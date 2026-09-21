@@ -15,6 +15,8 @@ interface PieSlice extends AnshdaarSummary {
   leaderX2: number;
   leaderY2: number;
   textAnchor: 'start' | 'end';
+  explodeX: number;
+  explodeY: number;
 }
 
 const CENTER = 120;
@@ -22,6 +24,7 @@ const PIE_RADIUS = 80;
 const LEADER_INNER_RADIUS = 82;
 const LEADER_OUTER_RADIUS = 94;
 const LABEL_RADIUS = 98;
+const EXPLODE_OFFSET = 8;
 
 function polarToCartesian(radius: number, angleDeg: number): { x: number; y: number } {
   const angleRad = ((angleDeg - 90) * Math.PI) / 180;
@@ -50,6 +53,7 @@ function buildPieSlices(summary: AnshdaarSummary[], total: number): PieSlice[] {
     const leaderStart = polarToCartesian(LEADER_INNER_RADIUS, midAngle);
     const leaderEnd = polarToCartesian(LEADER_OUTER_RADIUS, midAngle);
     const label = polarToCartesian(LABEL_RADIUS, midAngle);
+    const explode = polarToCartesian(EXPLODE_OFFSET, midAngle);
 
     return {
       ...entry,
@@ -62,6 +66,8 @@ function buildPieSlices(summary: AnshdaarSummary[], total: number): PieSlice[] {
       leaderX2: leaderEnd.x,
       leaderY2: leaderEnd.y,
       textAnchor: label.x < CENTER ? 'end' : 'start',
+      explodeX: explode.x - CENTER,
+      explodeY: explode.y - CENTER,
     };
   });
 }
@@ -88,16 +94,35 @@ export class Home {
   readonly totalRakba = signal(this.landData.getTotalRakba());
 
   readonly selectedKhataNo = signal('');
+  readonly selectedAnshdaar = signal<string | null>(null);
 
   readonly filteredKhesaraRecords = computed<KhesaraRecord[]>(() => {
     const khataNo = this.selectedKhataNo();
-    const records = this.khesaraRecords();
-    return khataNo ? records.filter((r) => r.khataNo === khataNo) : records;
+    const anshdaar = this.selectedAnshdaar();
+    let records = this.khesaraRecords();
+    if (khataNo) {
+      records = records.filter((r) => r.khataNo === khataNo);
+    }
+    if (anshdaar) {
+      records = records.filter((r) => r.dakhal.some((d) => d.name === anshdaar));
+    }
+    return records;
   });
 
   readonly filteredTotalRakba = computed<number>(() =>
     this.filteredKhesaraRecords().reduce((sum, r) => sum + r.rakba, 0),
   );
+
+  readonly selectedAnshdaarShareTotal = computed<number>(() => {
+    const anshdaar = this.selectedAnshdaar();
+    if (!anshdaar) {
+      return 0;
+    }
+    return this.filteredKhesaraRecords().reduce((sum, r) => {
+      const share = r.dakhal.find((d) => d.name === anshdaar)?.share ?? 0;
+      return sum + share;
+    }, 0);
+  });
 
   readonly breakdownTotalRakba = computed<number>(() =>
     this.anshdaarBreakdown().reduce((sum, a) => sum + a.totalRakba, 0),
@@ -113,13 +138,15 @@ export class Home {
 
   resetKhataFilter(): void {
     this.selectedKhataNo.set('');
+    this.selectedAnshdaar.set(null);
   }
 
-  formatDakhal(record: KhesaraRecord): string {
-    if (record.dakhal.length === 0) {
-      return '—';
-    }
-    return record.dakhal.map((d) => `${d.name} (${d.share})`).join(', ');
+  toggleAnshdaar(name: string): void {
+    this.selectedAnshdaar.update((current) => (current === name ? null : name));
+  }
+
+  clearAnshdaarFilter(): void {
+    this.selectedAnshdaar.set(null);
   }
 
   logout(): void {
