@@ -81,7 +81,8 @@ export class Home {
 
   readonly moujaInfo = signal(this.landData.getMoujaInfo());
   readonly khataDharakList = signal(this.landData.getKhataDharakList());
-  readonly anshdaarSummary = signal(this.landData.getAnshdaarSummary());
+  readonly resultAnshdaarSummary = signal(this.landData.getResultAnshdaarSummary());
+  readonly anshdaarBreakdown = signal(this.landData.getAnshdaarRakbaBreakdown());
   readonly khesaraRecords = signal<KhesaraRecord[]>(this.landData.getKhesaraRecords());
   readonly khataNos = signal<string[]>(this.landData.getKhataNos());
   readonly totalRakba = signal(this.landData.getTotalRakba());
@@ -98,12 +99,12 @@ export class Home {
     this.filteredKhesaraRecords().reduce((sum, r) => sum + r.rakba, 0),
   );
 
-  readonly anshdaarTotalRakba = computed<number>(() =>
-    this.anshdaarSummary().reduce((sum, a) => sum + a.totalRakba, 0),
+  readonly breakdownTotalRakba = computed<number>(() =>
+    this.anshdaarBreakdown().reduce((sum, a) => sum + a.totalRakba, 0),
   );
 
   readonly pieSlices = computed<PieSlice[]>(() =>
-    buildPieSlices(this.anshdaarSummary(), this.anshdaarTotalRakba()),
+    buildPieSlices(this.anshdaarBreakdown(), this.breakdownTotalRakba()),
   );
 
   onKhataNoChange(value: string): void {

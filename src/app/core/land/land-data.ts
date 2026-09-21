@@ -258,7 +258,7 @@ const KHESARA_RECORDS: KhesaraRecord[] = [
     khesaraNo: '972',
     rakba: 23,
     dakhal: [{ name: 'Hardev Tiwary', share: 33 }],
-    note: 'Dada wali bagicha rasta',
+    note: 'Dada wali bagicha rasta. (Source sheet records Dakhal share as 33 against a Rakba of 23 for this row — kept as-is.)',
   },
   {
     khataNo: '113',
@@ -326,11 +326,29 @@ const KHESARA_RECORDS: KhesaraRecord[] = [
   },
 ];
 
-const ANSHDAAR_SUMMARY: AnshdaarSummary[] = [
-  { name: 'Vasudev Tiwary', totalRakba: 52.25, colorCode: '#674ea7' },
-  { name: 'Hardev Tiwary', totalRakba: 52.25, colorCode: '#6aa84f' },
-  { name: 'Harkishor Tiwary', totalRakba: 44.75, colorCode: '#e69138' },
-  { name: 'Ramkumar Tiwary', totalRakba: 44.75, colorCode: '#a64d79' },
+/** Per-Anshdaar identity color, taken from the source sheet's own "Color Code" column. */
+const ANSHDAAR_COLORS: Record<string, string> = {
+  'Vasudev Tiwary': '#674ea7',
+  'Hardev Tiwary': '#6aa84f',
+  'Harkishor Tiwary': '#e69138',
+  'Ramkumar Tiwary': '#a64d79',
+};
+
+const UNASSIGNED_LABEL = 'Not Currently Dakhal (Sold / Unassigned)';
+const UNASSIGNED_COLOR = '#9aa0a6';
+
+/**
+ * The source sheet's own "Result" table: each Anshdaar's total Rakba after
+ * historic adjustments/exchanges (grand total 194 decimal). This is a
+ * separate, authoritative figure the sheet states directly — distinct from
+ * the raw Dakhal shares recorded per Khesara below (grand total 285 decimal,
+ * of which some Khesara currently have no recorded Dakhal holder).
+ */
+const RESULT_ANSHDAAR_SUMMARY: AnshdaarSummary[] = [
+  { name: 'Vasudev Tiwary', totalRakba: 52.25, colorCode: ANSHDAAR_COLORS['Vasudev Tiwary'] },
+  { name: 'Hardev Tiwary', totalRakba: 52.25, colorCode: ANSHDAAR_COLORS['Hardev Tiwary'] },
+  { name: 'Harkishor Tiwary', totalRakba: 44.75, colorCode: ANSHDAAR_COLORS['Harkishor Tiwary'] },
+  { name: 'Ramkumar Tiwary', totalRakba: 44.75, colorCode: ANSHDAAR_COLORS['Ramkumar Tiwary'] },
 ];
 
 @Service()
@@ -351,11 +369,59 @@ export class LandData {
     return [...new Set(KHESARA_RECORDS.map((r) => r.khataNo))];
   }
 
-  getAnshdaarSummary(): AnshdaarSummary[] {
-    return ANSHDAAR_SUMMARY;
+  getResultAnshdaarSummary(): AnshdaarSummary[] {
+    return RESULT_ANSHDAAR_SUMMARY;
   }
 
   getTotalRakba(): number {
     return KHESARA_RECORDS.reduce((sum, r) => sum + r.rakba, 0);
+  }
+
+  /**
+   * Each Anshdaar's actual Rakba, computed by summing their Dakhal share
+   * across every Khesara record, out of the full Total Rakba (285 decimal).
+   * Khesara with no recorded Dakhal (sold / disputed / unassigned) are
+   * rolled into a single "Not Currently Dakhal" slice so the breakdown
+   * always accounts for 100% of the Total Rakba.
+   *
+   * Two source rows (Khata 89/Khesara 330 and Khata 113/Khesara 972) have
+   * Dakhal shares that don't sum to their own Rakba — a genuine inconsistency
+   * in the source sheet, not a transcription error (see their notes). Each
+   * record's shares are normalized proportionally to that record's stated
+   * Rakba so the breakdown's grand total always equals the verified Total
+   * Rakba exactly, while preserving each Anshdaar's relative share within
+   * the record.
+   */
+  getAnshdaarRakbaBreakdown(): AnshdaarSummary[] {
+    const totals = new Map<string, number>();
+
+    for (const record of KHESARA_RECORDS) {
+      if (record.dakhal.length === 0) {
+        totals.set(UNASSIGNED_LABEL, (totals.get(UNASSIGNED_LABEL) ?? 0) + record.rakba);
+        continue;
+      }
+      const shareSum = record.dakhal.reduce((sum, d) => sum + d.share, 0);
+      for (const share of record.dakhal) {
+        const normalizedShare = (share.share / shareSum) * record.rakba;
+        totals.set(share.name, (totals.get(share.name) ?? 0) + normalizedShare);
+      }
+    }
+
+    const round2 = (value: number): number => Math.round(value * 100) / 100;
+
+    const anshdaarNames = Object.keys(ANSHDAAR_COLORS);
+    const breakdown: AnshdaarSummary[] = anshdaarNames
+      .filter((name) => totals.has(name))
+      .map((name) => ({ name, totalRakba: round2(totals.get(name)!), colorCode: ANSHDAAR_COLORS[name] }));
+
+    if (totals.has(UNASSIGNED_LABEL)) {
+      breakdown.push({
+        name: UNASSIGNED_LABEL,
+        totalRakba: round2(totals.get(UNASSIGNED_LABEL)!),
+        colorCode: UNASSIGNED_COLOR,
+      });
+    }
+
+    return breakdown;
   }
 }

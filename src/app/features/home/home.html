@@ -58,13 +58,17 @@
 
     <div class="card">
       <div class="card-title">Anshdaar-wise Rakba Distribution</div>
+      <p class="pie-subtitle">
+        Each Anshdaar's actual Dakhal share, summed across every Khesara record, out of the full Total Rakba
+        (285 decimal).
+      </p>
 
       <div class="pie-section">
         <svg
           class="pie-chart"
           viewBox="0 0 240 240"
           role="img"
-          [attr.aria-label]="'Anshdaar-wise Rakba distribution, total ' + anshdaarTotalRakba() + ' decimal'"
+          [attr.aria-label]="'Anshdaar-wise Rakba distribution, total ' + breakdownTotalRakba() + ' decimal'"
         >
           @for (slice of pieSlices(); track slice.name) {
             <path [attr.d]="slice.pathD" [attr.fill]="slice.colorCode" stroke="#ffffff" stroke-width="2" />
@@ -91,7 +95,7 @@
 
         <div class="pie-legend">
           <div class="legend-total">
-            <span class="legend-total-value">{{ anshdaarTotalRakba() }}</span>
+            <span class="legend-total-value">{{ breakdownTotalRakba() }}</span>
             <span class="legend-total-label">Total Rakba (Decimal)</span>
           </div>
 
@@ -104,6 +108,14 @@
           }
         </div>
       </div>
+
+      <p class="result-note">
+        <span class="note-label">Source sheet's Result summary</span> (after historic adjustments):
+        @for (entry of resultAnshdaarSummary(); track entry.name; let last = $last) {
+          {{ entry.name }} {{ entry.totalRakba }}{{ last ? '' : ' · ' }}
+        }
+        — Total 194 decimal.
+      </p>
     </div>
   </div>
 
