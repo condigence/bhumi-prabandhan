@@ -68,7 +68,9 @@
           class="pie-chart"
           viewBox="0 0 240 240"
           role="img"
-          [attr.aria-label]="'Anshdaar-wise Rakba distribution, total ' + breakdownTotalRakba() + ' decimal'"
+          [attr.aria-label]="
+            'Anshdaar-wise Rakba distribution, total ' + (breakdownTotalRakba() | number: '1.0-2') + ' decimal'
+          "
         >
           @for (slice of pieSlices(); track slice.name) {
             <path [attr.d]="slice.pathD" [attr.fill]="slice.colorCode" stroke="#ffffff" stroke-width="2" />
@@ -95,7 +97,7 @@
 
         <div class="pie-legend">
           <div class="legend-total">
-            <span class="legend-total-value">{{ breakdownTotalRakba() }}</span>
+            <span class="legend-total-value">{{ breakdownTotalRakba() | number: '1.0-2' }}</span>
             <span class="legend-total-label">Total Rakba (Decimal)</span>
           </div>
 

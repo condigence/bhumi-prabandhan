@@ -264,35 +264,35 @@ const KHESARA_RECORDS: KhesaraRecord[] = [
     khataNo: '113',
     khesaraNo: '969',
     rakba: 4,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 4 }],
     note: 'Dada wali bagicha rasta',
   },
   {
     khataNo: '113',
     khesaraNo: '970',
     rakba: 6,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 6 }],
     note: 'Dada wali bagicha rasta',
   },
   {
     khataNo: '113',
     khesaraNo: '517',
     rakba: 7,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 7 }],
     note: 'Ram das Upadhaya ko vikray kiya gaya hai',
   },
   {
     khataNo: '113',
     khesaraNo: '518',
     rakba: 1,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 1 }],
     note: 'Ram das Upadhaya ko vikray kiya gaya hai - Baba ka yagya and Sidhi baba se liya gaya hai',
   },
   {
     khataNo: '113',
     khesaraNo: '528',
     rakba: 7,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 7 }],
     note:
       'Ram das Upadhaya ko vikray kiya gaya hai - Baba ka yagya and Sidhi baba se liya gaya hai. ' +
       'Piyar tiwari se badalai and humlogo k ghar ka bsigat jamin liya gaya',
@@ -301,7 +301,7 @@ const KHESARA_RECORDS: KhesaraRecord[] = [
     khataNo: '113',
     khesaraNo: '792',
     rakba: 10,
-    dakhal: [],
+    dakhal: [{ name: 'Hardev Tiwary', share: 10 }],
     note:
       'Lakhi tiwari se makhoukik badailin kar k Ghar k paas duaar pe liya gaya hai - 113 khata k 528 ' +
       'or 792 Laki tiwari and Yugeshwar tiwari se badlien lekar - Khata 141 ka khesara 630 me liya gaya hai',
