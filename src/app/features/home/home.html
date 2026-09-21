@@ -1,5 +1,10 @@
 <div class="header">
-  <h1>Bhumi Prabandhan</h1>
+  <div>
+    <h1>Bhumi Prabandhan</h1>
+    <p class="tagline">
+      Mouja {{ moujaInfo().mouja }} · Thana No. {{ moujaInfo().thanaNumber }} {{ moujaInfo().thanaName }}
+    </p>
+  </div>
   <div class="header-right">
     <span class="mobile-badge">📱 {{ mobileNumber() }}</span>
     <button class="btn-logout" (click)="logout()">Logout</button>
@@ -10,233 +15,150 @@
   <!-- Top row: two sections side by side -->
   <div class="top-row">
     <div class="card">
-      <div class="card-title">Welcome</div>
-      <div class="welcome-body">
-        <div class="owner-avatar">👤</div>
-        <div>
-          <p class="welcome-name">Registered User</p>
-          <p class="welcome-mobile">+91 {{ mobileNumber() }}</p>
-          <p class="welcome-sub">Manage Khata, Plot &amp; Anshdaar land records from one place.</p>
-        </div>
+      <div class="card-title">Mouja &amp; Khata Dharak</div>
+
+      <p class="mouja-note">{{ moujaInfo().note }}</p>
+
+      <div class="table-wrapper">
+        <table class="khata-dharak-table">
+          <thead>
+            <tr>
+              <th>Sl.</th>
+              <th>Khata Dharak ka Naam</th>
+              <th>Son Of</th>
+              <th>Village</th>
+              <th>Total Rakaba (Decimal)</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (dharak of khataDharakList(); track dharak.slNo) {
+              <tr>
+                <td>{{ dharak.slNo }}</td>
+                <td class="strong">{{ dharak.name }}</td>
+                <td>{{ dharak.fatherName }}, S/o {{ dharak.grandfatherName }}</td>
+                <td>{{ dharak.village }}</td>
+                <td>{{ dharak.totalRakabaDecimal }}</td>
+              </tr>
+              @if (dharak.note) {
+                <tr class="note-row">
+                  <td></td>
+                  <td colspan="4">
+                    <span class="note-label">Note:</span> {{ dharak.note }}
+                    @if (dharak.reference) {
+                      <span class="note-label">· Reference:</span> {{ dharak.reference }}
+                    }
+                  </td>
+                </tr>
+              }
+            }
+          </tbody>
+        </table>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-title">Quick Stats</div>
-      <div class="stats">
-        <div class="stat-card">
-          <div class="stat-title">Total Khatas</div>
-          <div class="stat-value">{{ stats().totalKhatas }}</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">Total Plots</div>
-          <div class="stat-value">{{ stats().totalPlots }}</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">Total Area</div>
-          <div class="stat-value">{{ stats().totalArea }} Acre</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">Total Owners</div>
-          <div class="stat-value">{{ stats().totalOwners }}</div>
+      <div class="card-title">Anshdaar-wise Rakba Distribution</div>
+
+      <div class="pie-section">
+        <svg
+          class="pie-chart"
+          viewBox="0 0 240 240"
+          role="img"
+          [attr.aria-label]="'Anshdaar-wise Rakba distribution, total ' + anshdaarTotalRakba() + ' decimal'"
+        >
+          @for (slice of pieSlices(); track slice.name) {
+            <path [attr.d]="slice.pathD" [attr.fill]="slice.colorCode" stroke="#ffffff" stroke-width="2" />
+          }
+          @for (slice of pieSlices(); track slice.name) {
+            <line
+              [attr.x1]="slice.leaderX1"
+              [attr.y1]="slice.leaderY1"
+              [attr.x2]="slice.leaderX2"
+              [attr.y2]="slice.leaderY2"
+              [attr.stroke]="slice.colorCode"
+              stroke-width="1.5"
+            />
+            <text
+              [attr.x]="slice.labelX"
+              [attr.y]="slice.labelY"
+              [attr.text-anchor]="slice.textAnchor"
+              class="pie-label"
+            >
+              {{ slice.percent | number: '1.1-1' }}%
+            </text>
+          }
+        </svg>
+
+        <div class="pie-legend">
+          <div class="legend-total">
+            <span class="legend-total-value">{{ anshdaarTotalRakba() }}</span>
+            <span class="legend-total-label">Total Rakba (Decimal)</span>
+          </div>
+
+          @for (slice of pieSlices(); track slice.name) {
+            <div class="legend-item">
+              <span class="legend-swatch" [style.background]="slice.colorCode"></span>
+              <span class="legend-name">{{ slice.name }}</span>
+              <span class="legend-value">{{ slice.totalRakba }} ({{ slice.percent | number: '1.1-1' }}%)</span>
+            </div>
+          }
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bottom: full-width land record lookup -->
+  <!-- Bottom: full-width Khata / Khesara wise Bhumi Vivaran -->
   <div class="card full-width">
-    <div class="card-title">Land Record Search</div>
+    <div class="card-title">Khata / Khesara Wise Bhumi Vivaran</div>
 
     <div class="form-grid">
       <div class="form-group">
-        <label for="district">District</label>
-        <select
-          id="district"
-          [ngModel]="selectedDistrict()"
-          (ngModelChange)="onDistrictChange($event)"
-        >
-          <option value="">Select District</option>
-          @for (d of districts(); track d.id) {
-            <option [value]="d.id">{{ d.name }}</option>
-          }
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="thana">Thana</label>
-        <select
-          id="thana"
-          [ngModel]="selectedThana()"
-          (ngModelChange)="onThanaChange($event)"
-          [disabled]="!selectedDistrict()"
-        >
-          <option value="">Select Thana</option>
-          @for (t of thanas(); track t.id) {
-            <option [value]="t.id">{{ t.name }}</option>
-          }
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="mouja">Mouja</label>
-        <select
-          id="mouja"
-          [ngModel]="selectedMouja()"
-          (ngModelChange)="onMoujaChange($event)"
-          [disabled]="!selectedThana()"
-        >
-          <option value="">Select Mouja</option>
-          @for (m of moujas(); track m.id) {
-            <option [value]="m.id">{{ m.name }}</option>
-          }
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="khata">Khata No.</label>
-        <select
-          id="khata"
-          [ngModel]="selectedKhata()"
-          (ngModelChange)="onKhataChange($event)"
-          [disabled]="!selectedMouja()"
-        >
-          <option value="">Select Khata</option>
-          @for (k of khatas(); track k.id) {
-            <option [value]="k.id">{{ k.name }}</option>
-          }
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="plot">Plot / Khesra No.</label>
-        <select
-          id="plot"
-          [ngModel]="selectedPlot()"
-          (ngModelChange)="onPlotChange($event)"
-          [disabled]="!selectedKhata()"
-        >
-          <option value="">Select Plot</option>
-          @for (p of plots(); track p.id) {
-            <option [value]="p.id">{{ p.name }}</option>
-          }
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="owner">Anshdaar / Owner</label>
-        <select
-          id="owner"
-          [ngModel]="selectedOwner()"
-          (ngModelChange)="onOwnerChange($event)"
-          [disabled]="!selectedPlot()"
-        >
-          <option value="">Select Owner</option>
-          @for (o of owners(); track o.id) {
-            <option [value]="o.id">{{ o.name }}</option>
+        <label for="khataNo">Khata No</label>
+        <select id="khataNo" [ngModel]="selectedKhataNo()" (ngModelChange)="onKhataNoChange($event)">
+          <option value="">All Khata</option>
+          @for (khataNo of khataNos(); track khataNo) {
+            <option [value]="khataNo">{{ khataNo }}</option>
           }
         </select>
       </div>
     </div>
 
     <div class="button-row">
-      <button class="btn-secondary" (click)="resetSearch()">↻ Reset</button>
+      <button class="btn-secondary" (click)="resetKhataFilter()">↻ Reset</button>
     </div>
 
-    @if (ownerDetails(); as owner) {
-      <div class="owner-summary">
-        <div class="card-title">Selected Anshdaar / Owner Details</div>
-
-        <div class="owner-summary-grid">
-          <div class="owner-avatar large">👤</div>
-
-          <div class="owner-info">
-            <div class="info-box">
-              <div class="label">Owner Name</div>
-              <div class="value">{{ owner.name }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Father / Husband Name</div>
-              <div class="value">{{ owner.fatherName }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Owner ID</div>
-              <div class="value">{{ owner.id }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">District</div>
-              <div class="value">{{ owner.district }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Thana</div>
-              <div class="value">{{ owner.thana }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Mouja</div>
-              <div class="value">{{ owner.mouja }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Total Khatas</div>
-              <div class="value">{{ owner.totalKhatas }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Total Plots</div>
-              <div class="value">{{ owner.totalPlots }}</div>
-            </div>
-            <div class="info-box">
-              <div class="label">Total Owned Area</div>
-              <div class="value">{{ owner.totalOwnedArea }} Acre</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lands-section">
-        <div class="card-title">All Lands Owned By {{ owner.name }}</div>
-
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Sl.</th>
-                <th>District</th>
-                <th>Thana</th>
-                <th>Mouja</th>
-                <th>Khata No.</th>
-                <th>Plot No.</th>
-                <th>Land Type</th>
-                <th>Total Area</th>
-                <th>Owner Share</th>
-                <th>Owned Area</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (land of ownerLands(); track $index) {
-                <tr>
-                  <td>{{ $index + 1 }}</td>
-                  <td>{{ land.district }}</td>
-                  <td>{{ land.thana }}</td>
-                  <td>{{ land.mouja }}</td>
-                  <td>{{ land.khataNo }}</td>
-                  <td>{{ land.plotNo }}</td>
-                  <td>{{ land.landType }}</td>
-                  <td>{{ land.totalArea }} Acre</td>
-                  <td>{{ land.share }}</td>
-                  <td>{{ land.ownedArea }} Acre</td>
-                  <td>
-                    <span class="badge" [class.badge-green]="land.status === 'Active'" [class.badge-yellow]="land.status === 'Review'">
-                      {{ land.status }}
-                    </span>
-                  </td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        </div>
-      </div>
-    } @else {
-      <div class="empty-state">Select District → Thana → Mouja → Khata → Plot → Owner to view land records.</div>
-    }
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Sl.</th>
+            <th>Khata No</th>
+            <th>Khesara No</th>
+            <th>Rakba (Decimal)</th>
+            <th>Dakhal</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (record of filteredKhesaraRecords(); track $index) {
+            <tr>
+              <td>{{ $index + 1 }}</td>
+              <td>{{ record.khataNo }}</td>
+              <td>{{ record.khesaraNo }}</td>
+              <td>{{ record.rakba }}</td>
+              <td>{{ formatDakhal(record) }}</td>
+              <td class="note-cell">{{ record.note }}</td>
+            </tr>
+          }
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3" class="total-label">Total Rakba</td>
+            <td class="strong">{{ filteredTotalRakba() }}</td>
+            <td colspan="2"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </div>
 </div>

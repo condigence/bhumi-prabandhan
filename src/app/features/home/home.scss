@@ -15,6 +15,12 @@
     font-size: 22px;
   }
 
+  .tagline {
+    margin: 4px 0 0;
+    font-size: 12px;
+    opacity: 0.85;
+  }
+
   .header-right {
     display: flex;
     align-items: center;
@@ -75,72 +81,105 @@
   padding-bottom: 10px;
 }
 
-.welcome-body {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  .welcome-name {
-    margin: 0 0 4px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-
-  .welcome-mobile {
-    margin: 0 0 8px;
-    color: #6c757d;
-    font-size: 13px;
-  }
-
-  .welcome-sub {
-    margin: 0;
-    font-size: 13px;
-    color: #455a64;
-  }
+.mouja-note {
+  font-size: 12px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  max-height: 110px;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
-.owner-avatar {
-  flex-shrink: 0;
-  height: 70px;
-  width: 70px;
-  background: #e8f5e9;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 32px;
-  color: #198754;
-
-  &.large {
-    height: 130px;
-    width: 150px;
-    font-size: 50px;
-  }
+.khata-dharak-table {
+  min-width: 640px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.stat-card {
+.note-row td {
+  white-space: normal;
   background: #f8f9fa;
-  border-radius: 8px;
-  padding: 14px;
-  border-left: 4px solid #198754;
+  font-size: 12px;
+  color: #6c757d;
+  padding: 8px 10px;
+}
 
-  .stat-title {
+.note-label {
+  font-weight: bold;
+  color: #455a64;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.pie-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.pie-chart {
+  width: 240px;
+  height: 240px;
+  flex-shrink: 0;
+}
+
+.pie-label {
+  font-size: 10px;
+  font-weight: bold;
+  fill: #263238;
+}
+
+.pie-legend {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-total {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e0e0e0;
+
+  .legend-total-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #14532d;
+  }
+
+  .legend-total-label {
     font-size: 12px;
     color: #6c757d;
   }
+}
 
-  .stat-value {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 5px;
-    color: #14532d;
-  }
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  flex: 1;
+  color: #263238;
+  font-weight: 600;
+}
+
+.legend-value {
+  color: #6c757d;
 }
 
 .form-grid {
@@ -206,42 +245,6 @@ button {
   }
 }
 
-.owner-summary,
-.lands-section {
-  margin-top: 24px;
-}
-
-.owner-summary-grid {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 20px;
-}
-
-.owner-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.info-box {
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 5px;
-  padding: 12px;
-
-  .label {
-    color: #6c757d;
-    font-size: 12px;
-    margin-bottom: 4px;
-  }
-
-  .value {
-    font-size: 15px;
-    font-weight: bold;
-    color: #263238;
-  }
-}
-
 .table-wrapper {
   overflow-x: auto;
 }
@@ -268,32 +271,27 @@ td {
   white-space: nowrap;
 }
 
+.note-cell {
+  white-space: normal;
+  min-width: 280px;
+  color: #6c757d;
+  font-size: 12px;
+}
+
 tr:hover td {
   background: #f8fff9;
 }
 
-.badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 20px;
-  font-size: 11px;
+tfoot td {
+  border-bottom: none;
+  border-top: 2px solid #14532d;
+  background: #f8f9fa;
+}
+
+.total-label {
+  text-align: right;
   font-weight: bold;
-}
-
-.badge-green {
-  background: #d1e7dd;
-  color: #0f5132;
-}
-
-.badge-yellow {
-  background: #fff3cd;
-  color: #664d03;
-}
-
-.empty-state {
-  padding: 30px;
-  text-align: center;
-  color: #78909c;
+  color: #14532d;
 }
 
 @media (max-width: 1000px) {
@@ -304,20 +302,10 @@ tr:hover td {
   .form-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .owner-info {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 600px) {
-  .form-grid,
-  .owner-info,
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .owner-summary-grid {
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
@@ -329,8 +317,12 @@ tr:hover td {
     width: 100%;
   }
 
-  .welcome-body {
+  .pie-section {
     flex-direction: column;
-    text-align: center;
+    align-items: stretch;
+  }
+
+  .pie-chart {
+    margin: 0 auto;
   }
 }

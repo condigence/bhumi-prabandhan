@@ -5,7 +5,10 @@ Land record management Angular application.
 ## Features
 
 - **Login**: mobile-number based authentication with OTP verification (hardcoded OTP `123456` for now).
-- **Home**: two summary sections (Welcome, Quick Stats) on top, and a full-width Land Record Search section below with a cascading District → Thana → Mouja → Khata No. → Plot No. → Anshdaar/Owner selection, showing the selected owner's details and all their land holdings.
+- **Home**: data for Mouja Gosain Pur, Thana No. 110 Shahpur Patti (from the source spreadsheet), shown as:
+  - **Mouja & Khata Dharak** — the Mouja/Thana note and the Khata Dharak (original khata holders) table.
+  - **Anshdaar-wise Rakba Distribution** — a pie chart of each Anshdaar's total Rakba, using the same colour code the source spreadsheet's "Result" table defines per Anshdaar.
+  - **Khata / Khesara Wise Bhumi Vivaran** — a full-width, Khata No.–filterable table of every Khesara record with its Rakba, Dakhal (co-sharer shares), and note, matching the spreadsheet's own terminology (Khata, Khesara, Rakba, Dakhal, Anshdaar).
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
 
