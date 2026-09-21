@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:prod": "serve -s dist/bhumi-prabandhan/browser -l ${PORT:-3000}"
+    "serve:prod": "serve -s browser -l ${PORT:-3000}"
   },
   "private": true,
   "packageManager": "npm@11.19.0",
