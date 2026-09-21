@@ -1,0 +1,11 @@
+# Angular CLI 22 requires Node >=22.22.3, >=24.15.0, or >=26.0.0.
+# Pin a Node major version that satisfies that, and run the production
+# static-file server (not the "ng serve" dev server) after building.
+[variables]
+NIXPACKS_NODE_VERSION = "24"
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run serve:prod"
