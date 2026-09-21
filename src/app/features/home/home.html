@@ -1,0 +1,242 @@
+<div class="header">
+  <h1>Bhumi Prabandhan</h1>
+  <div class="header-right">
+    <span class="mobile-badge">📱 {{ mobileNumber() }}</span>
+    <button class="btn-logout" (click)="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Top row: two sections side by side -->
+  <div class="top-row">
+    <div class="card">
+      <div class="card-title">Welcome</div>
+      <div class="welcome-body">
+        <div class="owner-avatar">👤</div>
+        <div>
+          <p class="welcome-name">Registered User</p>
+          <p class="welcome-mobile">+91 {{ mobileNumber() }}</p>
+          <p class="welcome-sub">Manage Khata, Plot &amp; Anshdaar land records from one place.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Quick Stats</div>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-title">Total Khatas</div>
+          <div class="stat-value">{{ stats().totalKhatas }}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Total Plots</div>
+          <div class="stat-value">{{ stats().totalPlots }}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Total Area</div>
+          <div class="stat-value">{{ stats().totalArea }} Acre</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Total Owners</div>
+          <div class="stat-value">{{ stats().totalOwners }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom: full-width land record lookup -->
+  <div class="card full-width">
+    <div class="card-title">Land Record Search</div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="district">District</label>
+        <select
+          id="district"
+          [ngModel]="selectedDistrict()"
+          (ngModelChange)="onDistrictChange($event)"
+        >
+          <option value="">Select District</option>
+          @for (d of districts(); track d.id) {
+            <option [value]="d.id">{{ d.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="thana">Thana</label>
+        <select
+          id="thana"
+          [ngModel]="selectedThana()"
+          (ngModelChange)="onThanaChange($event)"
+          [disabled]="!selectedDistrict()"
+        >
+          <option value="">Select Thana</option>
+          @for (t of thanas(); track t.id) {
+            <option [value]="t.id">{{ t.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mouja">Mouja</label>
+        <select
+          id="mouja"
+          [ngModel]="selectedMouja()"
+          (ngModelChange)="onMoujaChange($event)"
+          [disabled]="!selectedThana()"
+        >
+          <option value="">Select Mouja</option>
+          @for (m of moujas(); track m.id) {
+            <option [value]="m.id">{{ m.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="khata">Khata No.</label>
+        <select
+          id="khata"
+          [ngModel]="selectedKhata()"
+          (ngModelChange)="onKhataChange($event)"
+          [disabled]="!selectedMouja()"
+        >
+          <option value="">Select Khata</option>
+          @for (k of khatas(); track k.id) {
+            <option [value]="k.id">{{ k.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="plot">Plot / Khesra No.</label>
+        <select
+          id="plot"
+          [ngModel]="selectedPlot()"
+          (ngModelChange)="onPlotChange($event)"
+          [disabled]="!selectedKhata()"
+        >
+          <option value="">Select Plot</option>
+          @for (p of plots(); track p.id) {
+            <option [value]="p.id">{{ p.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="owner">Anshdaar / Owner</label>
+        <select
+          id="owner"
+          [ngModel]="selectedOwner()"
+          (ngModelChange)="onOwnerChange($event)"
+          [disabled]="!selectedPlot()"
+        >
+          <option value="">Select Owner</option>
+          @for (o of owners(); track o.id) {
+            <option [value]="o.id">{{ o.name }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button class="btn-secondary" (click)="resetSearch()">↻ Reset</button>
+    </div>
+
+    @if (ownerDetails(); as owner) {
+      <div class="owner-summary">
+        <div class="card-title">Selected Anshdaar / Owner Details</div>
+
+        <div class="owner-summary-grid">
+          <div class="owner-avatar large">👤</div>
+
+          <div class="owner-info">
+            <div class="info-box">
+              <div class="label">Owner Name</div>
+              <div class="value">{{ owner.name }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Father / Husband Name</div>
+              <div class="value">{{ owner.fatherName }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Owner ID</div>
+              <div class="value">{{ owner.id }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">District</div>
+              <div class="value">{{ owner.district }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Thana</div>
+              <div class="value">{{ owner.thana }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Mouja</div>
+              <div class="value">{{ owner.mouja }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Total Khatas</div>
+              <div class="value">{{ owner.totalKhatas }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Total Plots</div>
+              <div class="value">{{ owner.totalPlots }}</div>
+            </div>
+            <div class="info-box">
+              <div class="label">Total Owned Area</div>
+              <div class="value">{{ owner.totalOwnedArea }} Acre</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lands-section">
+        <div class="card-title">All Lands Owned By {{ owner.name }}</div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Sl.</th>
+                <th>District</th>
+                <th>Thana</th>
+                <th>Mouja</th>
+                <th>Khata No.</th>
+                <th>Plot No.</th>
+                <th>Land Type</th>
+                <th>Total Area</th>
+                <th>Owner Share</th>
+                <th>Owned Area</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (land of ownerLands(); track $index) {
+                <tr>
+                  <td>{{ $index + 1 }}</td>
+                  <td>{{ land.district }}</td>
+                  <td>{{ land.thana }}</td>
+                  <td>{{ land.mouja }}</td>
+                  <td>{{ land.khataNo }}</td>
+                  <td>{{ land.plotNo }}</td>
+                  <td>{{ land.landType }}</td>
+                  <td>{{ land.totalArea }} Acre</td>
+                  <td>{{ land.share }}</td>
+                  <td>{{ land.ownedArea }} Acre</td>
+                  <td>
+                    <span class="badge" [class.badge-green]="land.status === 'Active'" [class.badge-yellow]="land.status === 'Review'">
+                      {{ land.status }}
+                    </span>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    } @else {
+      <div class="empty-state">Select District → Thana → Mouja → Khata → Plot → Owner to view land records.</div>
+    }
+  </div>
+</div>

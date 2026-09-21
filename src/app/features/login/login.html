@@ -1,0 +1,57 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="brand">
+      <div class="brand-icon">🌾</div>
+      <h1>Bhumi Prabandhan</h1>
+      <p>Land Record Management</p>
+    </div>
+
+    @if (step() === 'mobile') {
+      <form (ngSubmit)="sendOtp()">
+        <label for="mobile">Mobile Number</label>
+        <input
+          id="mobile"
+          type="tel"
+          name="mobile"
+          placeholder="Enter 10-digit mobile number"
+          maxlength="10"
+          [ngModel]="mobile()"
+          (ngModelChange)="mobile.set($event)"
+          autocomplete="tel"
+          required
+        />
+
+        @if (errorMessage()) {
+          <div class="error">{{ errorMessage() }}</div>
+        }
+
+        <button type="submit" class="btn-primary">Send OTP</button>
+      </form>
+    }
+
+    @if (step() === 'otp') {
+      <form (ngSubmit)="verifyOtp()">
+        <label for="otp">Enter OTP</label>
+        <p class="hint">OTP sent to +91 {{ mobile() }}</p>
+        <input
+          id="otp"
+          type="password"
+          name="otp"
+          placeholder="6-digit OTP"
+          maxlength="6"
+          [ngModel]="otp()"
+          (ngModelChange)="otp.set($event)"
+          autocomplete="one-time-code"
+          required
+        />
+
+        @if (errorMessage()) {
+          <div class="error">{{ errorMessage() }}</div>
+        }
+
+        <button type="submit" class="btn-primary">Verify &amp; Login</button>
+        <button type="button" class="btn-link" (click)="changeNumber()">Change mobile number</button>
+      </form>
+    }
+  </div>
+</div>
