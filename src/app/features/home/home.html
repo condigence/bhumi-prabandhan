@@ -155,9 +155,9 @@
     </div>
   </div>
 
-  <!-- Bottom: full-width Khata / Khesara wise Bhumi Vivaran -->
+  <!-- Bottom: full-width Anshdaar / Khata / Khesara wise Bhumi Vivaran -->
   <div class="card full-width">
-    <div class="card-title">Khata / Khesara Wise Bhumi Vivaran</div>
+    <div class="card-title">Anshdaar / Khata / Khesara Wise Bhumi Vivaran</div>
 
     <div class="form-grid">
       <div class="form-group">
@@ -166,6 +166,16 @@
           <option value="">All Khata</option>
           @for (khataNo of khataNos(); track khataNo) {
             <option [value]="khataNo">{{ khataNo }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="anshdaar">Anshdaar</label>
+        <select id="anshdaar" [ngModel]="selectedAnshdaar() ?? ''" (ngModelChange)="onAnshdaarChange($event)">
+          <option value="">All Anshdaar</option>
+          @for (name of anshdaarNames(); track name) {
+            <option [value]="name">{{ name }}</option>
           }
         </select>
       </div>

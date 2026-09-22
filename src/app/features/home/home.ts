@@ -91,6 +91,7 @@ export class Home {
   readonly anshdaarBreakdown = signal(this.landData.getAnshdaarRakbaBreakdown());
   readonly khesaraRecords = signal<KhesaraRecord[]>(this.landData.getKhesaraRecords());
   readonly khataNos = signal<string[]>(this.landData.getKhataNos());
+  readonly anshdaarNames = signal<string[]>(this.landData.getAnshdaarNames());
   readonly totalRakba = signal(this.landData.getTotalRakba());
 
   readonly selectedKhataNo = signal('');
@@ -134,6 +135,10 @@ export class Home {
 
   onKhataNoChange(value: string): void {
     this.selectedKhataNo.set(value);
+  }
+
+  onAnshdaarChange(value: string): void {
+    this.selectedAnshdaar.set(value || null);
   }
 
   resetKhataFilter(): void {

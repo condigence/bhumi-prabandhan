@@ -103,6 +103,10 @@ export class LandData {
     return [...new Set(KHESARA_RECORDS.map((r) => r.khataNo))];
   }
 
+  getAnshdaarNames(): string[] {
+    return Object.keys(ANSHDAAR_COLORS);
+  }
+
   getResultAnshdaarSummary(): AnshdaarSummary[] {
     return RESULT_ANSHDAAR_SUMMARY;
   }
