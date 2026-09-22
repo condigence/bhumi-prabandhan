@@ -1,7 +1,7 @@
 import { DecimalPipe } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../core/auth/auth';
 import { AnshdaarSummary, KhesaraRecord, LandData } from '../../core/land/land-data';
 
@@ -73,7 +73,7 @@ function buildPieSlices(summary: AnshdaarSummary[], total: number): PieSlice[] {
 }
 
 @Component({
-  imports: [FormsModule, DecimalPipe],
+  imports: [FormsModule, DecimalPipe, RouterLink],
   selector: 'app-home',
   styleUrl: './home.scss',
   templateUrl: './home.html',

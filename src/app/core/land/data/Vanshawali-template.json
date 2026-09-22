@@ -1,0 +1,247 @@
+{
+  "id": "badai-tiwary",
+  "name": "Badai Tiwary",
+  "fatherName": "",
+  "grandfatherName": "",
+  "district": "",
+  "village": "Gosaipur",
+  "thana": "Shahpur Patti",
+  "isAlive": false,
+  "hasChildren": true,
+  "noOfChildren": 3,
+  "hierarchy_level": 1,
+  "children": [
+    {
+      "id": "babuji-tiwary",
+      "name": "Babuji Tiwary",
+      "fatherName": "Badai Tiwary",
+      "grandfatherName": "",
+      "district": "",
+      "village": "Gosaipur",
+      "thana": "Shahpur Patti",
+      "isAlive": false,
+      "hasChildren": true,
+      "noOfChildren": 1,
+      "hierarchy_level": 2,
+      "children": [
+        {
+          "id": "lakhinarayan-tiwary",
+          "name": "Lakhinarayan Tiwary",
+          "fatherName": "Babuji Tiwary",
+          "grandfatherName": "Badai Tiwary",
+          "district": "",
+          "village": "Gosaipur",
+          "thana": "Shahpur Patti",
+          "isAlive": false,
+          "hasChildren": false,
+          "noOfChildren": 0,
+          "hierarchy_level": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "paramhans-tiwary",
+      "name": "Paramhans Tiwary",
+      "fatherName": "Badai Tiwary",
+      "grandfatherName": "",
+      "district": "",
+      "village": "Gosaipur",
+      "thana": "Shahpur Patti",
+      "isAlive": false,
+      "hasChildren": true,
+      "noOfChildren": 1,
+      "hierarchy_level": 2,
+      "children": [
+        {
+          "id": "jai-narayan-tiwary",
+          "name": "Jai Narayan Tiwary",
+          "fatherName": "Paramhans Tiwary",
+          "grandfatherName": "Badai Tiwary",
+          "district": "",
+          "village": "Gosaipur",
+          "thana": "Shahpur Patti",
+          "isAlive": false,
+          "hasChildren": true,
+          "noOfChildren": 4,
+          "hierarchy_level": 3,
+          "children": [
+            {
+              "id": "vasudev-tiwary",
+              "name": "Vasudev Tiwary",
+              "fatherName": "Jai Narayan Tiwary",
+              "grandfatherName": "Paramhans Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": false,
+              "hasChildren": true,
+              "noOfChildren": 2,
+              "hierarchy_level": 4,
+              "children": [
+                {
+                  "id": "srinivas-tiwary",
+                  "name": "Srinivas Tiwary",
+                  "fatherName": "Vasudev Tiwary",
+                  "grandfatherName": "Jai Narayan Tiwary",
+                  "district": "",
+                  "village": "Gosaipur",
+                  "thana": "Shahpur Patti",
+                  "isAlive": true,
+                  "hasChildren": false,
+                  "noOfChildren": 0,
+                  "hierarchy_level": 5,
+                  "children": []
+                },
+                {
+                  "id": "ramakant-tiwary",
+                  "name": "Ramakant Tiwary",
+                  "fatherName": "Vasudev Tiwary",
+                  "grandfatherName": "Jai Narayan Tiwary",
+                  "district": "",
+                  "village": "Gosaipur",
+                  "thana": "Shahpur Patti",
+                  "isAlive": false,
+                  "hasChildren": true,
+                  "noOfChildren": 1,
+                  "hierarchy_level": 5,
+                  "children": [
+                    {
+                      "id": "amit-tiwary",
+                      "name": "Amit Tiwary",
+                      "fatherName": "Ramakant Tiwary",
+                      "grandfatherName": "Vasudev Tiwary",
+                      "district": "",
+                      "village": "Gosaipur",
+                      "thana": "Shahpur Patti",
+                      "isAlive": true,
+                      "hasChildren": true,
+                      "noOfChildren": 1,
+                      "hierarchy_level": 6,
+                      "children": [
+                        {
+                          "id": "sparsh-tiwary",
+                          "name": "Sparsh Tiwary",
+                          "fatherName": "Amit Tiwary",
+                          "grandfatherName": "Ramakant Tiwary",
+                          "district": "",
+                          "village": "Gosaipur",
+                          "thana": "Shahpur Patti",
+                          "isAlive": true,
+                          "hasChildren": false,
+                          "noOfChildren": 0,
+                          "hierarchy_level": 7,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hardev-tiwary",
+              "name": "Hardev Tiwary",
+              "fatherName": "Jai Narayan Tiwary",
+              "grandfatherName": "Paramhans Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": false,
+              "hasChildren": true,
+              "noOfChildren": 1,
+              "hierarchy_level": 4,
+              "children": [
+                {
+                  "id": "ramniwas-tiwary",
+                  "name": "Ramniwas Tiwary",
+                  "fatherName": "Hardev Tiwary",
+                  "grandfatherName": "Jai Narayan Tiwary",
+                  "district": "",
+                  "village": "Gosaipur",
+                  "thana": "Shahpur Patti",
+                  "isAlive": true,
+                  "hasChildren": false,
+                  "noOfChildren": 0,
+                  "hierarchy_level": 5,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "harkishor-tiwary",
+              "name": "Harkishor Tiwary",
+              "fatherName": "Jai Narayan Tiwary",
+              "grandfatherName": "Paramhans Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": true,
+              "hasChildren": false,
+              "noOfChildren": 0,
+              "hierarchy_level": 4,
+              "children": []
+            },
+            {
+              "id": "ramkumar-tiwary",
+              "name": "Ramkumar Tiwary",
+              "fatherName": "Jai Narayan Tiwary",
+              "grandfatherName": "Paramhans Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": true,
+              "hasChildren": false,
+              "noOfChildren": 0,
+              "hierarchy_level": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ramchij-tiwary",
+      "name": "Ramchij Tiwary",
+      "fatherName": "Badai Tiwary",
+      "grandfatherName": "",
+      "district": "",
+      "village": "Gosaipur",
+      "thana": "Shahpur Patti",
+      "isAlive": false,
+      "hasChildren": true,
+      "noOfChildren": 2,
+      "hierarchy_level": 2,
+      "children": [
+        {
+          "id": "yugeshwar-tiwary",
+          "name": "Yugeshwar Tiwary",
+          "fatherName": "Ramchij Tiwary",
+          "grandfatherName": "Badai Tiwary",
+          "district": "",
+          "village": "Gosaipur",
+          "thana": "Shahpur Patti",
+          "isAlive": true,
+          "hasChildren": false,
+          "noOfChildren": 0,
+          "hierarchy_level": 3,
+          "children": []
+        },
+        {
+          "id": "sidheshwar-tiwary",
+          "name": "Sidheshwar Tiwary",
+          "fatherName": "Ramchij Tiwary",
+          "grandfatherName": "Badai Tiwary",
+          "district": "",
+          "village": "Gosaipur",
+          "thana": "Shahpur Patti",
+          "isAlive": true,
+          "hasChildren": false,
+          "noOfChildren": 0,
+          "hierarchy_level": 3,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

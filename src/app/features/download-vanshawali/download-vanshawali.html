@@ -1,0 +1,296 @@
+<div class="header">
+  <div>
+    <h1>Download Vanshawali</h1>
+    <p class="tagline">
+      Build a family lineage tree and download it as JSON + a shareable SVG diagram.
+    </p>
+  </div>
+  <div class="header-right">
+    <button class="btn-secondary" (click)="goHome()">← Back to Home</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-title">Example Vanshawali</div>
+    <p class="hint">
+      This is what a completed Vanshawali diagram looks like. Upload a photo of your own handwritten
+      Vanshawali as a reference below, or enter each family member's details in the form — either
+      way, you'll get a JSON file and an SVG diagram like this one at the end.
+    </p>
+    <div class="svg-preview reference" [innerHTML]="referenceSvg"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">1. Upload a Reference Image (optional)</div>
+    <p class="hint">
+      We can't automatically read names off a photo yet, so this is just kept alongside your entry
+      as a reference — please also fill in the details in the form below so we can build the JSON
+      and SVG.
+    </p>
+    <input type="file" accept="image/*" (change)="onImageSelected($event)" />
+    @if (uploadedImage()) {
+      <div class="uploaded-preview">
+        <img [src]="uploadedImage()" [alt]="uploadedImageName()" />
+        <div class="uploaded-meta">
+          <span>{{ uploadedImageName() }}</span>
+          <button type="button" class="btn-link" (click)="clearImage()">Remove</button>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="card">
+    <div class="card-title">2. Enter Family Details</div>
+
+    <div class="form-group">
+      <label for="treeTitle">Vanshawali Title</label>
+      <input
+        id="treeTitle"
+        type="text"
+        [ngModel]="treeTitle()"
+        (ngModelChange)="treeTitle.set($event)"
+        placeholder="e.g. Tiwary Family Vanshawali"
+      />
+    </div>
+
+    <form class="form-grid" (ngSubmit)="addPerson()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          [ngModel]="draft().name"
+          (ngModelChange)="updateDraft('name', $event)"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="fatherName">Father's Name</label>
+        <input
+          id="fatherName"
+          type="text"
+          [ngModel]="draft().fatherName"
+          (ngModelChange)="updateDraft('fatherName', $event)"
+          name="fatherName"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="grandfatherName">Grandfather's Name</label>
+        <input
+          id="grandfatherName"
+          type="text"
+          [ngModel]="draft().grandfatherName"
+          (ngModelChange)="updateDraft('grandfatherName', $event)"
+          name="grandfatherName"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="district">District</label>
+        <select
+          id="district"
+          [ngModel]="draft().district"
+          (ngModelChange)="updateDraft('district', $event)"
+          name="district"
+        >
+          @for (option of districtOptions; track option) {
+            <option [value]="option">{{ option === OTHER ? 'Other…' : option }}</option>
+          }
+        </select>
+        @if (draft().district === OTHER) {
+          <input
+            type="text"
+            class="other-input"
+            placeholder="Enter district"
+            [ngModel]="draft().customDistrict"
+            (ngModelChange)="updateDraft('customDistrict', $event)"
+            name="customDistrict"
+          />
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="village">Village</label>
+        <select
+          id="village"
+          [ngModel]="draft().village"
+          (ngModelChange)="updateDraft('village', $event)"
+          name="village"
+        >
+          @for (option of villageOptions; track option) {
+            <option [value]="option">{{ option === OTHER ? 'Other…' : option }}</option>
+          }
+        </select>
+        @if (draft().village === OTHER) {
+          <input
+            type="text"
+            class="other-input"
+            placeholder="Enter village"
+            [ngModel]="draft().customVillage"
+            (ngModelChange)="updateDraft('customVillage', $event)"
+            name="customVillage"
+          />
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="thana">Thana</label>
+        <select
+          id="thana"
+          [ngModel]="draft().thana"
+          (ngModelChange)="updateDraft('thana', $event)"
+          name="thana"
+        >
+          @for (option of thanaOptions; track option) {
+            <option [value]="option">{{ option === OTHER ? 'Other…' : option }}</option>
+          }
+        </select>
+        @if (draft().thana === OTHER) {
+          <input
+            type="text"
+            class="other-input"
+            placeholder="Enter thana"
+            [ngModel]="draft().customThana"
+            (ngModelChange)="updateDraft('customThana', $event)"
+            name="customThana"
+          />
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="isAlive">Is Alive?</label>
+        <select
+          id="isAlive"
+          [ngModel]="draft().isAlive ? 'yes' : 'no'"
+          (ngModelChange)="updateDraft('isAlive', $event === 'yes')"
+          name="isAlive"
+        >
+          <option value="yes">Yes</option>
+          <option value="no">No (deceased)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="hasChildren">Has Children?</label>
+        <select
+          id="hasChildren"
+          [ngModel]="draft().hasChildren ? 'yes' : 'no'"
+          (ngModelChange)="onHasChildrenChange($event === 'yes')"
+          name="hasChildren"
+        >
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+      </div>
+
+      @if (draft().hasChildren) {
+        <div class="form-group">
+          <label for="noOfChildren">No. of Children</label>
+          <input
+            id="noOfChildren"
+            type="number"
+            min="1"
+            [ngModel]="draft().noOfChildren"
+            (ngModelChange)="updateDraft('noOfChildren', +$event)"
+            name="noOfChildren"
+          />
+        </div>
+      }
+
+      <div class="form-group">
+        <label for="parentId">Parent</label>
+        @if (entries().length === 0) {
+          <input type="text" value="— Root (no parent) —" disabled />
+        } @else {
+          <select
+            id="parentId"
+            [ngModel]="draft().parentId"
+            (ngModelChange)="updateDraft('parentId', $event)"
+            name="parentId"
+          >
+            <option [ngValue]="null">— Root —</option>
+            @for (entry of entries(); track entry.id) {
+              <option [ngValue]="entry.id">{{ entry.name }}</option>
+            }
+          </select>
+        }
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary" [disabled]="!canAddPerson()">+ Add Person</button>
+      </div>
+    </form>
+  </div>
+
+  @if (entries().length > 0) {
+    <div class="card">
+      <div class="card-title">People Added ({{ entries().length }})</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Father</th>
+              <th>Village / Thana</th>
+              <th>Alive</th>
+              <th>Children</th>
+              <th>Parent</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (entry of entries(); track entry.id) {
+              <tr>
+                <td class="strong">{{ entry.name }}</td>
+                <td>{{ entry.fatherName || '—' }}</td>
+                <td>{{ entry.village || '—' }} / {{ entry.thana || '—' }}</td>
+                <td>{{ entry.isAlive ? 'Yes' : 'No' }}</td>
+                <td>{{ entry.hasChildren ? entry.noOfChildren : 0 }}</td>
+                <td>{{ parentName(entry.parentId) }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn-link danger"
+                    [disabled]="!canRemove(entry.id)"
+                    [title]="
+                      canRemove(entry.id) ? 'Remove' : 'Remove this person\'s children first'
+                    "
+                    (click)="removeEntry(entry.id)"
+                  >
+                    ✕
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="button-row">
+        <button class="btn-secondary" (click)="resetAll()">↻ Reset All</button>
+        <button class="btn-primary" (click)="generate()">Generate JSON &amp; SVG</button>
+      </div>
+
+      @if (errorMessage()) {
+        <div class="error">{{ errorMessage() }}</div>
+      }
+    </div>
+  }
+
+  @if (generatedTree()) {
+    <div class="card">
+      <div class="card-title">3. Your Vanshawali</div>
+
+      <div class="svg-preview" [innerHTML]="generatedSvgSafe()"></div>
+
+      <div class="button-row">
+        <button class="btn-primary" (click)="downloadSvg()">⬇ Download SVG</button>
+        <button class="btn-secondary" (click)="downloadJson()">⬇ Download JSON</button>
+      </div>
+    </div>
+  }
+</div>

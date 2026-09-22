@@ -12,5 +12,13 @@ export const routes: Routes = [
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
     canActivate: [authGuard],
   },
+  {
+    path: 'download-vanshawali',
+    loadComponent: () =>
+      import('./features/download-vanshawali/download-vanshawali').then(
+        (m) => m.DownloadVanshawali,
+      ),
+    canActivate: [authGuard],
+  },
   { path: '**', redirectTo: 'login' },
 ];
