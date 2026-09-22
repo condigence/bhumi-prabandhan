@@ -1,0 +1,157 @@
+{
+  "root": {
+    "name": "Badai Tiwary",
+    "hierarchy_level": 1,
+    "share_fraction": "1",
+    "share_percentage": 100.0,
+    "children": [
+      {
+        "name": "Babuji Tiwary",
+        "hierarchy_level": 2,
+        "share_fraction": "1/3",
+        "share_percentage": 33.333333,
+        "parent": "Badi Tiwary",
+        "children": [
+          {
+            "name": "Lakhinarayan Tiwary",
+            "hierarchy_level": 3,
+            "share_fraction": "1/3",
+            "share_percentage": 33.333333,
+            "parent": "Babuji Tiwary",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Paramhans Tiwary",
+        "hierarchy_level": 2,
+        "share_fraction": "1/3",
+        "share_percentage": 33.333333,
+        "parent": "Badai Tiwary",
+        "children": [
+          {
+            "name": "Jai Narayan Tiwary",
+            "hierarchy_level": 3,
+            "share_fraction": "1/3",
+            "share_percentage": 33.333333,
+            "parent": "Paramhans Tiwary",
+            "children": [
+              {
+                "name": "Vasudev Tiwary",
+                "hierarchy_level": 4,
+                "share_fraction": "1/12",
+                "share_percentage": 8.333333,
+                "parent": "Jai Narayan Tiwary",
+                "children": [
+                  {
+                    "name": "Srinivas Tiwary",
+                    "hierarchy_level": 5,
+                    "share_fraction": "1/24",
+                    "share_percentage": 4.166667,
+                    "parent": "Vasudev Tiwary",
+                    "children": []
+                  },
+                  {
+                    "name": "Ramakant Tiwary",
+                    "hierarchy_level": 5,
+                    "share_fraction": "1/24",
+                    "share_percentage": 4.166667,
+                    "parent": "Vasudev Tiwary",
+                    "children": [
+                      {
+                        "name": "Amit Tiwary",
+                        "hierarchy_level": 6,
+                        "share_fraction": "1/24",
+                        "share_percentage": 4.166667,
+                        "parent": "Ramakant Tiwary",
+                        "children": [
+                          {
+                            "name": "Sparsh Tiwary",
+                            "hierarchy_level": 7,
+                            "share_fraction": "1/24",
+                            "share_percentage": 4.166667,
+                            "parent": "Amit Tiwary",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Hardev Tiwary",
+                "hierarchy_level": 4,
+                "share_fraction": "1/12",
+                "share_percentage": 8.333333,
+                "parent": "Jai Narayan Tiwary",
+                "children": [
+                  {
+                    "name": "Ramniwas Tiwary",
+                    "hierarchy_level": 5,
+                    "share_fraction": "1/12",
+                    "share_percentage": 8.333333,
+                    "parent": "Hardev Tiwary",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Harkishor Tiwary",
+                "hierarchy_level": 4,
+                "share_fraction": "1/12",
+                "share_percentage": 8.333333,
+                "parent": "Jai Narayan Tiwary",
+                "children": []
+              },
+              {
+                "name": "Ramkumar Tiwary",
+                "hierarchy_level": 4,
+                "share_fraction": "1/12",
+                "share_percentage": 8.333333,
+                "parent": "Jai Narayan Tiwary",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ramchij Tiwary",
+        "hierarchy_level": 2,
+        "share_fraction": "1/3",
+        "share_percentage": 33.333333,
+        "parent": "Badi Tiwary",
+        "children": [
+          {
+            "name": "Yugeshwar Tiwary",
+            "hierarchy_level": 3,
+            "share_fraction": "1/6",
+            "share_percentage": 16.666667,
+            "parent": "Ramchij Tiwary",
+            "children": []
+          },
+          {
+            "name": "Sidheshwar Tiwary",
+            "hierarchy_level": 3,
+            "share_fraction": "1/6",
+            "share_percentage": 16.666667,
+            "parent": "Ramchij Tiwary",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "calculation_rule": {
+    "description": "Each person's share is divided equally among their direct children. The root Badi Tiwary is treated as 100%.",
+    "examples": [
+      "Badai Tiwary = 100%",
+      "Badai Tiwary's 3 children = 100% / 3 = 1/3 each",
+      "Ramchij Tiwary's 2 children = 1/3 / 2 = 1/6 each",
+      "Jainarayan Tiwary's 4 children = 1/3 / 4 = 1/12 each",
+      "Vasudev Tiwary's 2 children = 1/12 / 2 = 1/24 each"
+    ]
+  },
+  "source_note": "Names and hierarchy transcribed from the supplied handwritten family-tree image. Spelling should be verified against official records."
+}
