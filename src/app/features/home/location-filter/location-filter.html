@@ -1,0 +1,74 @@
+<div class="location-filter">
+  <fieldset class="field">
+    <legend>District <span class="required">*</span></legend>
+    <select
+      aria-label="District"
+      [ngModel]="selectedDistrict()"
+      (ngModelChange)="onDistrictChange($event)"
+      [disabled]="proceeded()"
+    >
+      <option value="">--- Select ---</option>
+      @for (district of districts(); track district) {
+        <option [value]="district">{{ district }}</option>
+      }
+    </select>
+  </fieldset>
+
+  <fieldset class="field">
+    <legend>Anchal <span class="required">*</span></legend>
+    <select
+      aria-label="Anchal"
+      [ngModel]="selectedAnchal()"
+      (ngModelChange)="onAnchalChange($event)"
+      [disabled]="!selectedDistrict() || proceeded()"
+    >
+      <option value="">--- Select ---</option>
+      @for (anchal of anchals(); track anchal) {
+        <option [value]="anchal">{{ anchal }}</option>
+      }
+    </select>
+  </fieldset>
+
+  <div class="actions">
+    <button type="button" class="btn-proceed" [disabled]="!canProceed()" (click)="proceed()">
+      Proceed
+    </button>
+    <button type="button" class="btn-reset" (click)="reset()">Reset</button>
+  </div>
+
+  <div class="field-with-info">
+    <fieldset class="field">
+      <legend>Halka <span class="required">*</span></legend>
+      <select
+        aria-label="Halka"
+        [ngModel]="selectedHalkaNumber()"
+        (ngModelChange)="onHalkaChange($event)"
+        [disabled]="!proceeded()"
+      >
+        <option value="">--- Select ---</option>
+        @for (halka of halkas(); track halka.halka_number) {
+          <option [value]="halka.halka_number">{{ halka.halka_name }}</option>
+        }
+      </select>
+    </fieldset>
+    <span class="info-icon" tabindex="0" role="img" [attr.aria-label]="halkaInfo()">
+      i
+      <span class="info-tooltip">{{ halkaInfo() }}</span>
+    </span>
+  </div>
+
+  <fieldset class="field">
+    <legend>Mouja <span class="required">*</span></legend>
+    <select
+      aria-label="Mouja"
+      [ngModel]="selectedMoujaNumber()"
+      (ngModelChange)="onMoujaChange($event)"
+      [disabled]="!selectedHalka()"
+    >
+      <option value="">--- Select ---</option>
+      @for (mouja of moujas(); track mouja.mouja_number) {
+        <option [value]="mouja.mouja_number">{{ mouja.mouja_name }}</option>
+      }
+    </select>
+  </fieldset>
+</div>

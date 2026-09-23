@@ -1,0 +1,184 @@
+:host {
+  display: block;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.location-filter {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 24px 14px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+
+.field {
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 220px;
+  flex: 1 1 220px;
+  max-width: 300px;
+
+  legend {
+    padding: 0 0 0 16px;
+    margin-bottom: -9px;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0f766e;
+    line-height: 1;
+
+    // White backing so the label sits "on" the select border.
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 4px -4px 0 12px;
+      background: white;
+      z-index: -1;
+    }
+  }
+
+  .required {
+    color: #dc3545;
+    font-size: 12px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px 12px 8px;
+    border: 1px solid #cfd8dc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: #263238;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      border-color: #198754;
+      box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.12);
+    }
+
+    &:disabled {
+      background: #efefef;
+      color: #455a64;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 18px;
+
+  button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .btn-proceed {
+    background: #5cb85c;
+
+    &:hover:not(:disabled) {
+      background: #449d44;
+    }
+
+    &:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+  }
+
+  .btn-reset {
+    background: #d9534f;
+
+    &:hover {
+      background: #c9302c;
+    }
+  }
+}
+
+.field-with-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 260px;
+  max-width: 360px;
+
+  .field {
+    max-width: none;
+  }
+}
+
+.info-icon {
+  position: relative;
+  margin-top: 16px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #1e73be;
+  color: white;
+  font: bold italic 13px/20px Georgia, serif;
+  text-align: center;
+  cursor: help;
+  outline: none;
+
+  .info-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -8px;
+    z-index: 10;
+    width: max-content;
+    max-width: 260px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background: #263238;
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  &:hover .info-tooltip,
+  &:focus .info-tooltip {
+    display: block;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px rgba(30, 115, 190, 0.4);
+  }
+}
+
+@media (max-width: 600px) {
+  .location-filter {
+    padding: 10px 16px 14px;
+  }
+
+  .field,
+  .field-with-info {
+    max-width: none;
+    flex-basis: 100%;
+  }
+
+  .actions {
+    width: 100%;
+
+    button {
+      flex: 1;
+    }
+  }
+}

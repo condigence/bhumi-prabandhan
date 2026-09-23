@@ -7,11 +7,15 @@
     </p>
   </div>
   <div class="header-right">
-    <a class="btn-vanshawali" routerLink="/download-vanshawali">📜 Vanshawali</a>
+    <a class="btn-vanshawali" routerLink="/download-vanshawali"
+      >You do not have Vanshawali? Create one by clicking here</a
+    >
     <span class="mobile-badge">📱 {{ mobileNumber() }}</span>
     <button class="btn-logout" (click)="logout()">Logout</button>
   </div>
 </div>
+
+<app-location-filter (locationChange)="selectedLocation.set($event)" />
 
 <div class="container">
   <!-- Top row: two sections side by side -->

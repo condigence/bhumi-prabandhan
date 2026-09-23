@@ -1,0 +1,112 @@
+{
+  "name": "L0N0",
+  "level": 0,
+  "node": "Badai Tiwary",
+  "children": [
+    {
+      "name": "L1N1",
+      "level": 1,
+      "node": "Babuji Tiwary",
+      "children": [
+        {
+          "name": "L2N2",
+          "level": 2,
+          "node": "Lakhinarayan Tiwary"
+        }
+      ]
+    },
+    {
+      "name": "L1N2",
+      "level": 1,
+      "node": "Paramhans Tiwary",
+      "children": [
+        {
+          "name": "L2N1",
+          "level": 2,
+          "node": "Jainarayan Tiwary",
+          "children": [
+            {
+              "name": "L3N1",
+              "level": 3,
+              "node": "Vaudev Tiwary",
+              "children": [
+                {
+                  "name": "L4N2",
+                  "level": 4,
+                  "node": "Ramakant Tiwary",
+                  "children": [
+                    {
+                      "name": "L5N1",
+                      "level": 5,
+                      "node": "Amit Tiwary",
+                      "children": [
+                        {
+                          "name": "L6N1",
+                          "level": 6,
+                          "node": "Sparsh Tiwary"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "L3N2",
+              "level": 3,
+              "node": "Hardev Tiwary",
+              "children": [
+                {
+                  "name": "L4N1",
+                  "level": 4,
+                  "node": "Ramniwas Tiwary"
+                }
+              ]
+            },
+            {
+              "name": "L3N3",
+              "level": 3,
+              "node": "Harkishor Tiwary",
+              "children": [
+                {
+                  "name": "L4N4",
+                  "level": 4,
+                  "node": "Prabhakar Tiwary"
+                }
+              ]
+            },
+            {
+              "name": "L3N4",
+              "level": 3,
+              "node": "Ramkumar Tiwary",
+              "children": [
+                {
+                  "name": "L4N3",
+                  "level": 4,
+                  "node": "Vijay Tiwary"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L1N3",
+      "level": 1,
+      "node": "Ramchij Tiwary",
+      "children": [
+        {
+          "name": "L2N3",
+          "level": 2,
+          "node": "Yugeshwar Tiwary"
+        },
+        {
+          "name": "L2N4",
+          "level": 2,
+          "node": "Sidheshwar Tiwary"
+        }
+      ]
+    }
+  ]
+}

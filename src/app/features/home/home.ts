@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../core/auth/auth';
 import { AnshdaarSummary, KhesaraRecord, LandData } from '../../core/land/land-data';
+import { LocationFilter, LocationSelection } from './location-filter/location-filter';
 
 interface PieSlice extends AnshdaarSummary {
   percent: number;
@@ -73,7 +74,7 @@ function buildPieSlices(summary: AnshdaarSummary[], total: number): PieSlice[] {
 }
 
 @Component({
-  imports: [FormsModule, DecimalPipe, RouterLink],
+  imports: [FormsModule, DecimalPipe, RouterLink, LocationFilter],
   selector: 'app-home',
   styleUrl: './home.scss',
   templateUrl: './home.html',
@@ -93,6 +94,8 @@ export class Home {
   readonly khataNos = signal<string[]>(this.landData.getKhataNos());
   readonly anshdaarNames = signal<string[]>(this.landData.getAnshdaarNames());
   readonly totalRakba = signal(this.landData.getTotalRakba());
+
+  readonly selectedLocation = signal<LocationSelection | null>(null);
 
   readonly selectedKhataNo = signal('');
   readonly selectedAnshdaar = signal<string | null>(null);

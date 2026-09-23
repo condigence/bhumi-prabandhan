@@ -1,0 +1,16 @@
+{
+  "state": "Bihar",
+  "district": "Bhojpur",
+  "anchal": "Shahpur",
+  "total_halkas": 2,
+  "halkas": [
+    {
+      "halka_number": 1,
+      "halka_name": "Semariya"
+    },
+    {
+      "halka_number": 2,
+      "halka_name": "Bilouti"
+    }
+  ]
+}

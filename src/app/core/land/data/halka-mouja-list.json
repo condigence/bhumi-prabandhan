@@ -1,0 +1,27 @@
+{
+  "state": "Bihar",
+  "district": "Bhojpur",
+  "anchal": "Shahpur",
+  "total_mouja": 3,
+  "moujas": [
+  {
+      "mouja_number": 1,
+      "mouja_name": "Gosaipur-109",
+      "thanaNumber": "110",
+      "thanaName": "Shahpur Patti",
+      "halka_name": "Semariya"
+    },
+    {
+      "mouja_number": 2,
+      "mouja_name": "Randadeeh-111",
+      "thanaNumber": "110",
+      "thanaName": "Shahpur Patti",  
+      "halka_name": "Bilouti"
+    },
+    {
+      "mouja_number": 3,
+      "mouja_name": "Byaschak-110",
+      "halka_name": "Bilouti"
+    }
+  ]
+}
