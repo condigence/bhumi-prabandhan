@@ -76,7 +76,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  margin-bottom: 18px;
+  margin: 18px 0;
+
+  // Nested inside the Bhumi Vivaran card: outline instead of a second shadow.
+  .card {
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+    min-width: 0;
+  }
 }
 
 .card {

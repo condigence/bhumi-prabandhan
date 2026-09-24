@@ -99,13 +99,29 @@ export class Home {
 
   readonly selectedKhataNo = signal('');
   readonly selectedAnshdaar = signal<string | null>(null);
+  readonly selectedKhesaraNo = signal('');
+
+  /** Khesara / Plot numbers available under the selected Khata (all Khata when none selected). */
+  readonly khesaraNos = computed<string[]>(() => {
+    const khataNo = this.selectedKhataNo();
+    const records = khataNo
+      ? this.khesaraRecords().filter((r) => r.khataNo === khataNo)
+      : this.khesaraRecords();
+    return [...new Set(records.map((r) => r.khesaraNo))].sort(
+      (a, b) => a.localeCompare(b, undefined, { numeric: true }),
+    );
+  });
 
   readonly filteredKhesaraRecords = computed<KhesaraRecord[]>(() => {
     const khataNo = this.selectedKhataNo();
     const anshdaar = this.selectedAnshdaar();
+    const khesaraNo = this.selectedKhesaraNo();
     let records = this.khesaraRecords();
     if (khataNo) {
       records = records.filter((r) => r.khataNo === khataNo);
+    }
+    if (khesaraNo) {
+      records = records.filter((r) => r.khesaraNo === khesaraNo);
     }
     if (anshdaar) {
       records = records.filter((r) => r.dakhal.some((d) => d.name === anshdaar));
@@ -138,6 +154,14 @@ export class Home {
 
   onKhataNoChange(value: string): void {
     this.selectedKhataNo.set(value);
+    // Drop a Khesara selection that doesn't exist under the newly chosen Khata.
+    if (!this.khesaraNos().includes(this.selectedKhesaraNo())) {
+      this.selectedKhesaraNo.set('');
+    }
+  }
+
+  onKhesaraNoChange(value: string): void {
+    this.selectedKhesaraNo.set(value);
   }
 
   onAnshdaarChange(value: string): void {
@@ -147,6 +171,7 @@ export class Home {
   resetKhataFilter(): void {
     this.selectedKhataNo.set('');
     this.selectedAnshdaar.set(null);
+    this.selectedKhesaraNo.set('');
   }
 
   toggleAnshdaar(name: string): void {

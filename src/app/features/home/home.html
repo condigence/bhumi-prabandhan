@@ -18,162 +18,7 @@
 <app-location-filter (locationChange)="selectedLocation.set($event)" />
 
 <div class="container">
-  <!-- Top row: two sections side by side -->
-  <div class="top-row">
-    <div class="card">
-      <div class="card-title">Mouja &amp; Khata Dharak</div>
-
-      <p class="mouja-note">{{ moujaInfo().note }}</p>
-
-      <div class="table-wrapper">
-        <table class="khata-dharak-table">
-          <thead>
-            <tr>
-              <th>Sl.</th>
-              <th>Khata Dharak ka Naam</th>
-              <th>Son Of</th>
-              <th>Village</th>
-              <th>Total Rakaba (Decimal)</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (dharak of khataDharakList(); track dharak.slNo) {
-              <tr>
-                <td>{{ dharak.slNo }}</td>
-                <td class="strong">{{ dharak.name }}</td>
-                <td>{{ dharak.fatherName }}, S/o {{ dharak.grandfatherName }}</td>
-                <td>{{ dharak.village }}</td>
-                <td>{{ dharak.totalRakabaDecimal }}</td>
-              </tr>
-              @if (dharak.note) {
-                <tr class="note-row">
-                  <td></td>
-                  <td colspan="4">
-                    <span class="note-label">Note:</span> {{ dharak.note }}
-                    @if (dharak.reference) {
-                      <span class="note-label">· Reference:</span> {{ dharak.reference }}
-                    }
-                  </td>
-                </tr>
-              }
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Anshdaar-wise Rakba Distribution</div>
-      <p class="pie-subtitle">
-        Each Anshdaar's actual Dakhal share, summed across every Khesara record, out of the full
-        Total Rakba (285 decimal).
-      </p>
-
-      <div class="pie-section">
-        <svg
-          class="pie-chart"
-          viewBox="0 0 240 240"
-          role="img"
-          [attr.aria-label]="
-            'Anshdaar-wise Rakba distribution, total ' +
-            (breakdownTotalRakba() | number: '1.0-2') +
-            ' decimal. ' +
-            'Click a slice to filter the records table below.'
-          "
-        >
-          @for (slice of pieSlices(); track slice.name) {
-            <path
-              [attr.d]="slice.pathD"
-              [attr.fill]="slice.colorCode"
-              [attr.transform]="
-                selectedAnshdaar() === slice.name
-                  ? 'translate(' + slice.explodeX + ',' + slice.explodeY + ')'
-                  : null
-              "
-              [class.pie-slice-selected]="selectedAnshdaar() === slice.name"
-              [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
-              class="pie-slice"
-              stroke="#ffffff"
-              stroke-width="2"
-              role="button"
-              tabindex="0"
-              [attr.aria-pressed]="selectedAnshdaar() === slice.name"
-              [attr.aria-label]="
-                slice.name +
-                ': ' +
-                slice.totalRakba +
-                ' decimal (' +
-                (slice.percent | number: '1.1-1') +
-                '%). Click to filter records for this Anshdaar.'
-              "
-              (click)="toggleAnshdaar(slice.name)"
-              (keydown.enter)="toggleAnshdaar(slice.name)"
-            />
-          }
-          @for (slice of pieSlices(); track slice.name) {
-            <line
-              [attr.x1]="slice.leaderX1"
-              [attr.y1]="slice.leaderY1"
-              [attr.x2]="slice.leaderX2"
-              [attr.y2]="slice.leaderY2"
-              [attr.stroke]="slice.colorCode"
-              [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
-              stroke-width="1.5"
-            />
-            <text
-              [attr.x]="slice.labelX"
-              [attr.y]="slice.labelY"
-              [attr.text-anchor]="slice.textAnchor"
-              [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
-              class="pie-label"
-            >
-              {{ slice.percent | number: '1.1-1' }}%
-            </text>
-          }
-        </svg>
-
-        <div class="pie-legend">
-          <div class="legend-total">
-            <span class="legend-total-value">{{ breakdownTotalRakba() | number: '1.0-2' }}</span>
-            <span class="legend-total-label">Total Rakba (Decimal)</span>
-          </div>
-
-          @for (slice of pieSlices(); track slice.name) {
-            <div
-              class="legend-item"
-              role="button"
-              tabindex="0"
-              [class.legend-item-selected]="selectedAnshdaar() === slice.name"
-              [class.legend-item-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
-              [attr.aria-pressed]="selectedAnshdaar() === slice.name"
-              (click)="toggleAnshdaar(slice.name)"
-              (keydown.enter)="toggleAnshdaar(slice.name)"
-            >
-              <span class="legend-swatch" [style.background]="slice.colorCode"></span>
-              <span class="legend-name">{{ slice.name }}</span>
-              <span class="legend-value"
-                >{{ slice.totalRakba }} ({{ slice.percent | number: '1.1-1' }}%)</span
-              >
-            </div>
-          }
-        </div>
-      </div>
-
-      <p class="pie-hint">
-        Click a slice or legend entry to filter the table below to that Anshdaar.
-      </p>
-
-      <p class="result-note">
-        <span class="note-label">Source sheet's Result summary</span> (after historic adjustments):
-        @for (entry of resultAnshdaarSummary(); track entry.name; let last = $last) {
-          {{ entry.name }} {{ entry.totalRakba }}{{ last ? '' : ' · ' }}
-        }
-        — Total 194 decimal.
-      </p>
-    </div>
-  </div>
-
-  <!-- Bottom: full-width Anshdaar / Khata / Khesara wise Bhumi Vivaran -->
+  <!-- Anshdaar / Khata / Khesara wise Bhumi Vivaran -->
   <div class="card full-width">
     <div class="card-title">Anshdaar / Khata / Khesara Wise Bhumi Vivaran</div>
 
@@ -193,15 +38,29 @@
       </div>
 
       <div class="form-group">
-        <label for="anshdaar">Anshdaar</label>
+        <label for="anshdaar">Raiyat Name</label>
         <select
           id="anshdaar"
           [ngModel]="selectedAnshdaar() ?? ''"
           (ngModelChange)="onAnshdaarChange($event)"
         >
-          <option value="">All Anshdaar</option>
+          <option value="">All Raiyat</option>
           @for (name of anshdaarNames(); track name) {
             <option [value]="name">{{ name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="khesaraNo">Khesara / Plot Number</label>
+        <select
+          id="khesaraNo"
+          [ngModel]="selectedKhesaraNo()"
+          (ngModelChange)="onKhesaraNoChange($event)"
+        >
+          <option value="">All Khesara</option>
+          @for (khesaraNo of khesaraNos(); track khesaraNo) {
+            <option [value]="khesaraNo">{{ khesaraNo }}</option>
           }
         </select>
       </div>
@@ -209,7 +68,7 @@
 
     @if (selectedAnshdaar(); as anshdaar) {
       <div class="filter-chip">
-        Filtered by Anshdaar: <strong>{{ anshdaar }}</strong> (combined Dakhal share in these
+        Filtered by Raiyat Name: <strong>{{ anshdaar }}</strong> (combined Dakhal share in these
         records: {{ selectedAnshdaarShareTotal() }} decimal)
         <button type="button" class="chip-clear" (click)="clearAnshdaarFilter()">✕</button>
       </div>
@@ -217,6 +76,161 @@
 
     <div class="button-row">
       <button class="btn-secondary" (click)="resetKhataFilter()">↻ Reset</button>
+    </div>
+
+    <!-- Mouja &amp; Khata Dharak and Anshdaar-wise Rakba Distribution, side by side -->
+    <div class="top-row">
+      <div class="card">
+        <div class="card-title">Mouja &amp; Khata Dharak</div>
+
+        <p class="mouja-note">{{ moujaInfo().note }}</p>
+
+        <div class="table-wrapper">
+          <table class="khata-dharak-table">
+            <thead>
+              <tr>
+                <th>Sl.</th>
+                <th>Khata Dharak ka Naam</th>
+                <th>Son Of</th>
+                <th>Village</th>
+                <th>Total Rakaba (Decimal)</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (dharak of khataDharakList(); track dharak.slNo) {
+                <tr>
+                  <td>{{ dharak.slNo }}</td>
+                  <td class="strong">{{ dharak.name }}</td>
+                  <td>{{ dharak.fatherName }}, S/o {{ dharak.grandfatherName }}</td>
+                  <td>{{ dharak.village }}</td>
+                  <td>{{ dharak.totalRakabaDecimal }}</td>
+                </tr>
+                @if (dharak.note) {
+                  <tr class="note-row">
+                    <td></td>
+                    <td colspan="4">
+                      <span class="note-label">Note:</span> {{ dharak.note }}
+                      @if (dharak.reference) {
+                        <span class="note-label">· Reference:</span> {{ dharak.reference }}
+                      }
+                    </td>
+                  </tr>
+                }
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Anshdaar-wise Rakba Distribution</div>
+        <p class="pie-subtitle">
+          Each Anshdaar's actual Dakhal share, summed across every Khesara record, out of the full
+          Total Rakba (285 decimal).
+        </p>
+
+        <div class="pie-section">
+          <svg
+            class="pie-chart"
+            viewBox="0 0 240 240"
+            role="img"
+            [attr.aria-label]="
+              'Anshdaar-wise Rakba distribution, total ' +
+              (breakdownTotalRakba() | number: '1.0-2') +
+              ' decimal. ' +
+              'Click a slice to filter the records table below.'
+            "
+          >
+            @for (slice of pieSlices(); track slice.name) {
+              <path
+                [attr.d]="slice.pathD"
+                [attr.fill]="slice.colorCode"
+                [attr.transform]="
+                  selectedAnshdaar() === slice.name
+                    ? 'translate(' + slice.explodeX + ',' + slice.explodeY + ')'
+                    : null
+                "
+                [class.pie-slice-selected]="selectedAnshdaar() === slice.name"
+                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                class="pie-slice"
+                stroke="#ffffff"
+                stroke-width="2"
+                role="button"
+                tabindex="0"
+                [attr.aria-pressed]="selectedAnshdaar() === slice.name"
+                [attr.aria-label]="
+                  slice.name +
+                  ': ' +
+                  slice.totalRakba +
+                  ' decimal (' +
+                  (slice.percent | number: '1.1-1') +
+                  '%). Click to filter records for this Anshdaar.'
+                "
+                (click)="toggleAnshdaar(slice.name)"
+                (keydown.enter)="toggleAnshdaar(slice.name)"
+              />
+            }
+            @for (slice of pieSlices(); track slice.name) {
+              <line
+                [attr.x1]="slice.leaderX1"
+                [attr.y1]="slice.leaderY1"
+                [attr.x2]="slice.leaderX2"
+                [attr.y2]="slice.leaderY2"
+                [attr.stroke]="slice.colorCode"
+                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                stroke-width="1.5"
+              />
+              <text
+                [attr.x]="slice.labelX"
+                [attr.y]="slice.labelY"
+                [attr.text-anchor]="slice.textAnchor"
+                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                class="pie-label"
+              >
+                {{ slice.percent | number: '1.1-1' }}%
+              </text>
+            }
+          </svg>
+
+          <div class="pie-legend">
+            <div class="legend-total">
+              <span class="legend-total-value">{{ breakdownTotalRakba() | number: '1.0-2' }}</span>
+              <span class="legend-total-label">Total Rakba (Decimal)</span>
+            </div>
+
+            @for (slice of pieSlices(); track slice.name) {
+              <div
+                class="legend-item"
+                role="button"
+                tabindex="0"
+                [class.legend-item-selected]="selectedAnshdaar() === slice.name"
+                [class.legend-item-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                [attr.aria-pressed]="selectedAnshdaar() === slice.name"
+                (click)="toggleAnshdaar(slice.name)"
+                (keydown.enter)="toggleAnshdaar(slice.name)"
+              >
+                <span class="legend-swatch" [style.background]="slice.colorCode"></span>
+                <span class="legend-name">{{ slice.name }}</span>
+                <span class="legend-value"
+                  >{{ slice.totalRakba }} ({{ slice.percent | number: '1.1-1' }}%)</span
+                >
+              </div>
+            }
+          </div>
+        </div>
+
+        <p class="pie-hint">
+          Click a slice or legend entry to filter the table below to that Anshdaar.
+        </p>
+
+        <p class="result-note">
+          <span class="note-label">Source sheet's Result summary</span> (after historic adjustments):
+          @for (entry of resultAnshdaarSummary(); track entry.name; let last = $last) {
+            {{ entry.name }} {{ entry.totalRakba }}{{ last ? '' : ' · ' }}
+          }
+          — Total 194 decimal.
+        </p>
+      </div>
     </div>
 
     <div class="table-wrapper">
