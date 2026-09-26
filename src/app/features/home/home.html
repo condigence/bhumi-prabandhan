@@ -15,12 +15,23 @@
   </div>
 </div>
 
-<app-location-filter (locationChange)="selectedLocation.set($event)" />
+<app-location-filter (locationChange)="onLocationChange($event)" />
 
 <div class="container">
   <!-- Anshdaar / Khata / Khesara wise Bhumi Vivaran -->
   <div class="card full-width">
-    <div class="card-title">Anshdaar / Khata / Khesara Wise Bhumi Vivaran</div>
+    <div class="card-title">
+      Anshdaar / Khata / Khesara Wise Bhumi Vivaran — Mouja {{ selectedMoujaName() }}
+      @if (khatiyan(); as k) {
+        (Khatiyan: {{ k.khatiyan_name }})
+      }
+    </div>
+
+    @if (!hasLandRecords()) {
+      <p class="empty-cell">
+        Khatiyan records for Mouja {{ selectedMoujaName() }} are not available yet.
+      </p>
+    }
 
     <div class="form-grid">
       <div class="form-group">
@@ -125,8 +136,9 @@
       <div class="card">
         <div class="card-title">Anshdaar-wise Rakba Distribution</div>
         <p class="pie-subtitle">
-          Each Anshdaar's actual Dakhal share, summed across every Khesara record, out of the full
-          Total Rakba (285 decimal).
+          Each Raiyat's actual Dakhal share, summed across every Khesara of Mouja
+          {{ selectedMoujaName() }}, out of the known Total Rakba
+          ({{ breakdownTotalRakba() | number: '1.0-2' }} decimal).
         </p>
 
         <div class="pie-section">
@@ -246,24 +258,24 @@
           </tr>
         </thead>
         <tbody>
-          @for (record of filteredKhesaraRecords(); track $index) {
+          @for (plot of filteredKhataPlots(); track $index) {
             <tr>
               <td>{{ $index + 1 }}</td>
-              <td>{{ record.khataNo }}</td>
-              <td>{{ record.khesaraNo }}</td>
-              <td>{{ record.rakba }}</td>
+              <td>{{ plot.khata_number }}</td>
+              <td>{{ plot.khesara_no }}</td>
+              <td>{{ plot.totalRakabaDecimal }}</td>
               <td>
-                @if (record.dakhal.length === 0) {
+                @if (dakhalHolders(plot).length === 0) {
                   —
                 } @else {
-                  @for (d of record.dakhal; track d.name; let last = $last) {
+                  @for (d of dakhalHolders(plot); track d.name; let last = $last) {
                     <span [class.dakhal-highlight]="d.name === selectedAnshdaar()"
                       >{{ d.name }} ({{ d.share }})</span
                     >{{ last ? '' : ', ' }}
                   }
                 }
               </td>
-              <td class="note-cell">{{ record.note }}</td>
+              <td class="note-cell">{{ plotNote(plot) }}</td>
             </tr>
           } @empty {
             <tr>

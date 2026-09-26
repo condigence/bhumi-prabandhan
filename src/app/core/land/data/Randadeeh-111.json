@@ -1,0 +1,902 @@
+[
+  {
+    "khata_number": 10,
+    "khesara_no": 625,
+    "plot_type": "sikmi",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 1.3 },
+      { "name": "Paramhans Tiwary", "share": 1.3 },
+      { "name": "Ramchij Tiwary", "share": 1.4 },
+      { "name": "OTHERS", "share": 3 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 87,
+    "khesara_no": 609,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 3,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 1 },
+      { "name": "Paramhans Tiwary", "share": 1 },
+      { "name": "Ramchij Tiwary", "share": 1 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 87,
+    "khesara_no": 610,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 1.6 },
+      { "name": "Paramhans Tiwary", "share": 1.8 },
+      { "name": "Ramchij Tiwary", "share": 1.6 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 88,
+    "khesara_no": 299,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 16,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 8 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 8 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 17,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 10,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 8 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 19,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 6 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 315,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 11 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 330,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 13 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 331,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 15,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 15 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": "341/98",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 9,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 9 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 342,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 22,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 22 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 346,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 18,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 18 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 400,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 18,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 18 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 401,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 15,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 15 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 402,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 12 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 439,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 16,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 16 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 440,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 15,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 15 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 467,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 10,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 10 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 468,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 41,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 41 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 477,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 13 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 478,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 12 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 617,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 4,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 4 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 624,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 4 },
+      { "name": "Paramhans Tiwary", "share": 4 },
+      { "name": "Ramchij Tiwary", "share": 4 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 646,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 6 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 675,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 13 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 680,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 13 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 824,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 20,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 20 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 825,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 22,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 22 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 840,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 22,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 22 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 875,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 35,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 35 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 930,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 21,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 21 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 89,
+    "khesara_no": 931,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 6 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 90,
+    "khesara_no": 730,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 9,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 9 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 517,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 7 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 518,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 1,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 1 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 528,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 7 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 551,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 6 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 769,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 4,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 4 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 770,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 6 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 772,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 23,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 23 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 113,
+    "khesara_no": 792,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 10,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 10 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 360,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 7 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 454,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 25,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 25 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 722,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 4,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 4 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 765,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 6.5 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 6.5 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 766,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 10,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 10 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 126,
+    "khesara_no": 921,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 18,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 18 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 135,
+    "khesara_no": 888,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 30,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 30 },
+      { "name": "OTHERS", "share": 30 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 602,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA" },
+      { "name": "Paramhans Tiwary", "share": "NA" },
+      { "name": "Ramchij Tiwary", "share": "NA" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 608,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA" },
+      { "name": "Paramhans Tiwary", "share": "NA" },
+      { "name": "Ramchij Tiwary", "share": "NA" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 611,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA" },
+      { "name": "Paramhans Tiwary", "share": "NA" },
+      { "name": "Ramchij Tiwary", "share": "NA" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 621,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 4 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 630,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA" },
+      { "name": "Paramhans Tiwary", "share": "NA" },
+      { "name": "Ramchij Tiwary", "share": "NA" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 141,
+    "khesara_no": 839,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": "NA",
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 4 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 142,
+    "khesara_no": 726,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 8,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 8 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 142,
+    "khesara_no": 727,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 10,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 10 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 159,
+    "khesara_no": "339/1004",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 5 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 159,
+    "khesara_no": 349,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 101,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 50.5 },
+      { "name": "Paramhans Tiwary", "share": 50.5 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 160,
+    "khesara_no": 338,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA" },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 25,
+    "khesara_no": 723,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 20,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0 },
+      { "name": "Paramhans Tiwary", "share": 0 },
+      { "name": "Ramchij Tiwary", "share": 20 },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  }
+]

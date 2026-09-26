@@ -1,6 +1,7 @@
 import { Service } from '@angular/core';
 import khataDharakData from './data/khata-dharak.json';
-import khesaraRecordsData from './data/khesara-records.json';
+import gosaipur109Plots from './data/Gosaipur-109.json';
+import gosaipur109Khatiyan from './data/mouja-khatiyan-Gosaipur-109.json';
 
 /**
  * Source: "Untitled spreadsheet.xlsx" (Sheet1) — Khanagi Bantwara (private partition)
@@ -25,17 +26,43 @@ export interface KhataDharak {
   reference?: string;
 }
 
+/** Values missing from the source Khatiyan sheet are recorded as "NA". */
+export type NumberOrNA = number | 'NA';
+
 export interface DakhalShare {
   name: string;
-  share: number;
+  share: NumberOrNA;
 }
 
-export interface KhesaraRecord {
-  khataNo: string;
-  khesaraNo: string;
-  rakba: number;
+/** One Khata row of a Mouja's Khatiyan (mouja-khatiyan-<mouja>.json). */
+export interface KhatiyanKhata {
+  khata_number: number;
+  raiyat_name: string[];
+  total_plots: number;
+  totalRakabaDecimal: NumberOrNA;
+}
+
+export interface MoujaKhatiyan {
+  mouja: string;
+  khatiyan_name: string;
+  khata: KhatiyanKhata[];
+}
+
+/** One Khesara / Plot of a Mouja (<mouja>.json). */
+export interface KhataPlot {
+  khata_number: number;
+  khesara_no: number | string;
+  plot_type: string;
+  chouhadi: string[];
+  totalRakabaDecimal: NumberOrNA;
   dakhal: DakhalShare[];
-  note?: string;
+  landMark: string;
+  comments: string;
+}
+
+interface MoujaLandRecords {
+  khatiyan: MoujaKhatiyan;
+  plots: KhataPlot[];
 }
 
 export interface AnshdaarSummary {
@@ -58,7 +85,25 @@ const MOUJA_INFO: MoujaInfo = {
 
 const KHATA_DHARAK_LIST: KhataDharak[] = khataDharakData;
 
-const KHESARA_RECORDS: KhesaraRecord[] = khesaraRecordsData;
+/**
+ * Khatiyan + plot records per Mouja, keyed by the Mouja name used in
+ * halka-mouja-list.json. Add an entry here when another Mouja's files are ready.
+ */
+const MOUJA_LAND_RECORDS: Record<string, MoujaLandRecords> = {
+  'Gosaipur-109': {
+    khatiyan: gosaipur109Khatiyan as MoujaKhatiyan,
+    plots: gosaipur109Plots as KhataPlot[],
+  },
+};
+
+/** Mouja shown before one is picked in the location filter. */
+export const DEFAULT_MOUJA = 'Gosaipur-109';
+
+export const OTHERS_LABEL = 'OTHERS';
+
+/** Raiyat slice colors, assigned in the order Raiyat first appear in a Mouja's Khatiyan. */
+const RAIYAT_PALETTE = ['#674ea7', '#6aa84f', '#e69138', '#a64d79', '#3d85c6', '#cc4125', '#45818e'];
+const OTHERS_COLOR = '#b7b7b7';
 
 /** Per-Anshdaar identity color, taken from the source sheet's own "Color Code" column. */
 const ANSHDAAR_COLORS: Record<string, string> = {
@@ -95,63 +140,70 @@ export class LandData {
     return KHATA_DHARAK_LIST;
   }
 
-  getKhesaraRecords(): KhesaraRecord[] {
-    return KHESARA_RECORDS;
+  hasLandRecords(mouja: string): boolean {
+    return mouja in MOUJA_LAND_RECORDS;
   }
 
-  getKhataNos(): string[] {
-    return [...new Set(KHESARA_RECORDS.map((r) => r.khataNo))];
+  getMoujaKhatiyan(mouja: string): MoujaKhatiyan | null {
+    return MOUJA_LAND_RECORDS[mouja]?.khatiyan ?? null;
   }
 
-  getAnshdaarNames(): string[] {
-    return Object.keys(ANSHDAAR_COLORS);
+  getKhataPlots(mouja: string): KhataPlot[] {
+    return MOUJA_LAND_RECORDS[mouja]?.plots ?? [];
   }
 
   getResultAnshdaarSummary(): AnshdaarSummary[] {
     return RESULT_ANSHDAAR_SUMMARY;
   }
 
-  getTotalRakba(): number {
-    return KHESARA_RECORDS.reduce((sum, r) => sum + r.rakba, 0);
-  }
-
   /**
-   * Each Anshdaar's actual Rakba, computed by summing their Dakhal share
-   * across every Khesara record, out of the full Total Rakba (285 decimal).
-   * Khesara with no recorded Dakhal (sold / disputed / unassigned) are
-   * rolled into a single "Not Currently Dakhal" slice so the breakdown
-   * always accounts for 100% of the Total Rakba.
-   *
-   * Two source rows (Khata 89/Khesara 330 and Khata 113/Khesara 972) have
-   * Dakhal shares that don't sum to their own Rakba — a genuine inconsistency
-   * in the source sheet, not a transcription error (see their notes). Each
-   * record's shares are normalized proportionally to that record's stated
-   * Rakba so the breakdown's grand total always equals the verified Total
-   * Rakba exactly, while preserving each Anshdaar's relative share within
-   * the record.
+   * Each Raiyat's Dakhal share summed across the given plots. Shares recorded
+   * as "NA" are skipped. When a plot's shares add up to more than its Rakba
+   * (e.g. Khata 135 / Khesara 888) they are scaled down to the Rakba; when
+   * they add up to less, the remainder goes to a "Not Currently Dakhal" slice,
+   * so the breakdown always totals the plots' known Rakba.
    */
-  getAnshdaarRakbaBreakdown(): AnshdaarSummary[] {
+  getRaiyatRakbaBreakdown(khatiyan: MoujaKhatiyan | null, plots: KhataPlot[]): AnshdaarSummary[] {
     const totals = new Map<string, number>();
+    const add = (name: string, value: number): void => {
+      totals.set(name, (totals.get(name) ?? 0) + value);
+    };
 
-    for (const record of KHESARA_RECORDS) {
-      if (record.dakhal.length === 0) {
-        totals.set(UNASSIGNED_LABEL, (totals.get(UNASSIGNED_LABEL) ?? 0) + record.rakba);
+    for (const plot of plots) {
+      if (plot.totalRakabaDecimal === 'NA') {
         continue;
       }
-      const shareSum = record.dakhal.reduce((sum, d) => sum + d.share, 0);
-      for (const share of record.dakhal) {
-        const normalizedShare = (share.share / shareSum) * record.rakba;
-        totals.set(share.name, (totals.get(share.name) ?? 0) + normalizedShare);
+      const rakba = plot.totalRakabaDecimal;
+      const shares = plot.dakhal.filter(
+        (d): d is { name: string; share: number } => d.share !== 'NA' && d.share > 0,
+      );
+      const shareSum = shares.reduce((sum, d) => sum + d.share, 0);
+      const scale = shareSum > rakba ? rakba / shareSum : 1;
+      for (const d of shares) {
+        add(d.name, d.share * scale);
+      }
+      if (shareSum < rakba) {
+        add(UNASSIGNED_LABEL, rakba - shareSum);
       }
     }
 
     const round2 = (value: number): number => Math.round(value * 100) / 100;
 
-    const anshdaarNames = Object.keys(ANSHDAAR_COLORS);
-    const breakdown: AnshdaarSummary[] = anshdaarNames
-      .filter((name) => totals.has(name))
-      .map((name) => ({ name, totalRakba: round2(totals.get(name)!), colorCode: ANSHDAAR_COLORS[name] }));
+    const raiyatOrder = [...new Set(khatiyan?.khata.flatMap((k) => k.raiyat_name) ?? [])];
+    for (const name of totals.keys()) {
+      if (!raiyatOrder.includes(name) && name !== OTHERS_LABEL && name !== UNASSIGNED_LABEL) {
+        raiyatOrder.push(name);
+      }
+    }
 
+    const breakdown: AnshdaarSummary[] = raiyatOrder.map((name, i) => ({
+      name,
+      totalRakba: round2(totals.get(name) ?? 0),
+      colorCode: RAIYAT_PALETTE[i % RAIYAT_PALETTE.length],
+    }));
+    if (totals.has(OTHERS_LABEL)) {
+      breakdown.push({ name: OTHERS_LABEL, totalRakba: round2(totals.get(OTHERS_LABEL)!), colorCode: OTHERS_COLOR });
+    }
     if (totals.has(UNASSIGNED_LABEL)) {
       breakdown.push({
         name: UNASSIGNED_LABEL,
@@ -160,6 +212,6 @@ export class LandData {
       });
     }
 
-    return breakdown;
+    return breakdown.filter((entry) => entry.totalRakba > 0);
   }
 }
