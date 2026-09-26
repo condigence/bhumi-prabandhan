@@ -143,10 +143,17 @@ export class Home {
     return othersHoldDakhal ? [...names, OTHERS_LABEL] : names;
   });
 
-  /** Anshdar descending from a Raiyat of the selected Khata (all Khata when none selected). */
+  /**
+   * Anshdar descending from the selected Raiyat (only their successors), or
+   * from any Raiyat of the selected Khata when no Raiyat is selected. The
+   * Raiyat themselves are picked from the Raiyat Name filter, not here.
+   */
   readonly anshdarOptions = computed<Anshdar[]>(() => {
-    const raiyatNames = this.raiyatNames();
-    return this.anshdarList().filter((a) => raiyatNames.includes(a.raiyat));
+    const raiyat = this.selectedRaiyat();
+    const raiyatNames = raiyat ? [raiyat] : this.raiyatNames();
+    return this.anshdarList().filter(
+      (a) => a.name !== a.raiyat && raiyatNames.includes(a.raiyat),
+    );
   });
 
   readonly selectedAnshdar = computed<Anshdar | null>(
