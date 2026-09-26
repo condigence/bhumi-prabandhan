@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../core/auth/auth';
 import {
+  Anshdar,
   AnshdaarSummary,
   DEFAULT_MOUJA,
   KhataPlot,
@@ -103,7 +104,7 @@ export class Home {
   readonly mobileNumber = this.auth.mobileNumber;
 
   readonly moujaInfo = signal(this.landData.getMoujaInfo());
-  readonly khataDharakList = signal(this.landData.getKhataDharakList());
+  readonly anshdarList = signal<Anshdar[]>(this.landData.getAnshdarList());
   readonly resultAnshdaarSummary = signal(this.landData.getResultAnshdaarSummary());
 
   readonly selectedLocation = signal<LocationSelection | null>(null);
@@ -121,15 +122,16 @@ export class Home {
   );
 
   readonly selectedKhataNo = signal('');
-  readonly selectedAnshdaar = signal<string | null>(null);
+  readonly selectedRaiyat = signal<string | null>(null);
   readonly selectedKhesaraNo = signal('');
+  readonly selectedAnshdarName = signal('');
 
   readonly khataNos = computed<string[]>(
     () => this.khatiyan()?.khata.map((k) => String(k.khata_number)) ?? [],
   );
 
   /** Raiyat of the selected Khata (all Khata when none selected), plus OTHERS when they hold Dakhal. */
-  readonly anshdaarNames = computed<string[]>(() => {
+  readonly raiyatNames = computed<string[]>(() => {
     const khataNo = this.selectedKhataNo();
     const khata = (this.khatiyan()?.khata ?? []).filter(
       (k) => !khataNo || String(k.khata_number) === khataNo,
@@ -141,11 +143,37 @@ export class Home {
     return othersHoldDakhal ? [...names, OTHERS_LABEL] : names;
   });
 
+  /** Anshdar descending from a Raiyat of the selected Khata (all Khata when none selected). */
+  readonly anshdarOptions = computed<Anshdar[]>(() => {
+    const raiyatNames = this.raiyatNames();
+    return this.anshdarList().filter((a) => raiyatNames.includes(a.raiyat));
+  });
+
+  readonly selectedAnshdar = computed<Anshdar | null>(
+    () => this.anshdarList().find((a) => a.name === this.selectedAnshdarName()) ?? null,
+  );
+
+  /**
+   * The selected Anshdar's estimated Rakba in the filtered records: their
+   * Raiyat's Dakhal share scaled by the Anshdar's part of that Raiyat's Ansh
+   * (e.g. Vasudev holds 1/12 of Paramhans' 1/3, so a quarter of it).
+   */
+  readonly selectedAnshdarEstimatedRakba = computed<number>(() => {
+    const anshdar = this.selectedAnshdar();
+    const raiyat = anshdar && this.anshdarList().find((a) => a.name === anshdar.raiyat);
+    if (!anshdar || !raiyat) {
+      return 0;
+    }
+    const estimate =
+      (this.selectedRaiyatShareTotal() * anshdar.share_percentage) / raiyat.share_percentage;
+    return Math.round(estimate * 100) / 100;
+  });
+
   /** Khesara / Plot numbers under the selected Khata and Raiyat. */
   readonly khesaraNos = computed<string[]>(() => {
-    const anshdaar = this.selectedAnshdaar();
+    const raiyat = this.selectedRaiyat();
     const plots = this.plotsForKhata(this.selectedKhataNo()).filter(
-      (p) => !anshdaar || hasDakhalShare(p, anshdaar),
+      (p) => !raiyat || hasDakhalShare(p, raiyat),
     );
     return [...new Set(plots.map((p) => String(p.khesara_no)))].sort((a, b) =>
       a.localeCompare(b, undefined, { numeric: true }),
@@ -153,12 +181,12 @@ export class Home {
   });
 
   readonly filteredKhataPlots = computed<KhataPlot[]>(() => {
-    const anshdaar = this.selectedAnshdaar();
+    const raiyat = this.selectedRaiyat();
     const khesaraNo = this.selectedKhesaraNo();
     return this.plotsForKhata(this.selectedKhataNo()).filter(
       (p) =>
         (!khesaraNo || String(p.khesara_no) === khesaraNo) &&
-        (!anshdaar || hasDakhalShare(p, anshdaar)),
+        (!raiyat || hasDakhalShare(p, raiyat)),
     );
   });
 
@@ -166,13 +194,13 @@ export class Home {
     this.filteredKhataPlots().reduce((sum, p) => sum + numberOrZero(p.totalRakabaDecimal), 0),
   );
 
-  readonly selectedAnshdaarShareTotal = computed<number>(() => {
-    const anshdaar = this.selectedAnshdaar();
-    if (!anshdaar) {
+  readonly selectedRaiyatShareTotal = computed<number>(() => {
+    const raiyat = this.selectedRaiyat();
+    if (!raiyat) {
       return 0;
     }
     return this.filteredKhataPlots().reduce((sum, p) => {
-      const share = p.dakhal.find((d) => d.name === anshdaar)?.share ?? 0;
+      const share = p.dakhal.find((d) => d.name === raiyat)?.share ?? 0;
       return sum + numberOrZero(share);
     }, 0);
   });
@@ -197,9 +225,9 @@ export class Home {
   onKhataNoChange(value: string): void {
     this.selectedKhataNo.set(value);
     // Drop Raiyat / Khesara selections that don't exist under the newly chosen Khata.
-    const anshdaar = this.selectedAnshdaar();
-    if (anshdaar && !this.anshdaarNames().includes(anshdaar)) {
-      this.selectedAnshdaar.set(null);
+    const raiyat = this.selectedRaiyat();
+    if (raiyat && !this.raiyatNames().includes(raiyat)) {
+      this.setRaiyat(null);
     }
     this.dropStaleKhesara();
   }
@@ -208,24 +236,39 @@ export class Home {
     this.selectedKhesaraNo.set(value);
   }
 
-  onAnshdaarChange(value: string): void {
-    this.selectedAnshdaar.set(value || null);
+  onRaiyatChange(value: string): void {
+    this.setRaiyat(value || null);
+    this.dropStaleKhesara();
+  }
+
+  /** Picking an Anshdar filters the records to the Raiyat their share descends from. */
+  onAnshdarChange(value: string): void {
+    this.selectedAnshdarName.set(value);
+    const anshdar = this.selectedAnshdar();
+    if (anshdar) {
+      this.selectedRaiyat.set(anshdar.raiyat);
+    }
     this.dropStaleKhesara();
   }
 
   resetKhataFilter(): void {
     this.selectedKhataNo.set('');
-    this.selectedAnshdaar.set(null);
+    this.selectedRaiyat.set(null);
     this.selectedKhesaraNo.set('');
+    this.selectedAnshdarName.set('');
   }
 
-  toggleAnshdaar(name: string): void {
-    this.selectedAnshdaar.update((current) => (current === name ? null : name));
+  toggleRaiyat(name: string): void {
+    this.setRaiyat(this.selectedRaiyat() === name ? null : name);
     this.dropStaleKhesara();
   }
 
-  clearAnshdaarFilter(): void {
-    this.selectedAnshdaar.set(null);
+  clearRaiyatFilter(): void {
+    this.setRaiyat(null);
+  }
+
+  clearAnshdarFilter(): void {
+    this.selectedAnshdarName.set('');
   }
 
   /** Dakhal holders with a share on this plot (zero shares hidden, "NA" kept). */
@@ -242,6 +285,14 @@ export class Home {
   private plotsForKhata(khataNo: string): KhataPlot[] {
     const plots = this.khataPlots();
     return khataNo ? plots.filter((p) => String(p.khata_number) === khataNo) : plots;
+  }
+
+  /** Sets the Raiyat filter, dropping an Anshdar selection that belongs to another Raiyat. */
+  private setRaiyat(raiyat: string | null): void {
+    this.selectedRaiyat.set(raiyat);
+    if (this.selectedAnshdar()?.raiyat !== raiyat) {
+      this.selectedAnshdarName.set('');
+    }
   }
 
   private dropStaleKhesara(): void {

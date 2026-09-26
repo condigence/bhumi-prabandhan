@@ -1,5 +1,5 @@
 import { Service } from '@angular/core';
-import khataDharakData from './data/khata-dharak.json';
+import anshdarData from './data/anshdar.json';
 import gosaipur109Plots from './data/Gosaipur-109.json';
 import gosaipur109Khatiyan from './data/mouja-khatiyan-Gosaipur-109.json';
 
@@ -15,15 +15,28 @@ export interface MoujaInfo {
   note: string;
 }
 
-export interface KhataDharak {
+/**
+ * One member of the family holding (or inheriting) an Ansh in the land,
+ * from anshdar.json — built from Vanshawali.json and tiwary_family_tree1.svg.
+ */
+export interface Anshdar {
   slNo: number;
   name: string;
   fatherName: string;
   grandfatherName: string;
   village: string;
-  totalRakabaDecimal: number;
+  totalRakabaDecimal: NumberOrNA;
   note?: string;
   reference?: string;
+  /** Generation below Badai Tiwary (Gen 0), as in the family tree. */
+  generation: number;
+  /** Family-tree node id (e.g. L3N1); "NA" when the person isn't drawn in the tree. */
+  nodeId: string;
+  /** Khatiyan Raiyat (Badai Tiwary's son) this Anshdar's share descends from. */
+  raiyat: string;
+  /** Share of Badai Tiwary's land, split equally among each person's children. */
+  share_fraction: string;
+  share_percentage: number;
 }
 
 /** Values missing from the source Khatiyan sheet are recorded as "NA". */
@@ -83,7 +96,7 @@ const MOUJA_INFO: MoujaInfo = {
     'Note : 1980 isvi k Biajdawa ko sudhar kiya gaya khatiyaan and anshdari k basis pe jo pahale ye sab vishesh jankari nahi rahane k karan bahut saari trutiya rah gayi thi.',
 };
 
-const KHATA_DHARAK_LIST: KhataDharak[] = khataDharakData;
+const ANSHDAR_LIST: Anshdar[] = anshdarData as Anshdar[];
 
 /**
  * Khatiyan + plot records per Mouja, keyed by the Mouja name used in
@@ -136,8 +149,8 @@ export class LandData {
     return MOUJA_INFO;
   }
 
-  getKhataDharakList(): KhataDharak[] {
-    return KHATA_DHARAK_LIST;
+  getAnshdarList(): Anshdar[] {
+    return ANSHDAR_LIST;
   }
 
   hasLandRecords(mouja: string): boolean {

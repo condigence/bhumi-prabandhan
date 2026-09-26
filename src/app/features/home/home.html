@@ -49,14 +49,14 @@
       </div>
 
       <div class="form-group">
-        <label for="anshdaar">Raiyat Name</label>
+        <label for="raiyat">Raiyat Name</label>
         <select
-          id="anshdaar"
-          [ngModel]="selectedAnshdaar() ?? ''"
-          (ngModelChange)="onAnshdaarChange($event)"
+          id="raiyat"
+          [ngModel]="selectedRaiyat() ?? ''"
+          (ngModelChange)="onRaiyatChange($event)"
         >
           <option value="">All Raiyat</option>
-          @for (name of anshdaarNames(); track name) {
+          @for (name of raiyatNames(); track name) {
             <option [value]="name">{{ name }}</option>
           }
         </select>
@@ -75,13 +75,38 @@
           }
         </select>
       </div>
+
+      <div class="form-group">
+        <label for="anshdar">Anshdar</label>
+        <select
+          id="anshdar"
+          [ngModel]="selectedAnshdarName()"
+          (ngModelChange)="onAnshdarChange($event)"
+        >
+          <option value="">All Anshdar</option>
+          @for (anshdar of anshdarOptions(); track anshdar.slNo) {
+            <option [value]="anshdar.name">
+              {{ anshdar.name }} (Gen {{ anshdar.generation }} · {{ anshdar.share_fraction }})
+            </option>
+          }
+        </select>
+      </div>
     </div>
 
-    @if (selectedAnshdaar(); as anshdaar) {
+    @if (selectedRaiyat(); as raiyat) {
       <div class="filter-chip">
-        Filtered by Raiyat Name: <strong>{{ anshdaar }}</strong> (combined Dakhal share in these
-        records: {{ selectedAnshdaarShareTotal() }} decimal)
-        <button type="button" class="chip-clear" (click)="clearAnshdaarFilter()">✕</button>
+        Filtered by Raiyat Name: <strong>{{ raiyat }}</strong> (combined Dakhal share in these
+        records: {{ selectedRaiyatShareTotal() }} decimal)
+        <button type="button" class="chip-clear" (click)="clearRaiyatFilter()">✕</button>
+      </div>
+    }
+
+    @if (selectedAnshdar(); as anshdar) {
+      <div class="filter-chip">
+        Filtered by Anshdar: <strong>{{ anshdar.name }}</strong> — {{ anshdar.share_fraction }} Ansh
+        via Raiyat {{ anshdar.raiyat }} (estimated share in these records:
+        {{ selectedAnshdarEstimatedRakba() }} decimal)
+        <button type="button" class="chip-clear" (click)="clearAnshdarFilter()">✕</button>
       </div>
     }
 
@@ -89,10 +114,10 @@
       <button class="btn-secondary" (click)="resetKhataFilter()">↻ Reset</button>
     </div>
 
-    <!-- Mouja &amp; Khata Dharak and Anshdaar-wise Rakba Distribution, side by side -->
+    <!-- Mouja &amp; Anshdar and Anshdaar-wise Rakba Distribution, side by side -->
     <div class="top-row">
       <div class="card">
-        <div class="card-title">Mouja &amp; Khata Dharak</div>
+        <div class="card-title">Mouja &amp; Anshdar</div>
 
         <p class="mouja-note">{{ moujaInfo().note }}</p>
 
@@ -101,25 +126,36 @@
             <thead>
               <tr>
                 <th>Sl.</th>
-                <th>Khata Dharak ka Naam</th>
+                <th>Anshdar ka Naam</th>
                 <th>Son Of</th>
+                <th>Gen</th>
+                <th>Raiyat</th>
+                <th>Ansh</th>
                 <th>Village</th>
                 <th>Total Rakaba (Decimal)</th>
               </tr>
             </thead>
             <tbody>
-              @for (dharak of khataDharakList(); track dharak.slNo) {
-                <tr>
+              @for (dharak of anshdarList(); track dharak.slNo) {
+                <tr [class.anshdar-row-selected]="dharak.name === selectedAnshdarName()">
                   <td>{{ dharak.slNo }}</td>
                   <td class="strong">{{ dharak.name }}</td>
-                  <td>{{ dharak.fatherName }}, S/o {{ dharak.grandfatherName }}</td>
+                  <td>
+                    {{ dharak.fatherName }}
+                    @if (dharak.grandfatherName !== 'NA') {
+                      , S/o {{ dharak.grandfatherName }}
+                    }
+                  </td>
+                  <td>{{ dharak.generation }}</td>
+                  <td>{{ dharak.raiyat }}</td>
+                  <td>{{ dharak.share_fraction }}</td>
                   <td>{{ dharak.village }}</td>
                   <td>{{ dharak.totalRakabaDecimal }}</td>
                 </tr>
                 @if (dharak.note) {
                   <tr class="note-row">
                     <td></td>
-                    <td colspan="4">
+                    <td colspan="7">
                       <span class="note-label">Note:</span> {{ dharak.note }}
                       @if (dharak.reference) {
                         <span class="note-label">· Reference:</span> {{ dharak.reference }}
@@ -158,18 +194,18 @@
                 [attr.d]="slice.pathD"
                 [attr.fill]="slice.colorCode"
                 [attr.transform]="
-                  selectedAnshdaar() === slice.name
+                  selectedRaiyat() === slice.name
                     ? 'translate(' + slice.explodeX + ',' + slice.explodeY + ')'
                     : null
                 "
-                [class.pie-slice-selected]="selectedAnshdaar() === slice.name"
-                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                [class.pie-slice-selected]="selectedRaiyat() === slice.name"
+                [class.pie-slice-dimmed]="!!selectedRaiyat() && selectedRaiyat() !== slice.name"
                 class="pie-slice"
                 stroke="#ffffff"
                 stroke-width="2"
                 role="button"
                 tabindex="0"
-                [attr.aria-pressed]="selectedAnshdaar() === slice.name"
+                [attr.aria-pressed]="selectedRaiyat() === slice.name"
                 [attr.aria-label]="
                   slice.name +
                   ': ' +
@@ -178,8 +214,8 @@
                   (slice.percent | number: '1.1-1') +
                   '%). Click to filter records for this Anshdaar.'
                 "
-                (click)="toggleAnshdaar(slice.name)"
-                (keydown.enter)="toggleAnshdaar(slice.name)"
+                (click)="toggleRaiyat(slice.name)"
+                (keydown.enter)="toggleRaiyat(slice.name)"
               />
             }
             @for (slice of pieSlices(); track slice.name) {
@@ -189,14 +225,14 @@
                 [attr.x2]="slice.leaderX2"
                 [attr.y2]="slice.leaderY2"
                 [attr.stroke]="slice.colorCode"
-                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                [class.pie-slice-dimmed]="!!selectedRaiyat() && selectedRaiyat() !== slice.name"
                 stroke-width="1.5"
               />
               <text
                 [attr.x]="slice.labelX"
                 [attr.y]="slice.labelY"
                 [attr.text-anchor]="slice.textAnchor"
-                [class.pie-slice-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
+                [class.pie-slice-dimmed]="!!selectedRaiyat() && selectedRaiyat() !== slice.name"
                 class="pie-label"
               >
                 {{ slice.percent | number: '1.1-1' }}%
@@ -215,11 +251,11 @@
                 class="legend-item"
                 role="button"
                 tabindex="0"
-                [class.legend-item-selected]="selectedAnshdaar() === slice.name"
-                [class.legend-item-dimmed]="!!selectedAnshdaar() && selectedAnshdaar() !== slice.name"
-                [attr.aria-pressed]="selectedAnshdaar() === slice.name"
-                (click)="toggleAnshdaar(slice.name)"
-                (keydown.enter)="toggleAnshdaar(slice.name)"
+                [class.legend-item-selected]="selectedRaiyat() === slice.name"
+                [class.legend-item-dimmed]="!!selectedRaiyat() && selectedRaiyat() !== slice.name"
+                [attr.aria-pressed]="selectedRaiyat() === slice.name"
+                (click)="toggleRaiyat(slice.name)"
+                (keydown.enter)="toggleRaiyat(slice.name)"
               >
                 <span class="legend-swatch" [style.background]="slice.colorCode"></span>
                 <span class="legend-name">{{ slice.name }}</span>
@@ -269,7 +305,7 @@
                   —
                 } @else {
                   @for (d of dakhalHolders(plot); track d.name; let last = $last) {
-                    <span [class.dakhal-highlight]="d.name === selectedAnshdaar()"
+                    <span [class.dakhal-highlight]="d.name === selectedRaiyat()"
                       >{{ d.name }} ({{ d.share }})</span
                     >{{ last ? '' : ', ' }}
                   }
