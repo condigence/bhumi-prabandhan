@@ -124,6 +124,15 @@
   background: #e8f5e9;
 }
 
+.sold-row td {
+  color: #c62828;
+}
+
+.sold-badge {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
 .note-row td {
   white-space: normal;
   background: #f8f9fa;
@@ -139,6 +148,16 @@
 
 .strong {
   font-weight: bold;
+}
+
+.filtered-pie-card {
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 18px;
+}
+
+.legend-item-static {
+  cursor: default;
 }
 
 .pie-subtitle {

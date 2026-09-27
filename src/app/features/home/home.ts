@@ -165,15 +165,15 @@ export class Home {
    * Raiyat's Dakhal share scaled by the Anshdar's part of that Raiyat's Ansh
    * (e.g. Vasudev holds 1/12 of Paramhans' 1/3, so a quarter of it).
    */
-  readonly selectedAnshdarEstimatedRakba = computed<number>(() => {
+  readonly selectedAnshdarEstimatedRakba = computed<number>(
+    () => Math.round(this.selectedRaiyatShareTotal() * this.selectedAnshdarRatio() * 100) / 100,
+  );
+
+  /** The selected Anshdar's part of their Raiyat's Ansh (0 when none selected). */
+  private readonly selectedAnshdarRatio = computed<number>(() => {
     const anshdar = this.selectedAnshdar();
     const raiyat = anshdar && this.anshdarList().find((a) => a.name === anshdar.raiyat);
-    if (!anshdar || !raiyat) {
-      return 0;
-    }
-    const estimate =
-      (this.selectedRaiyatShareTotal() * anshdar.share_percentage) / raiyat.share_percentage;
-    return Math.round(estimate * 100) / 100;
+    return anshdar && raiyat ? anshdar.share_percentage / raiyat.share_percentage : 0;
   });
 
   /** Khesara / Plot numbers under the selected Khata and Raiyat. */
@@ -223,6 +223,57 @@ export class Home {
   readonly pieSlices = computed<PieSlice[]>(() =>
     buildPieSlices(this.anshdaarBreakdown(), this.breakdownTotalRakba()),
   );
+
+  /**
+   * Rakba distribution of only the records matching the Khata / Raiyat /
+   * Khesara / Anshdar filters. With an Anshdar selected, their Raiyat's slice
+   * is split into the Anshdar's estimated part and the rest of that Raiyat's line.
+   */
+  readonly filteredBreakdown = computed<AnshdaarSummary[]>(() => {
+    const breakdown = this.landData.getRaiyatRakbaBreakdown(
+      this.khatiyan(),
+      this.filteredKhataPlots(),
+    );
+    const anshdar = this.selectedAnshdar();
+    const ratio = this.selectedAnshdarRatio();
+    if (!anshdar || ratio >= 1) {
+      return breakdown;
+    }
+    const round2 = (value: number): number => Math.round(value * 100) / 100;
+    return breakdown.flatMap((slice) => {
+      if (slice.name !== anshdar.raiyat) {
+        return [slice];
+      }
+      const anshdarRakba = round2(slice.totalRakba * ratio);
+      return [
+        { name: anshdar.name, totalRakba: anshdarRakba, colorCode: slice.colorCode },
+        {
+          name: `Rest of ${slice.name} line`,
+          totalRakba: round2(slice.totalRakba - anshdarRakba),
+          colorCode: `${slice.colorCode}66`,
+        },
+      ].filter((s) => s.totalRakba > 0);
+    });
+  });
+
+  readonly filteredBreakdownTotal = computed<number>(() =>
+    this.filteredBreakdown().reduce((sum, a) => sum + a.totalRakba, 0),
+  );
+
+  readonly filteredPieSlices = computed<PieSlice[]>(() =>
+    buildPieSlices(this.filteredBreakdown(), this.filteredBreakdownTotal()),
+  );
+
+  /** Human-readable summary of the active filters, for the filtered pie's subtitle. */
+  readonly activeFilterSummary = computed<string>(() => {
+    const parts = [
+      this.selectedKhataNo() && `Khata ${this.selectedKhataNo()}`,
+      this.selectedRaiyat() && `Raiyat ${this.selectedRaiyat()}`,
+      this.selectedKhesaraNo() && `Khesara ${this.selectedKhesaraNo()}`,
+      this.selectedAnshdarName() && `Anshdar ${this.selectedAnshdarName()}`,
+    ].filter(Boolean);
+    return parts.length ? parts.join(' · ') : 'No filters selected (all records)';
+  });
 
   onLocationChange(location: LocationSelection | null): void {
     this.selectedLocation.set(location);

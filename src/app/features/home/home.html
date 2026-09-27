@@ -114,59 +114,70 @@
       <button class="btn-secondary" (click)="resetKhataFilter()">↻ Reset</button>
     </div>
 
-    <!-- Mouja &amp; Anshdar and Anshdaar-wise Rakba Distribution, side by side -->
+    <!-- Filtered and overall Rakba Distribution, side by side -->
     <div class="top-row">
       <div class="card">
-        <div class="card-title">Mouja &amp; Anshdar</div>
+        <div class="card-title">Filtered Rakba Distribution</div>
+        <p class="pie-subtitle">
+          {{ activeFilterSummary() }} — {{ filteredKhataPlots().length }} Khesara,
+          {{ filteredBreakdownTotal() | number: '1.0-2' }} decimal.
+        </p>
 
-        <p class="mouja-note">{{ moujaInfo().note }}</p>
-
-        <div class="table-wrapper">
-          <table class="khata-dharak-table">
-            <thead>
-              <tr>
-                <th>Sl.</th>
-                <th>Anshdar ka Naam</th>
-                <th>Son Of</th>
-                <th>Gen</th>
-                <th>Raiyat</th>
-                <th>Ansh</th>
-                <th>Village</th>
-                <th>Total Rakaba (Decimal)</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (dharak of anshdarList(); track dharak.slNo) {
-                <tr [class.anshdar-row-selected]="dharak.name === selectedAnshdarName()">
-                  <td>{{ dharak.slNo }}</td>
-                  <td class="strong">{{ dharak.name }}</td>
-                  <td>
-                    {{ dharak.fatherName }}
-                    @if (dharak.grandfatherName !== 'NA') {
-                      , S/o {{ dharak.grandfatherName }}
-                    }
-                  </td>
-                  <td>{{ dharak.generation }}</td>
-                  <td>{{ dharak.raiyat }}</td>
-                  <td>{{ dharak.share_fraction }}</td>
-                  <td>{{ dharak.village }}</td>
-                  <td>{{ dharak.totalRakabaDecimal }}</td>
-                </tr>
-                @if (dharak.note) {
-                  <tr class="note-row">
-                    <td></td>
-                    <td colspan="7">
-                      <span class="note-label">Note:</span> {{ dharak.note }}
-                      @if (dharak.reference) {
-                        <span class="note-label">· Reference:</span> {{ dharak.reference }}
-                      }
-                    </td>
-                  </tr>
-                }
+        @if (filteredPieSlices().length === 0) {
+          <p class="empty-cell">No Dakhal recorded in the records matching the current filters.</p>
+        } @else {
+          <div class="pie-section">
+            <svg
+              class="pie-chart"
+              viewBox="0 0 240 240"
+              role="img"
+              [attr.aria-label]="
+                'Filtered Rakba distribution, total ' +
+                (filteredBreakdownTotal() | number: '1.0-2') +
+                ' decimal.'
+              "
+            >
+              @for (slice of filteredPieSlices(); track slice.name) {
+                <path [attr.d]="slice.pathD" [attr.fill]="slice.colorCode" stroke="#ffffff" stroke-width="2" />
               }
-            </tbody>
-          </table>
-        </div>
+              @for (slice of filteredPieSlices(); track slice.name) {
+                <line
+                  [attr.x1]="slice.leaderX1"
+                  [attr.y1]="slice.leaderY1"
+                  [attr.x2]="slice.leaderX2"
+                  [attr.y2]="slice.leaderY2"
+                  [attr.stroke]="slice.colorCode"
+                  stroke-width="1.5"
+                />
+                <text
+                  [attr.x]="slice.labelX"
+                  [attr.y]="slice.labelY"
+                  [attr.text-anchor]="slice.textAnchor"
+                  class="pie-label"
+                >
+                  {{ slice.percent | number: '1.1-1' }}%
+                </text>
+              }
+            </svg>
+
+            <div class="pie-legend">
+              <div class="legend-total">
+                <span class="legend-total-value">{{ filteredBreakdownTotal() | number: '1.0-2' }}</span>
+                <span class="legend-total-label">Filtered Rakba (Decimal)</span>
+              </div>
+
+              @for (slice of filteredPieSlices(); track slice.name) {
+                <div class="legend-item legend-item-static">
+                  <span class="legend-swatch" [style.background]="slice.colorCode"></span>
+                  <span class="legend-name">{{ slice.name }}</span>
+                  <span class="legend-value"
+                    >{{ slice.totalRakba }} ({{ slice.percent | number: '1.1-1' }}%)</span
+                  >
+                </div>
+              }
+            </div>
+          </div>
+        }
       </div>
 
       <div class="card">
@@ -295,7 +306,7 @@
         </thead>
         <tbody>
           @for (plot of filteredKhataPlots(); track $index) {
-            <tr>
+            <tr [class.sold-row]="plot.isSold">
               <td>{{ $index + 1 }}</td>
               <td>{{ plot.khata_number }}</td>
               <td>{{ plot.khesara_no }}</td>
@@ -311,7 +322,12 @@
                   }
                 }
               </td>
-              <td class="note-cell">{{ plotNote(plot) }}</td>
+              <td class="note-cell">
+                @if (plot.isSold) {
+                  <span class="sold-badge">Sold{{ plot.seller ? ' by ' + plot.seller : '' }}</span>
+                }
+                {{ plotNote(plot) }}
+              </td>
             </tr>
           } @empty {
             <tr>
@@ -327,6 +343,62 @@
           </tr>
         </tfoot>
       </table>
+    </div>
+
+    <!-- Mouja &amp; Anshdar, full width -->
+    <div class="top-row">
+      <div class="card" style="grid-column: 1 / -1">
+        <div class="card-title">Mouja &amp; Anshdar</div>
+
+        <p class="mouja-note">{{ moujaInfo().note }}</p>
+
+        <div class="table-wrapper">
+          <table class="khata-dharak-table">
+            <thead>
+              <tr>
+                <th>Sl.</th>
+                <th>Anshdar ka Naam</th>
+                <th>Son Of</th>
+                <th>Gen</th>
+                <th>Raiyat</th>
+                <th>Ansh</th>
+                <th>Village</th>
+                <th>Total Rakaba (Decimal)</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (dharak of anshdarList(); track dharak.slNo) {
+                <tr [class.anshdar-row-selected]="dharak.name === selectedAnshdarName()">
+                  <td>{{ dharak.slNo }}</td>
+                  <td class="strong">{{ dharak.name }}</td>
+                  <td>
+                    {{ dharak.fatherName }}
+                    @if (dharak.grandfatherName !== 'NA') {
+                      , S/o {{ dharak.grandfatherName }}
+                    }
+                  </td>
+                  <td>{{ dharak.generation }}</td>
+                  <td>{{ dharak.raiyat }}</td>
+                  <td>{{ dharak.share_fraction }}</td>
+                  <td>{{ dharak.village }}</td>
+                  <td>{{ dharak.totalRakabaDecimal }}</td>
+                </tr>
+                @if (dharak.note) {
+                  <tr class="note-row">
+                    <td></td>
+                    <td colspan="7">
+                      <span class="note-label">Note:</span> {{ dharak.note }}
+                      @if (dharak.reference) {
+                        <span class="note-label">· Reference:</span> {{ dharak.reference }}
+                      }
+                    </td>
+                  </tr>
+                }
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

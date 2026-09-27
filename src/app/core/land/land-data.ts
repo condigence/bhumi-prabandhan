@@ -75,6 +75,10 @@ export interface KhataPlot {
   dakhal: DakhalShare[];
   landMark: string;
   comments: string;
+  /** True only when the plot is explicitly recorded as sold. */
+  isSold: boolean;
+  /** Who sold it (the Dakhal holder, or e.g. Lakhinarayan Tiwary for LNT); "" when not sold. */
+  seller: string;
 }
 
 interface MoujaLandRecords {

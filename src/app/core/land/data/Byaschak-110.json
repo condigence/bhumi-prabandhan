@@ -12,7 +12,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 6,
@@ -27,7 +29,9 @@
       { "name": "OTHERS", "share": "NA" }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 6,
@@ -42,7 +46,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 6,
@@ -57,7 +63,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -72,7 +80,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -87,7 +97,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -102,7 +114,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -117,7 +131,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -132,7 +148,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -147,7 +165,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -162,7 +182,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -177,7 +199,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -192,7 +216,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 11,
@@ -207,7 +233,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 12,
@@ -222,7 +250,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 12,
@@ -237,7 +267,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 12,
@@ -252,7 +284,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 72,
@@ -267,7 +301,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   },
   {
     "khata_number": 72,
@@ -282,6 +318,8 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": ""
+    "comments": "",
+    "isSold": false,
+    "seller": ""
   }
 ]
