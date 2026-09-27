@@ -264,6 +264,20 @@ export class Home {
     buildPieSlices(this.filteredBreakdown(), this.filteredBreakdownTotal()),
   );
 
+  readonly excessDakhalPlots = computed<string[]>(() =>
+    this.landData.getExcessDakhalPlots(this.khataPlots()),
+  );
+
+  readonly filteredExcessDakhalPlots = computed<string[]>(() =>
+    this.landData.getExcessDakhalPlots(this.filteredKhataPlots()),
+  );
+
+  /** Filtered-pie slice of the selected Anshdar (or else Raiyat), for the table's Dakhal Rakba row. */
+  readonly selectedDakhalSlice = computed<PieSlice | null>(() => {
+    const name = this.selectedAnshdarName() || this.selectedRaiyat();
+    return (name && this.filteredPieSlices().find((s) => s.name === name)) || null;
+  });
+
   /** Human-readable summary of the active filters, for the filtered pie's subtitle. */
   readonly activeFilterSummary = computed<string>(() => {
     const parts = [

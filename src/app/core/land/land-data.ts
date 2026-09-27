@@ -186,12 +186,29 @@ export class LandData {
   }
 
   /**
-   * Each Raiyat's Dakhal share summed across the given plots. Shares recorded
-   * as "NA" are skipped. When a plot's shares add up to more than its Rakba
-   * (e.g. Khata 135 / Khesara 888) they are scaled down to the Rakba; when
-   * they add up to less, the remainder goes to a "Not Currently Dakhal" slice,
-   * so the breakdown always totals the plots' known Rakba.
+   * Each Raiyat's Dakhal share summed across the given plots, as recorded.
+   * Shares recorded as "NA" are skipped. When a plot's shares add up to less
+   * than its Rakba, the remainder goes to a "Not Currently Dakhal" slice. When
+   * they add up to more (e.g. Gosaipur Khata 135 / Khesara 888), the recorded
+   * shares are kept, so the breakdown total can exceed the plots' Rakba — see
+   * getExcessDakhalPlots().
    */
+  /** Plots whose recorded Dakhal shares add up to more than their Rakba, as "Khata/Khesara". */
+  getExcessDakhalPlots(plots: KhataPlot[]): string[] {
+    return plots
+      .filter((plot) => {
+        if (plot.totalRakabaDecimal === 'NA') {
+          return false;
+        }
+        const shareSum = plot.dakhal.reduce(
+          (sum, d) => sum + (d.share === 'NA' ? 0 : d.share),
+          0,
+        );
+        return shareSum > plot.totalRakabaDecimal + 1e-9;
+      })
+      .map((plot) => `${plot.khata_number}/${plot.khesara_no}`);
+  }
+
   getRaiyatRakbaBreakdown(khatiyan: MoujaKhatiyan | null, plots: KhataPlot[]): AnshdaarSummary[] {
     const totals = new Map<string, number>();
     const add = (name: string, value: number): void => {
@@ -207,9 +224,8 @@ export class LandData {
         (d): d is { name: string; share: number } => d.share !== 'NA' && d.share > 0,
       );
       const shareSum = shares.reduce((sum, d) => sum + d.share, 0);
-      const scale = shareSum > rakba ? rakba / shareSum : 1;
       for (const d of shares) {
-        add(d.name, d.share * scale);
+        add(d.name, d.share);
       }
       if (shareSum < rakba) {
         add(UNASSIGNED_LABEL, rakba - shareSum);

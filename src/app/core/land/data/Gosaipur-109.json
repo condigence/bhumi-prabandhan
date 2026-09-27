@@ -803,12 +803,12 @@
     "khesara_no": 888,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 30,
+    "totalRakabaDecimal": 90,
     "dakhal": [
       { "name": "Babuji Tiwary", "share": 0 },
       { "name": "Paramhans Tiwary", "share": 0 },
       { "name": "Ramchij Tiwary", "share": 30 },
-      { "name": "OTHERS", "share": 30 }
+      { "name": "OTHERS", "share": 60 }
     ],
     "landMark": "",
     "comments": "",

@@ -120,7 +120,11 @@
         <div class="card-title">Filtered Rakba Distribution</div>
         <p class="pie-subtitle">
           {{ activeFilterSummary() }} — {{ filteredKhataPlots().length }} Khesara,
-          {{ filteredBreakdownTotal() | number: '1.0-2' }} decimal.
+          {{ filteredTotalRakba() | number: '1.0-2' }} decimal Rakba.
+          @if (filteredExcessDakhalPlots().length) {
+            Recorded Dakhal exceeds Rakba on Khata/Khesara
+            {{ filteredExcessDakhalPlots().join(', ') }}, so the chart total is higher.
+          }
         </p>
 
         @if (filteredPieSlices().length === 0) {
@@ -163,7 +167,7 @@
             <div class="pie-legend">
               <div class="legend-total">
                 <span class="legend-total-value">{{ filteredBreakdownTotal() | number: '1.0-2' }}</span>
-                <span class="legend-total-label">Filtered Rakba (Decimal)</span>
+                <span class="legend-total-label">Filtered Dakhal (Decimal)</span>
               </div>
 
               @for (slice of filteredPieSlices(); track slice.name) {
@@ -184,8 +188,11 @@
         <div class="card-title">Anshdaar-wise Rakba Distribution</div>
         <p class="pie-subtitle">
           Each Raiyat's actual Dakhal share, summed across every Khesara of Mouja
-          {{ selectedMoujaName() }}, out of the known Total Rakba
-          ({{ breakdownTotalRakba() | number: '1.0-2' }} decimal).
+          {{ selectedMoujaName() }}, plus land with no recorded Dakhal.
+          @if (excessDakhalPlots().length) {
+            Recorded Dakhal exceeds Rakba on Khata/Khesara {{ excessDakhalPlots().join(', ') }}, so
+            the chart total is higher than the Total Rakba.
+          }
         </p>
 
         <div class="pie-section">
@@ -254,7 +261,7 @@
           <div class="pie-legend">
             <div class="legend-total">
               <span class="legend-total-value">{{ breakdownTotalRakba() | number: '1.0-2' }}</span>
-              <span class="legend-total-label">Total Rakba (Decimal)</span>
+              <span class="legend-total-label">Total Dakhal (Decimal)</span>
             </div>
 
             @for (slice of pieSlices(); track slice.name) {
@@ -292,6 +299,7 @@
       </div>
     </div>
 
+    <div class="card-title">Rakba wise Dakhal</div>
     <div class="table-wrapper">
       <table>
         <thead>
@@ -341,6 +349,15 @@
             <td class="strong">{{ filteredTotalRakba() }}</td>
             <td colspan="2"></td>
           </tr>
+          @if (selectedDakhalSlice(); as dakhal) {
+            <tr>
+              <td colspan="3" class="total-label">Dakhal Rakba — {{ dakhal.name }}</td>
+              <td class="strong">
+                {{ dakhal.totalRakba }} ({{ dakhal.percent | number: '1.1-1' }}%)
+              </td>
+              <td colspan="2"></td>
+            </tr>
+          }
         </tfoot>
       </table>
     </div>
