@@ -1,0 +1,30 @@
+{
+  "mouja": "Byaschak-110",
+  "khatiyan_name": "Byaschak",
+  "khata": [
+  {
+      "khata_number": 6,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 4,
+      "totalRakabaDecimal": 189
+  },
+  {
+      "khata_number": 11,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 10,
+      "totalRakabaDecimal": 373
+  },
+  {
+      "khata_number": 12,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 3,
+      "totalRakabaDecimal": 71
+  },
+  {
+      "khata_number": 72,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 2,
+      "totalRakabaDecimal": 36
+  }
+]
+}

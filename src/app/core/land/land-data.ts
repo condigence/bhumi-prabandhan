@@ -1,5 +1,7 @@
 import { Service } from '@angular/core';
 import anshdarData from './data/anshdar.json';
+import byaschak110Plots from './data/Byaschak-110.json';
+import byaschak110Khatiyan from './data/mouja-khatiyan-Byaschak-110.json';
 import gosaipur109Plots from './data/Gosaipur-109.json';
 import gosaipur109Khatiyan from './data/mouja-khatiyan-Gosaipur-109.json';
 import randadeeh111Plots from './data/Randadeeh-111.json';
@@ -112,6 +114,10 @@ const MOUJA_LAND_RECORDS: Record<string, MoujaLandRecords> = {
   'Randadeeh-111': {
     khatiyan: randadeeh111Khatiyan as MoujaKhatiyan,
     plots: randadeeh111Plots as KhataPlot[],
+  },
+  'Byaschak-110': {
+    khatiyan: byaschak110Khatiyan as MoujaKhatiyan,
+    plots: byaschak110Plots as KhataPlot[],
   },
 };
 
