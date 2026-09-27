@@ -352,9 +352,7 @@
           @if (selectedDakhalSlice(); as dakhal) {
             <tr>
               <td colspan="3" class="total-label">Dakhal Rakba — {{ dakhal.name }}</td>
-              <td class="strong">
-                {{ dakhal.totalRakba }} ({{ dakhal.percent | number: '1.1-1' }}%)
-              </td>
+              <td class="strong">{{ dakhal.totalRakba }}</td>
               <td colspan="2"></td>
             </tr>
           }
