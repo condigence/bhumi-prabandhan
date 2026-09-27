@@ -1,0 +1,90 @@
+{
+  "mouja": "Randadeeh-111",
+  "khatiyan_name": "Randadeeh",
+  "khata": [
+  {
+      "khata_number": 163,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 4,
+      "totalRakabaDecimal": 98
+  },
+  {
+      "khata_number": 164,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 29,
+      "totalRakabaDecimal": 1241
+  },
+  {
+      "khata_number": 165,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 20,
+      "totalRakabaDecimal": 542
+  },
+  {
+      "khata_number": 166,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 6,
+      "totalRakabaDecimal": 99
+  },
+  {
+      "khata_number": 167,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 15,
+      "totalRakabaDecimal": 328
+  },
+  {
+      "khata_number": 44,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 1,
+      "totalRakabaDecimal": 19
+  },
+  {
+      "khata_number": 45,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 5,
+      "totalRakabaDecimal": 170
+  },
+  {
+      "khata_number": 47,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 2,
+      "totalRakabaDecimal": 59
+  },
+  {
+      "khata_number": 245,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 1,
+      "totalRakabaDecimal": 32
+  },
+  {
+      "khata_number": 280,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 1,
+      "totalRakabaDecimal": 3
+  },
+  {
+      "khata_number": 281,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 7,
+      "totalRakabaDecimal": 151
+  },
+  {
+      "khata_number": 294,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 2,
+      "totalRakabaDecimal": 62
+  },
+  {
+      "khata_number": 293,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 4,
+      "totalRakabaDecimal": 122
+  },
+  {
+      "khata_number": 17,
+      "raiyat_name": ["Babuji Tiwary", "Paramhans Tiwary", "Ramchij Tiwary" ],
+      "total_plots": 1,
+      "totalRakabaDecimal": 17
+  }
+]
+}

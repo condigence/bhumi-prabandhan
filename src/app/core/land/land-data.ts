@@ -2,6 +2,8 @@ import { Service } from '@angular/core';
 import anshdarData from './data/anshdar.json';
 import gosaipur109Plots from './data/Gosaipur-109.json';
 import gosaipur109Khatiyan from './data/mouja-khatiyan-Gosaipur-109.json';
+import randadeeh111Plots from './data/Randadeeh-111.json';
+import randadeeh111Khatiyan from './data/mouja-khatiyan-Randadeeh-111.json';
 
 /**
  * Source: "Untitled spreadsheet.xlsx" (Sheet1) — Khanagi Bantwara (private partition)
@@ -106,6 +108,10 @@ const MOUJA_LAND_RECORDS: Record<string, MoujaLandRecords> = {
   'Gosaipur-109': {
     khatiyan: gosaipur109Khatiyan as MoujaKhatiyan,
     plots: gosaipur109Plots as KhataPlot[],
+  },
+  'Randadeeh-111': {
+    khatiyan: randadeeh111Khatiyan as MoujaKhatiyan,
+    plots: randadeeh111Plots as KhataPlot[],
   },
 };
 

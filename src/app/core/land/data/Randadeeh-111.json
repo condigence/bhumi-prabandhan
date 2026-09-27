@@ -1,899 +1,1469 @@
 [
   {
-    "khata_number": 10,
-    "khesara_no": 625,
-    "plot_type": "sikmi",
-    "chouhadi": [],
-    "totalRakabaDecimal": 7,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 1.3 },
-      { "name": "Paramhans Tiwary", "share": 1.3 },
-      { "name": "Ramchij Tiwary", "share": 1.4 },
-      { "name": "OTHERS", "share": 3 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 87,
-    "khesara_no": 609,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 3,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 1 },
-      { "name": "Paramhans Tiwary", "share": 1 },
-      { "name": "Ramchij Tiwary", "share": 1 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 87,
-    "khesara_no": 610,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 5,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 1.6 },
-      { "name": "Paramhans Tiwary", "share": 1.8 },
-      { "name": "Ramchij Tiwary", "share": 1.6 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 88,
-    "khesara_no": 299,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 16,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 8 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 8 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 17,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 10,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 8 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 19,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 6,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 6 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 315,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 11,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 11 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 330,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 13 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 331,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 15,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 15 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": "341/98",
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 9,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 9 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 342,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 22,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 22 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 346,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 18,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 18 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 400,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 18,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 18 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 401,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 15,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 15 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 402,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 12,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 12 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 439,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 16,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 16 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 440,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 15,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 15 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 467,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 10,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 10 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 468,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 41,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 41 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 477,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 13 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 478,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 12,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 12 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 617,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 4,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 4 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 624,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 12,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 4 },
-      { "name": "Paramhans Tiwary", "share": 4 },
-      { "name": "Ramchij Tiwary", "share": 4 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 646,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 6,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 6 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 675,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 13 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 680,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 13 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 824,
+    "khata_number": 163,
+    "khesara_no": 136,
     "plot_type": "",
     "chouhadi": [],
     "totalRakabaDecimal": 20,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 20 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 20, "sold": 20, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 89,
-    "khesara_no": 825,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 22,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 22 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 840,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 22,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 22 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 875,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 35,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 35 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 930,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 21,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 21 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 89,
-    "khesara_no": 931,
+    "khata_number": 163,
+    "khesara_no": 137,
     "plot_type": "",
     "chouhadi": [],
     "totalRakabaDecimal": 6,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 6 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 6, "sold": 6, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 90,
-    "khesara_no": 730,
+    "khata_number": 163,
+    "khesara_no": 138,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 9,
+    "totalRakabaDecimal": 16,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 9 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 16, "sold": 16, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 113,
-    "khesara_no": 517,
+    "khata_number": 163,
+    "khesara_no": 202,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 7,
+    "totalRakabaDecimal": 56,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 7 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 56, "sold": 56, "remaining": 0, "seller": "LNT", "comments": "LNT(Deed 27-05-1987 Lakhan Sah)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 113,
-    "khesara_no": 518,
+    "khata_number": 164,
+    "khesara_no": 121,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 1,
+    "totalRakabaDecimal": 47,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 1 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 47, "sold": 0, "remaining": 47, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 15.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 113,
-    "khesara_no": 528,
+    "khata_number": 164,
+    "khesara_no": 124,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 7,
+    "totalRakabaDecimal": 46,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 7 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 46, "sold": 0, "remaining": 46, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 113,
-    "khesara_no": 551,
+    "khata_number": 164,
+    "khesara_no": 139,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 6,
+    "totalRakabaDecimal": 52,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 6 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 52, "sold": 52, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 113,
-    "khesara_no": 769,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 4,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 4 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 113,
-    "khesara_no": 770,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 6,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 6 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 113,
-    "khesara_no": 772,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 23,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 23 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 113,
-    "khesara_no": 792,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 10,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 10 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 360,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 7,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 7 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 454,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 25,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 25 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 722,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 4,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 4 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 765,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 6.5 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 6.5 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 766,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 10,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 10 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 126,
-    "khesara_no": 921,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 18,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 18 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 135,
-    "khesara_no": 888,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 30,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 30 },
-      { "name": "OTHERS", "share": 30 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 602,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": "NA" },
-      { "name": "Paramhans Tiwary", "share": "NA" },
-      { "name": "Ramchij Tiwary", "share": "NA" },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 608,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": "NA" },
-      { "name": "Paramhans Tiwary", "share": "NA" },
-      { "name": "Ramchij Tiwary", "share": "NA" },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 611,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": "NA" },
-      { "name": "Paramhans Tiwary", "share": "NA" },
-      { "name": "Ramchij Tiwary", "share": "NA" },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 621,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 4 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 630,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": "NA" },
-      { "name": "Paramhans Tiwary", "share": "NA" },
-      { "name": "Ramchij Tiwary", "share": "NA" },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 141,
-    "khesara_no": 839,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": "NA",
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 4 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": 0 }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 142,
-    "khesara_no": 726,
+    "khata_number": 164,
+    "khesara_no": 140,
     "plot_type": "",
     "chouhadi": [],
     "totalRakabaDecimal": 8,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 8 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 8, "sold": 0, "remaining": 8, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 2.6 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 142,
-    "khesara_no": 727,
+    "khata_number": 164,
+    "khesara_no": 141,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 10,
+    "totalRakabaDecimal": 9,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 10 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 9, "sold": 9, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 159,
-    "khesara_no": "339/1004",
+    "khata_number": 164,
+    "khesara_no": 272,
     "plot_type": "",
     "chouhadi": [],
-    "totalRakabaDecimal": 5,
+    "totalRakabaDecimal": 16,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 5 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": "NA" }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 159,
-    "khesara_no": 349,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 101,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": 50.5 },
-      { "name": "Paramhans Tiwary", "share": 50.5 },
-      { "name": "Ramchij Tiwary", "share": 0 },
-      { "name": "OTHERS", "share": "NA" }
-    ],
-    "landMark": "",
-    "comments": ""
-  },
-  {
-    "khata_number": 160,
-    "khesara_no": 338,
-    "plot_type": "",
-    "chouhadi": [],
-    "totalRakabaDecimal": 13,
-    "dakhal": [
-      { "name": "Babuji Tiwary", "share": "NA" },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 0 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 16, "sold": 0, "remaining": 16, "seller": "", "comments": "Badlain" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
     "comments": ""
   },
   {
-    "khata_number": 25,
-    "khesara_no": 723,
+    "khata_number": 164,
+    "khesara_no": 273,
     "plot_type": "",
     "chouhadi": [],
     "totalRakabaDecimal": 20,
     "dakhal": [
-      { "name": "Babuji Tiwary", "share": 0 },
-      { "name": "Paramhans Tiwary", "share": 0 },
-      { "name": "Ramchij Tiwary", "share": 20 },
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 20, "sold": 0, "remaining": 20, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 279,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 16,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 16, "sold": 0, "remaining": 16, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 324,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 24,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 24, "sold": 0, "remaining": 24, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 410,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 23,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 23, "sold": 0, "remaining": 23, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 411,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 41,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 41, "sold": 11, "remaining": 30, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 417,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 15,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -15 decimal)"
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 418,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 12, "sold": 0, "remaining": 12, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 419,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 20,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 20, "sold": 0, "remaining": 20, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 542,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 30,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 30, "sold": 30, "remaining": 0, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 10 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 543,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 50,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 50, "sold": 50, "remaining": 0, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 16.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 673,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 12, "sold": 12, "remaining": 0, "seller": "LNT", "comments": "LNT(Deed 24-06-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 674,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 11, "sold": 11, "remaining": 0, "seller": "LNT", "comments": "LNT(Deed 24-06-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 675,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 11, "sold": 11, "remaining": 0, "seller": "LNT", "comments": "LNT(Deed 24-06-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 757,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 80,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 40, "sold": 22, "remaining": 18, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 40, "sold": 40, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 772,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 8,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 8, "sold": 8, "remaining": 0, "seller": "LNT", "comments": "LNT()" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": "797 & 797/2028",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 86,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 31, "sold": 31, "remaining": 0, "seller": "LNT", "comments": "LNT(18-02-1974)" },
+      { "name": "Paramhans Tiwary", "share": 25, "sold": 25, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 30, "sold": 30, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 800,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 120,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 120, "sold": 120, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 811,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 140,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 66, "sold": 66, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 65, "sold": 65, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 9, "sold": 0, "remaining": 9, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 812,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 190,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 35, "sold": 35, "remaining": 0, "seller": "LNT", "comments": "LNT(Deed 23-01-1975 ->10d and 02-06-1979 -> 25d )" },
+      { "name": "Paramhans Tiwary", "share": 155, "sold": 155, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 901,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 75,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 53, "sold": 53, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 22, "sold": 22, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 902,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 40,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 35.5, "sold": 35.5, "remaining": 0, "seller": "LNT", "comments": "LNT(24-10-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 4.5, "sold": 4.5, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": 920,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 5, "sold": 5, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 164,
+    "khesara_no": "1717 &1744",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 34,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 11.3, "sold": 11.3, "remaining": 0, "seller": "LNT", "comments": "LNT(19-08-1963)" },
+      { "name": "Paramhans Tiwary", "share": 11.3, "sold": 11.3, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 11.4, "sold": 11.4, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 142,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 40,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 40, "sold": 40, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 200,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 93,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 93, "sold": 31, "remaining": 62, "seller": "", "comments": "VT / Vinod Tiwary" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 201,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 5, "sold": 5, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 325,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 27,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 27, "sold": 0, "remaining": 27, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 354,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 25,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 25, "sold": 0, "remaining": 25, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 364,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 20,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 20, "sold": 6, "remaining": 14, "seller": "", "comments": "VT(04-08-2023)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 365,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 26,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 26, "sold": 25, "remaining": 1, "seller": "", "comments": "VT(04-08-2023) - 9d RKT(30-08-1998) - 16d" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 367,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 18,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 18, "sold": 0, "remaining": 18, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 370,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 30,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 30, "sold": 15, "remaining": 15, "seller": "", "comments": "RKT(30-08-1998)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 383,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 4,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -4 decimal)"
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 577,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 23,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "PT (not counted in kul dakhal of khata, -23 decimal)"
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 622,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 21,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 21, "sold": 21, "remaining": 0, "seller": "LNT", "comments": "LNT(27-07-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 722,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 13, "sold": 13, "remaining": 0, "seller": "LNT", "comments": "LNT(06-10-1980)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 724,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 8,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 8, "sold": 8, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 731,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 8,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 8, "sold": 8, "remaining": 0, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 2.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 767,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 28,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 28, "sold": 28, "remaining": 0, "seller": "LNT", "comments": "LNT(06-10-1980)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 981,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 34,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 34, "sold": 34, "remaining": 0, "seller": "LNT", "comments": "LNT(02-06-1968)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 1002,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 62,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 62, "sold": 62, "remaining": 0, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 20.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": "1008/1083",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 25,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 25, "sold": 25, "remaining": 0, "seller": "LNT", "comments": "LNT(24-06-1970)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 165,
+    "khesara_no": 1010,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 32,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 32, "sold": 32, "remaining": 0, "seller": "LNT", "comments": "LNT(24-06-1970)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 143,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 43,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 43, "sold": 0, "remaining": 43, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 14.3 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 326,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 13,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 4, "sold": 0, "remaining": 4, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 9, "sold": 0, "remaining": 9, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 327,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 2,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 2, "sold": 0, "remaining": 2, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 330,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 11, "sold": 0, "remaining": 11, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 337,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 8,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -8 decimal)"
+  },
+  {
+    "khata_number": 166,
+    "khesara_no": 353,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 22,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 22, "sold": 0, "remaining": 22, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 22,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 5, "sold": 0, "remaining": 5, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 72,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 32,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 32, "sold": 0, "remaining": 32, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 10.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 73,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 14,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 14, "sold": 0, "remaining": 14, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 4.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 144,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 45,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 45, "sold": 27, "remaining": 18, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 15 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 301,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 51,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 51, "sold": 0, "remaining": 51, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 308,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 7, "sold": 0, "remaining": 7, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 328,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 5, "sold": 0, "remaining": 5, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 329,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 14,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 7, "sold": 0, "remaining": 7, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 7, "sold": 0, "remaining": 7, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 331,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -11 decimal)"
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 338,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 19,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 19, "sold": 0, "remaining": 19, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 355,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 40,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 40, "sold": 29, "remaining": 11, "seller": "", "comments": "DKT" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 392,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 26,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -26 decimal)"
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 394,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": "NA", "sold": "NA", "remaining": "NA", "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": "NA" }
+    ],
+    "landMark": "",
+    "comments": "MT (not counted in kul dakhal of khata, -5 decimal)"
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 621,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 12,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 12, "sold": 12, "remaining": 0, "seller": "LNT", "comments": "LNT(27-07-1975)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 167,
+    "khesara_no": 1009,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 42,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 42, "sold": 42, "remaining": 0, "seller": "LNT", "comments": "LNT(24-06-1970)" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 44,
+    "khesara_no": 323,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 19,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 19, "sold": 0, "remaining": 19, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 45,
+    "khesara_no": 1417,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 45,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 15, "sold": 15, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 15, "sold": 15, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 15, "sold": 15, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 45,
+    "khesara_no": 1419,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 50,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 16.8, "sold": 16.8, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 16.6, "sold": 16.6, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 16.6, "sold": 16.6, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 45,
+    "khesara_no": 1509,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 42,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 14, "sold": 14, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 14, "sold": 14, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 14, "sold": 14, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 45,
+    "khesara_no": 1588,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 2,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0.6, "sold": 0.6, "remaining": 0, "seller": "LNT", "comments": "LNT" },
+      { "name": "Paramhans Tiwary", "share": 0.8, "sold": 0.8, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0.6, "sold": 0.6, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 45,
+    "khesara_no": 126,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 31,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 31, "sold": 31, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 47,
+    "khesara_no": 397,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 37,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 37, "sold": 0, "remaining": 37, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 47,
+    "khesara_no": 404,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 22,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 22, "sold": 0, "remaining": 22, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 245,
+    "khesara_no": 306,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 32,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 32, "sold": 0, "remaining": 32, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 280,
+    "khesara_no": 771,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 3,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 3, "sold": "NA", "remaining": 3, "seller": "LNT", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 552,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 21,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 21, "sold": 21, "remaining": 0, "seller": "LNT", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 614,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 11,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 11, "sold": 11, "remaining": 0, "seller": "LNT", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 634,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 25,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 25, "sold": 25, "remaining": 0, "seller": "LNT", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 721,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 5,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 5, "sold": 5, "remaining": 0, "seller": "LNT", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 725,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 20,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 20, "sold": 20, "remaining": 0, "seller": "", "comments": "", "anshdar": [{ "name": "Hardev Tiwary", "share": 6.7 }] },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 729,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 7,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 7, "sold": 7, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 281,
+    "khesara_no": 549,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 62,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 62, "sold": 62, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 294,
+    "khesara_no": 49,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 16,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 16, "sold": 0, "remaining": 16, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 294,
+    "khesara_no": 59,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 46,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 46, "sold": 0, "remaining": 46, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 293,
+    "khesara_no": 712,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 40,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 40, "sold": 40, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 293,
+    "khesara_no": 748,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 28,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 28, "sold": 28, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 293,
+    "khesara_no": 902,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 6,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 6, "sold": 6, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 293,
+    "khesara_no": 904,
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 48,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 48, "sold": 48, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "OTHERS", "share": 0 }
+    ],
+    "landMark": "",
+    "comments": ""
+  },
+  {
+    "khata_number": 17,
+    "khesara_no": "NA",
+    "plot_type": "",
+    "chouhadi": [],
+    "totalRakabaDecimal": 17,
+    "dakhal": [
+      { "name": "Babuji Tiwary", "share": 17, "sold": 0, "remaining": 17, "seller": "", "comments": "" },
+      { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
