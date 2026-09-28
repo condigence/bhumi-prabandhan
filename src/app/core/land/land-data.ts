@@ -169,6 +169,23 @@ export class LandData {
     return ANSHDAR_LIST;
   }
 
+  /**
+   * Every descendant of the given person in the Vanshawali (anshdar.json),
+   * found by following fatherName links down the tree, ordered by generation.
+   * Years in fatherName (e.g. "Jainarayan Tiwary(1901-1965)") are ignored.
+   */
+  getSuccessors(name: string): Anshdar[] {
+    const baseName = (value: string): string => value.replace(/\(.*\)/, '').trim();
+    const successors: Anshdar[] = [];
+    let generation = [baseName(name)];
+    while (generation.length) {
+      const children = ANSHDAR_LIST.filter((a) => generation.includes(baseName(a.fatherName)));
+      successors.push(...children);
+      generation = children.map((a) => a.name);
+    }
+    return successors;
+  }
+
   hasLandRecords(mouja: string): boolean {
     return mouja in MOUJA_LAND_RECORDS;
   }

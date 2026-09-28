@@ -165,16 +165,14 @@ export class Home {
   });
 
   /**
-   * Anshdar descending from the selected Raiyat (only their successors), or
-   * from any Raiyat of the selected Khata when no Raiyat is selected. The
-   * Raiyat themselves are picked from the Raiyat Name filter, not here.
+   * Successors (per the Vanshawali family tree) of the selected Raiyat, or of
+   * every Raiyat of the selected Khata when no Raiyat is selected. The Raiyat
+   * themselves are picked from the Raiyat Name filter, not here.
    */
   readonly anshdarOptions = computed<Anshdar[]>(() => {
     const raiyat = this.selectedRaiyat();
     const raiyatNames = raiyat ? [raiyat] : this.raiyatNames();
-    return this.anshdarList().filter(
-      (a) => a.name !== a.raiyat && raiyatNames.includes(a.raiyat),
-    );
+    return raiyatNames.flatMap((name) => this.landData.getSuccessors(name));
   });
 
   readonly selectedAnshdar = computed<Anshdar | null>(
@@ -383,7 +381,8 @@ export class Home {
   /** Sets the Raiyat filter, dropping an Anshdar selection that belongs to another Raiyat. */
   private setRaiyat(raiyat: string | null): void {
     this.selectedRaiyat.set(raiyat);
-    if (this.selectedAnshdar()?.raiyat !== raiyat) {
+    const anshdar = this.selectedAnshdarName();
+    if (anshdar && !this.anshdarOptions().some((a) => a.name === anshdar)) {
       this.selectedAnshdarName.set('');
     }
   }
