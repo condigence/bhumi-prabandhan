@@ -18,7 +18,28 @@
       Vanshawali as a reference below, or enter each family member's details in the form — either
       way, you'll get a JSON file and an SVG diagram like this one at the end.
     </p>
-    <div class="svg-preview reference" [innerHTML]="referenceSvg"></div>
+    <div class="diagram-toolbar">
+      <ng-container *ngTemplateOutlet="zoomControls; context: { $implicit: 'example' }" />
+      <div class="toolbar-actions">
+        <button type="button" class="btn-secondary" (click)="openPreview('example')">
+          ⛶ Preview Vanshawali
+        </button>
+        <button type="button" class="btn-primary" (click)="downloadExampleSvg()">
+          ⬇ Download Vanshawali (SVG)
+        </button>
+        <button type="button" class="btn-secondary" (click)="downloadExampleJson()">
+          ⬇ Download JSON
+        </button>
+      </div>
+    </div>
+
+    <div class="svg-viewport" (wheel)="onDiagramWheel($event, 'example')">
+      <div
+        class="svg-canvas"
+        [style.width.%]="zoomLevels().example"
+        [innerHTML]="referenceSvg"
+      ></div>
+    </div>
   </div>
 
   <div class="card">
@@ -285,12 +306,73 @@
     <div class="card">
       <div class="card-title">3. Your Vanshawali</div>
 
-      <div class="svg-preview" [innerHTML]="generatedSvgSafe()"></div>
+      <div class="diagram-toolbar">
+        <ng-container *ngTemplateOutlet="zoomControls; context: { $implicit: 'generated' }" />
+        <div class="toolbar-actions">
+          <button type="button" class="btn-secondary" (click)="openPreview('generated')">
+            ⛶ Preview Vanshawali
+          </button>
+          <button class="btn-primary" (click)="downloadSvg()">⬇ Download Vanshawali (SVG)</button>
+          <button class="btn-secondary" (click)="downloadJson()">⬇ Download JSON</button>
+        </div>
+      </div>
 
-      <div class="button-row">
-        <button class="btn-primary" (click)="downloadSvg()">⬇ Download SVG</button>
-        <button class="btn-secondary" (click)="downloadJson()">⬇ Download JSON</button>
+      <div class="svg-viewport" (wheel)="onDiagramWheel($event, 'generated')">
+        <div
+          class="svg-canvas"
+          [style.width.%]="zoomLevels().generated"
+          [innerHTML]="generatedSvgSafe()"
+        ></div>
       </div>
     </div>
   }
 </div>
+
+@if (previewSvg(); as svg) {
+  <div class="preview-overlay" role="dialog" aria-modal="true" [attr.aria-label]="previewTitle()">
+    <div class="preview-header">
+      <span class="preview-title">{{ previewTitle() }}</span>
+      <ng-container *ngTemplateOutlet="zoomControls; context: { $implicit: 'preview' }" />
+      <div class="toolbar-actions">
+        <button
+          type="button"
+          class="btn-primary"
+          (click)="previewSource() === 'example' ? downloadExampleSvg() : downloadSvg()"
+        >
+          ⬇ Download
+        </button>
+        <button type="button" class="btn-secondary" (click)="closePreview()">✕ Close</button>
+      </div>
+    </div>
+    <div class="preview-body svg-viewport" (wheel)="onDiagramWheel($event, 'preview')">
+      <div class="svg-canvas" [style.width.%]="zoomLevels().preview" [innerHTML]="svg"></div>
+    </div>
+  </div>
+}
+
+<!-- Zoom out / % / zoom in / Fit controls for one diagram -->
+<ng-template #zoomControls let-target>
+  <div class="zoom-controls" role="group" aria-label="Zoom">
+    <button
+      type="button"
+      class="btn-zoom"
+      aria-label="Zoom out"
+      [disabled]="zoomOf(target) <= zoomMin"
+      (click)="zoomOut(target)"
+    >
+      −
+    </button>
+    <span class="zoom-value">{{ zoomOf(target) }}%</span>
+    <button
+      type="button"
+      class="btn-zoom"
+      aria-label="Zoom in"
+      [disabled]="zoomOf(target) >= zoomMax"
+      (click)="zoomIn(target)"
+    >
+      +
+    </button>
+    <button type="button" class="btn-zoom" (click)="resetZoom(target)">Fit</button>
+    <span class="zoom-hint">Ctrl + scroll to zoom</span>
+  </div>
+</ng-template>

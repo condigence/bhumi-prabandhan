@@ -79,6 +79,8 @@ export interface KhataPlot {
   isSold: boolean;
   /** Who sold it (the Dakhal holder, or e.g. Lakhinarayan Tiwary for LNT); "" when not sold. */
   seller: string;
+  /** Decimal sold when only part of the plot was sold; omitted for a full sale. */
+  soldRakbaDecimal?: number;
 }
 
 interface MoujaLandRecords {

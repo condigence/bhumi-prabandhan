@@ -148,9 +148,9 @@
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": "",
-    "isSold": false,
-    "seller": ""
+    "comments": "Ramchij Tiwary's full Dakhal of 9 decimal sold",
+    "isSold": true,
+    "seller": "Ramchij Tiwary"
   },
   {
     "khata_number": 164,
@@ -246,13 +246,14 @@
     "dakhal": [
       { "name": "Babuji Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
       { "name": "Paramhans Tiwary", "share": 0, "sold": 0, "remaining": 0, "seller": "", "comments": "" },
-      { "name": "Ramchij Tiwary", "share": 41, "sold": 11, "remaining": 30, "seller": "", "comments": "" },
+      { "name": "Ramchij Tiwary", "share": 41, "sold": 11, "remaining": 30, "seller": "Ramchij Tiwary", "comments": "Sold 11 Remaining 30" },
       { "name": "OTHERS", "share": 0 }
     ],
     "landMark": "",
-    "comments": "",
-    "isSold": false,
-    "seller": ""
+    "comments": "11 of Ramchij Tiwary's 41 decimal Dakhal sold, 30 decimal remaining",
+    "isSold": true,
+    "seller": "Ramchij Tiwary",
+    "soldRakbaDecimal": 11
   },
   {
     "khata_number": 164,

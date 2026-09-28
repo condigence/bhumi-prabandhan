@@ -65,7 +65,12 @@ function buildPieSlices(summary: AnshdaarSummary[], total: number): PieSlice[] {
     const start = polarToCartesian(PIE_RADIUS, startAngle);
     const end = polarToCartesian(PIE_RADIUS, endAngle);
     const largeArcFlag = sliceAngle > 180 ? 1 : 0;
-    const pathD = `M ${CENTER} ${CENTER} L ${start.x} ${start.y} A ${PIE_RADIUS} ${PIE_RADIUS} 0 ${largeArcFlag} 1 ${end.x} ${end.y} Z`;
+    // A single arc can't draw a full circle (its start and end coincide), so a
+    // 100% slice is drawn as two half-circle arcs instead.
+    const pathD =
+      sliceAngle >= 359.999
+        ? `M ${CENTER - PIE_RADIUS} ${CENTER} A ${PIE_RADIUS} ${PIE_RADIUS} 0 1 1 ${CENTER + PIE_RADIUS} ${CENTER} A ${PIE_RADIUS} ${PIE_RADIUS} 0 1 1 ${CENTER - PIE_RADIUS} ${CENTER} Z`
+        : `M ${CENTER} ${CENTER} L ${start.x} ${start.y} A ${PIE_RADIUS} ${PIE_RADIUS} 0 ${largeArcFlag} 1 ${end.x} ${end.y} Z`;
 
     const midAngle = startAngle + sliceAngle / 2;
     const leaderStart = polarToCartesian(LEADER_INNER_RADIUS, midAngle);

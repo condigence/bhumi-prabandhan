@@ -12,8 +12,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/home/home').then((m) => m.Home),
     canActivate: [authGuard],
   },
+  // Old URL, kept so existing links and bookmarks still work.
+  { path: 'download-vanshawali', redirectTo: 'vanshawali' },
   {
-    path: 'download-vanshawali',
+    path: 'vanshawali',
     loadComponent: () =>
       import('./features/download-vanshawali/download-vanshawali').then(
         (m) => m.DownloadVanshawali,

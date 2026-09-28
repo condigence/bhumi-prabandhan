@@ -1,4 +1,5 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import { Component, computed, HostListener, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -12,6 +13,14 @@ import {
 } from '../../core/land/vanshawali-tree';
 
 const OTHER = '__other__';
+
+/** Diagrams on this page that can be zoomed; "preview" is the full-screen viewer. */
+type ZoomTarget = 'example' | 'generated' | 'preview';
+
+const ZOOM_MIN = 25;
+const ZOOM_MAX = 400;
+const ZOOM_STEP = 25;
+const EXAMPLE_TITLE = 'Example: Tiwary Vanshawali';
 
 const DISTRICT_OPTIONS = ['Nawada', 'Patna', 'Gaya', 'Nalanda', 'Munger', OTHER];
 const VILLAGE_OPTIONS = ['Gosaipur', OTHER];
@@ -62,7 +71,7 @@ function slugify(name: string): string {
 }
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, NgTemplateOutlet],
   selector: 'app-download-vanshawali',
   styleUrl: './download-vanshawali.scss',
   templateUrl: './download-vanshawali.html',
@@ -77,9 +86,17 @@ export class DownloadVanshawali {
   readonly thanaOptions = THANA_OPTIONS;
 
   readonly referenceTree = referenceTemplateData as unknown as VanshawaliPerson;
-  readonly referenceSvg: SafeHtml = this.sanitizer.bypassSecurityTrustHtml(
-    renderVanshawaliSvg(this.referenceTree, 'Example: Tiwary Vanshawali'),
-  );
+  private readonly referenceSvgMarkup = renderVanshawaliSvg(this.referenceTree, EXAMPLE_TITLE);
+  readonly referenceSvg: SafeHtml = this.sanitizer.bypassSecurityTrustHtml(this.referenceSvgMarkup);
+
+  /** Zoom level (%) per diagram; 100% fits the diagram to the width of its box. */
+  readonly zoomLevels = signal<Record<ZoomTarget, number>>({
+    example: 100,
+    generated: 100,
+    preview: 100,
+  });
+  readonly zoomMin = ZOOM_MIN;
+  readonly zoomMax = ZOOM_MAX;
 
   readonly treeTitle = signal('My Family Vanshawali');
   readonly uploadedImage = signal<string | null>(null);
@@ -94,6 +111,24 @@ export class DownloadVanshawali {
   readonly generatedSvgSafe = computed<SafeHtml>(() =>
     this.sanitizer.bypassSecurityTrustHtml(this.generatedSvgMarkup()),
   );
+
+  /** Which diagram the full-screen preview is showing, if open. */
+  readonly previewSource = signal<'example' | 'generated' | null>(null);
+  readonly previewTitle = computed(() =>
+    this.previewSource() === 'example'
+      ? EXAMPLE_TITLE
+      : this.treeTitle().trim() || 'Family Vanshawali',
+  );
+  readonly previewSvg = computed<SafeHtml | null>(() => {
+    switch (this.previewSource()) {
+      case 'example':
+        return this.referenceSvg;
+      case 'generated':
+        return this.generatedSvgSafe();
+      default:
+        return null;
+    }
+  });
 
   readonly dependentCounts = computed<Map<string, number>>(() => {
     const counts = new Map<string, number>();
@@ -245,6 +280,62 @@ export class DownloadVanshawali {
       this.generatedSvgMarkup(),
       'image/svg+xml',
     );
+  }
+
+  zoomOf(target: ZoomTarget): number {
+    return this.zoomLevels()[target];
+  }
+
+  zoomIn(target: ZoomTarget): void {
+    this.setZoom(target, this.zoomLevels()[target] + ZOOM_STEP);
+  }
+
+  zoomOut(target: ZoomTarget): void {
+    this.setZoom(target, this.zoomLevels()[target] - ZOOM_STEP);
+  }
+
+  resetZoom(target: ZoomTarget): void {
+    this.setZoom(target, 100);
+  }
+
+  /** Ctrl + mouse wheel zooms the diagram under the pointer instead of the page. */
+  onDiagramWheel(event: WheelEvent, target: ZoomTarget): void {
+    if (!event.ctrlKey) {
+      return;
+    }
+    event.preventDefault();
+    if (event.deltaY < 0) {
+      this.zoomIn(target);
+    } else {
+      this.zoomOut(target);
+    }
+  }
+
+  openPreview(source: 'example' | 'generated'): void {
+    this.resetZoom('preview');
+    this.previewSource.set(source);
+  }
+
+  @HostListener('document:keydown.escape')
+  closePreview(): void {
+    this.previewSource.set(null);
+  }
+
+  downloadExampleSvg(): void {
+    downloadTextFile('example-vanshawali.svg', this.referenceSvgMarkup, 'image/svg+xml');
+  }
+
+  downloadExampleJson(): void {
+    downloadTextFile(
+      'example-vanshawali.json',
+      JSON.stringify(this.referenceTree, null, 2),
+      'application/json',
+    );
+  }
+
+  private setZoom(target: ZoomTarget, value: number): void {
+    const zoom = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, value));
+    this.zoomLevels.update((levels) => ({ ...levels, [target]: zoom }));
   }
 
   goHome(): void {

@@ -1,6 +1,6 @@
 /**
  * Shared schema + tree-building + SVG-rendering logic for a Vanshawali
- * (family lineage) tree. Used by the download-vanshawali feature to turn a
+ * (family lineage) tree. Used by the Vanshawali page (/vanshawali) to turn a
  * flat, form-entered list of people into the nested JSON tree the rest of
  * the app's data files use (see data/Vanshawali-template.json), and to
  * render that tree as a standalone, downloadable SVG diagram.

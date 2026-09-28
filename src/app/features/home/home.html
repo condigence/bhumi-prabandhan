@@ -4,7 +4,7 @@
     <p class="tagline">{{ locationSubtitle() }}</p>
   </div>
   <div class="header-right">
-    <a class="btn-vanshawali" routerLink="/download-vanshawali"
+    <a class="btn-vanshawali" routerLink="/vanshawali"
       >You do not have Vanshawali? Create one by clicking here</a
     >
     <span class="mobile-badge">📱 {{ mobileNumber() }}</span>
@@ -329,7 +329,14 @@
               </td>
               <td class="note-cell">
                 @if (plot.isSold) {
-                  <span class="sold-badge">Sold{{ plot.seller ? ' by ' + plot.seller : '' }}</span>
+                  <span class="sold-badge">
+                    @if (plot.soldRakbaDecimal !== undefined) {
+                      Partly sold ({{ plot.soldRakbaDecimal }} of {{ plot.totalRakabaDecimal }} decimal)
+                    } @else {
+                      Sold
+                    }
+                    {{ plot.seller ? 'by ' + plot.seller : '' }}
+                  </span>
                 }
                 {{ plotNote(plot) }}
               </td>

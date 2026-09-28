@@ -29,9 +29,10 @@
 }
 
 .container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 0 15px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0;
+  padding: 0 24px 40px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -230,20 +231,104 @@ tr:hover td {
   background: #f8fff9;
 }
 
-.svg-preview {
-  overflow-x: auto;
-  text-align: center;
-  padding: 10px 0;
+.diagram-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
 
-  svg {
-    max-width: 100%;
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-zoom {
+  background: #e9ecef;
+  color: #14532d;
+  padding: 6px 12px;
+  min-width: 36px;
+
+  &:hover:not(:disabled) {
+    background: #dee2e6;
+  }
+}
+
+.zoom-value {
+  min-width: 48px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #455a64;
+}
+
+.zoom-hint {
+  font-size: 11px;
+  color: #9aa0a6;
+  margin-left: 6px;
+}
+
+// Scrollable box the diagram is zoomed inside; 100% zoom fits its width.
+.svg-viewport {
+  overflow: auto;
+  max-height: 75vh;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #faf7f0;
+}
+
+.svg-canvas {
+  margin: 0 auto;
+
+  // The SVG is injected via innerHTML, so it needs ::ng-deep to be styled.
+  ::ng-deep svg {
+    display: block;
+    width: 100%;
     height: auto;
   }
 }
 
-.svg-preview.reference {
-  background: #faf7f0;
-  border-radius: 6px;
+.preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 16px;
+}
+
+.preview-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #14532d;
+}
+
+.preview-body {
+  flex: 1;
+  max-height: none;
+  border-radius: 0 0 8px 8px;
 }
 
 @media (max-width: 900px) {
