@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "node scripts/start.mjs",
+    "predev": "npm run sync:vanshawali",
     "dev": "ng serve --host 0.0.0.0",
+    "prebuild": "npm run sync:vanshawali",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sync:vanshawali": "node --no-warnings scripts/sync-vanshawali.mjs"
   },
   "private": true,
   "packageManager": "npm@11.19.0",

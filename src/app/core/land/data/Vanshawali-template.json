@@ -46,8 +46,65 @@
           "thana": "Shahpur Patti",
           "isAlive": false,
           "hasChildren": true,
-          "noOfChildren": 1,
-          "children": []
+          "noOfChildren": 3,
+          "children": [
+            {
+              "name": "L3N5",
+              "level": 3,
+              "node": "Rajkishor Tiwary",
+              "displayName": "Lt. Rajkishor Tiwary",
+              "share_fraction": "1/9",
+              "share_percentage": 11.111111,
+              "share_note": "Line ended; share passed to siblings' lines",
+              "parent": "Lakhinarayan Tiwary",
+              "fatherName": "Lakhinarayan Tiwary",
+              "grandfatherName": "Babuji Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": false,
+              "hasChildren": false,
+              "noOfChildren": 0,
+              "children": []
+            },
+            {
+              "name": "L3N6",
+              "level": 3,
+              "node": "Devkumar Tiwary",
+              "displayName": "Lt. Devkumar Tiwary",
+              "share_fraction": "1/9",
+              "share_percentage": 11.111111,
+              "share_note": "Line ended; share passed to siblings' lines",
+              "parent": "Lakhinarayan Tiwary",
+              "fatherName": "Lakhinarayan Tiwary",
+              "grandfatherName": "Babuji Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": false,
+              "hasChildren": false,
+              "noOfChildren": 0,
+              "children": []
+            },
+            {
+              "name": "L3N7",
+              "level": 3,
+              "node": "Chandrakumar Tiwary",
+              "displayName": "Chandrakumar Tiwary",
+              "share_fraction": "1/3",
+              "share_percentage": 33.333333,
+              "parent": "Lakhinarayan Tiwary",
+              "fatherName": "Lakhinarayan Tiwary",
+              "grandfatherName": "Babuji Tiwary",
+              "district": "",
+              "village": "Gosaipur",
+              "thana": "Shahpur Patti",
+              "isAlive": true,
+              "hasChildren": false,
+              "noOfChildren": 0,
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -109,6 +166,7 @@
                   "displayName": "Lt. Srinivas Tiwary",
                   "share_fraction": "1/24",
                   "share_percentage": 4.166667,
+                  "share_note": "Line ended; share passed to siblings' lines",
                   "parent": "Vasudev Tiwary",
                   "fatherName": "Vasudev Tiwary",
                   "grandfatherName": "Jainarayan Tiwary",
@@ -118,8 +176,7 @@
                   "isAlive": false,
                   "hasChildren": false,
                   "noOfChildren": 0,
-                  "children": [],
-                  "share_note": "Line ended; share passed to siblings' lines"
+                  "children": []
                 },
                 {
                   "name": "L4N2",
