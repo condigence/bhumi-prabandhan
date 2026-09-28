@@ -48,6 +48,14 @@ interface HalkaMoujaRecord {
   moujas: Mouja[];
 }
 
+/** Location pre-selected in the Jila → Anchal → Halka → Mouja filter. */
+export const DEFAULT_LOCATION = {
+  district: 'Bhojpur',
+  anchal: 'Shahpur',
+  halkaName: 'Semariya',
+  moujaName: 'Gosaipur-109',
+};
+
 function toArray<T>(data: T | T[]): T[] {
   return Array.isArray(data) ? data : [data];
 }

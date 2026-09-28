@@ -109,6 +109,27 @@ export class Home {
 
   readonly selectedLocation = signal<LocationSelection | null>(null);
 
+  /** Header subtitle for the selected location, e.g. "Mouja Gosaipur-109 · Thana No. 110 Shahpur Patti · …". */
+  readonly locationSubtitle = computed<string>(() => {
+    const location = this.selectedLocation();
+    if (!location?.mouja) {
+      return 'Select District, Anchal, Halka and Mouja';
+    }
+    const { mouja, halka } = location;
+    const thana = [mouja.thanaNumber && `Thana No. ${mouja.thanaNumber}`, mouja.thanaName]
+      .filter(Boolean)
+      .join(' ');
+    return [
+      `Mouja ${mouja.mouja_name}`,
+      thana,
+      halka && `Halka ${halka.halka_name}`,
+      `Anchal ${location.anchal}`,
+      `District ${location.district}`,
+    ]
+      .filter(Boolean)
+      .join(' · ');
+  });
+
   /** Mouja whose Khatiyan drives the Bhumi Vivaran card; falls back to the default until one is picked. */
   readonly selectedMoujaName = computed<string>(
     () => this.selectedLocation()?.mouja?.mouja_name ?? DEFAULT_MOUJA,
