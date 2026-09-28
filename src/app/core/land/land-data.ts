@@ -21,7 +21,7 @@ export interface MoujaInfo {
 
 /**
  * One member of the family holding (or inheriting) an Ansh in the land,
- * from anshdar.json — built from Vanshawali.json and tiwary_family_tree1.svg.
+ * from anshdar.json — built from Vanshawali-template.json and tiwary_family_tree.svg.
  */
 export interface Anshdar {
   slNo: number;
@@ -34,7 +34,7 @@ export interface Anshdar {
   reference?: string;
   /** Generation below Badai Tiwary (Gen 0), as in the family tree. */
   generation: number;
-  /** Family-tree node id (e.g. L3N1); "NA" when the person isn't drawn in the tree. */
+  /** Family-tree node id (e.g. L3N1), the same as `name` in Vanshawali-template.json. */
   nodeId: string;
   /** Khatiyan Raiyat (Badai Tiwary's son) this Anshdar's share descends from. */
   raiyat: string;

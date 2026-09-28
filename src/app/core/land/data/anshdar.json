@@ -168,8 +168,8 @@
     "generation": 4,
     "nodeId": "L4N2",
     "raiyat": "Paramhans Tiwary",
-    "share_fraction": "1/24",
-    "share_percentage": 4.166667
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
   },
   {
     "slNo": 14,
@@ -181,8 +181,8 @@
     "generation": 4,
     "nodeId": "L4N3",
     "raiyat": "Paramhans Tiwary",
-    "share_fraction": "1/12",
-    "share_percentage": 8.333333
+    "share_fraction": "1/24",
+    "share_percentage": 4.166667
   },
   {
     "slNo": 15,
@@ -205,13 +205,26 @@
     "village": "Gosaipur",
     "totalRakabaDecimal": "NA",
     "generation": 4,
-    "nodeId": "NA",
+    "nodeId": "L4N5",
     "raiyat": "Paramhans Tiwary",
     "share_fraction": "1/24",
     "share_percentage": 4.166667
   },
   {
     "slNo": 17,
+    "name": "Ajay Tiwary",
+    "fatherName": "Ramkumar Tiwary",
+    "grandfatherName": "Jainarayan Tiwary(1901-1965)",
+    "village": "Gosaipur",
+    "totalRakabaDecimal": "NA",
+    "generation": 4,
+    "nodeId": "L4N6",
+    "raiyat": "Paramhans Tiwary",
+    "share_fraction": "1/24",
+    "share_percentage": 4.166667
+  },
+  {
+    "slNo": 18,
     "name": "Amit Tiwary",
     "fatherName": "Ramakant Tiwary",
     "grandfatherName": "Vasudev Tiwary",
@@ -220,11 +233,11 @@
     "generation": 5,
     "nodeId": "L5N1",
     "raiyat": "Paramhans Tiwary",
-    "share_fraction": "1/24",
-    "share_percentage": 4.166667
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
   },
   {
-    "slNo": 18,
+    "slNo": 19,
     "name": "Sparsh Tiwary",
     "fatherName": "Amit Tiwary",
     "grandfatherName": "Ramakant Tiwary",
@@ -233,7 +246,7 @@
     "generation": 6,
     "nodeId": "L6N1",
     "raiyat": "Paramhans Tiwary",
-    "share_fraction": "1/24",
-    "share_percentage": 4.166667
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
   }
 ]

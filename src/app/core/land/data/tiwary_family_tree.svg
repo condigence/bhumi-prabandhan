@@ -1,106 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="928" viewBox="0 0 1620 928" font-family="'Segoe UI', Arial, sans-serif">
-<defs><linearGradient id="nodeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f4f1ea"/></linearGradient><linearGradient id="rootFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#198754"/><stop offset="100%" stop-color="#14532d"/></linearGradient></defs>
-<rect x="0" y="0" width="1620" height="928" fill="#faf7f0"/>
-<text x="810" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#14532d">Tiwary Vanshawali</text>
-<path d="M 769.2 156.0 C 769.2 189.0, 124.0 189.0, 124.0 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1816" height="928" viewBox="0 0 1816 928" font-family="'Segoe UI', Arial, sans-serif">
+<defs><linearGradient id="nodeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f4f1ea"/></linearGradient><linearGradient id="rootFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#198754"/><stop offset="100%" stop-color="#14532d"/></linearGradient><linearGradient id="deceasedFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdecea"/><stop offset="100%" stop-color="#f8d4d0"/></linearGradient><filter id="deceasedBlur" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="0.45"/></filter></defs>
+<rect x="0" y="0" width="1816" height="928" fill="#faf7f0"/>
+<text x="908" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#14532d">Tiwary Family Tree</text>
+<rect x="758" y="52" width="12" height="12" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.2"/><text x="776" y="62" font-size="12" fill="#6c757d">Red, square box (Lt.) = deceased · rounded box = alive</text>
+<path d="M 842.7 156.0 C 842.7 189.0, 124.0 189.0, 124.0 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 124.0 278.0 C 124.0 311.0, 124.0 311.0, 124.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 769.2 156.0 C 769.2 189.0, 785.5 189.0, 785.5 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 785.5 278.0 C 785.5 311.0, 785.5 311.0, 785.5 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 785.5 400.0 C 785.5 433.0, 418.0 433.0, 418.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 842.7 156.0 C 842.7 189.0, 810.0 189.0, 810.0 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 810.0 278.0 C 810.0 311.0, 810.0 311.0, 810.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 810.0 400.0 C 810.0 433.0, 418.0 433.0, 418.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 418.0 522.0 C 418.0 555.0, 320.0 555.0, 320.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 418.0 522.0 C 418.0 555.0, 516.0 555.0, 516.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 516.0 644.0 C 516.0 677.0, 516.0 677.0, 516.0 710.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 516.0 766.0 C 516.0 799.0, 516.0 799.0, 516.0 832.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 785.5 400.0 C 785.5 433.0, 712.0 433.0, 712.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 810.0 400.0 C 810.0 433.0, 712.0 433.0, 712.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
 <path d="M 712.0 522.0 C 712.0 555.0, 712.0 555.0, 712.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 785.5 400.0 C 785.5 433.0, 908.0 433.0, 908.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 785.5 400.0 C 785.5 433.0, 1104.0 433.0, 1104.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 769.2 156.0 C 769.2 189.0, 1398.0 189.0, 1398.0 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 1398.0 278.0 C 1398.0 311.0, 1300.0 311.0, 1300.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<path d="M 1398.0 278.0 C 1398.0 311.0, 1496.0 311.0, 1496.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
-<g class="tree-node tree-root" data-id="badai-tiwary" data-level="1">
-<rect x="685.2" y="100.0" width="168" height="56" rx="10" fill="url(#rootFill)" stroke="#0d3d24" stroke-width="1.6"/>
-<text class="tree-node-label" x="769.2" y="124.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#ffffff">Badai Tiwary &#8224;</text>
-<text class="tree-node-sub" x="769.2" y="142.0" text-anchor="middle" font-size="11" fill="#d7f0e3">Gen 1 &#183; Gosaipur</text>
+<path d="M 810.0 400.0 C 810.0 433.0, 908.0 433.0, 908.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 908.0 522.0 C 908.0 555.0, 908.0 555.0, 908.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 810.0 400.0 C 810.0 433.0, 1202.0 433.0, 1202.0 466.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 1202.0 522.0 C 1202.0 555.0, 1104.0 555.0, 1104.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 1202.0 522.0 C 1202.0 555.0, 1300.0 555.0, 1300.0 588.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 842.7 156.0 C 842.7 189.0, 1594.0 189.0, 1594.0 222.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 1594.0 278.0 C 1594.0 311.0, 1496.0 311.0, 1496.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<path d="M 1594.0 278.0 C 1594.0 311.0, 1692.0 311.0, 1692.0 344.0" fill="none" stroke="#b9a98c" stroke-width="2"/>
+<g class="tree-node tree-root tree-deceased" data-id="L0N0" data-level="0" filter="url(#deceasedBlur)">
+<rect x="758.7" y="100.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="2.4"/>
+<text class="tree-node-label" x="842.7" y="124.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Badai Tiwary</text>
+<text class="tree-node-sub" x="842.7" y="142.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 0 &#183; L0N0 &#183; 1</text>
 </g>
-<g class="tree-node" data-id="babuji-tiwary" data-level="2">
-<rect x="40.0" y="222.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="124.0" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Babuji Tiwary &#8224;</text>
-<text class="tree-node-sub" x="124.0" y="264.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 2 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L1N1" data-level="1" filter="url(#deceasedBlur)">
+<rect x="40.0" y="222.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="124.0" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Babuji Tiwary</text>
+<text class="tree-node-sub" x="124.0" y="264.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 1 &#183; L1N1 &#183; 1/3</text>
 </g>
-<g class="tree-node" data-id="lakhinarayan-tiwary" data-level="3">
-<rect x="40.0" y="344.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="124.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Lakhinarayan Tiwary &#8224;</text>
-<text class="tree-node-sub" x="124.0" y="386.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 3 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L2N2" data-level="2" filter="url(#deceasedBlur)">
+<rect x="40.0" y="344.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="124.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Lakhinarayan Tiwary</text>
+<text class="tree-node-sub" x="124.0" y="386.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 2 &#183; L2N2 &#183; 1/3</text>
 </g>
-<g class="tree-node" data-id="paramhans-tiwary" data-level="2">
-<rect x="701.5" y="222.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="785.5" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Paramhans Tiwary &#8224;</text>
-<text class="tree-node-sub" x="785.5" y="264.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 2 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L1N2" data-level="1" filter="url(#deceasedBlur)">
+<rect x="726.0" y="222.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="810.0" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Paramhans Tiwary</text>
+<text class="tree-node-sub" x="810.0" y="264.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 1 &#183; L1N2 &#183; 1/3</text>
 </g>
-<g class="tree-node" data-id="jai-narayan-tiwary" data-level="3">
-<rect x="701.5" y="344.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="785.5" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Jai Narayan Tiwary &#8224;</text>
-<text class="tree-node-sub" x="785.5" y="386.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 3 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L2N1" data-level="2" filter="url(#deceasedBlur)">
+<rect x="726.0" y="344.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="810.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Jainarayan Tiwary</text>
+<text class="tree-node-sub" x="810.0" y="386.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 2 &#183; L2N1 &#183; 1/3</text>
 </g>
-<g class="tree-node" data-id="vasudev-tiwary" data-level="4">
-<rect x="334.0" y="466.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="418.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Vasudev Tiwary &#8224;</text>
-<text class="tree-node-sub" x="418.0" y="508.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L3N1" data-level="3" filter="url(#deceasedBlur)">
+<rect x="334.0" y="466.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="418.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Vasudev Tiwary</text>
+<text class="tree-node-sub" x="418.0" y="508.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 3 &#183; L3N1 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="srinivas-tiwary" data-level="5">
-<rect x="236.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="320.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Srinivas Tiwary</text>
-<text class="tree-node-sub" x="320.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 5 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L4N5" data-level="4" filter="url(#deceasedBlur)">
+<rect x="236.0" y="588.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="320.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Srinivas Tiwary</text>
+<text class="tree-node-sub" x="320.0" y="630.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 4 &#183; L4N5 &#183; 1/24 (line ended)</text>
 </g>
-<g class="tree-node" data-id="ramakant-tiwary" data-level="5">
-<rect x="432.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="516.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Ramakant Tiwary &#8224;</text>
-<text class="tree-node-sub" x="516.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 5 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L4N2" data-level="4" filter="url(#deceasedBlur)">
+<rect x="432.0" y="588.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="516.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Ramakant Tiwary</text>
+<text class="tree-node-sub" x="516.0" y="630.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 4 &#183; L4N2 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="amit-tiwary" data-level="6">
-<rect x="432.0" y="710.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="516.0" y="734.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Amit Tiwary</text>
-<text class="tree-node-sub" x="516.0" y="752.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 6 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L5N1" data-level="5" filter="url(#deceasedBlur)">
+<rect x="432.0" y="710.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="516.0" y="734.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Amit Tiwary</text>
+<text class="tree-node-sub" x="516.0" y="752.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 5 &#183; L5N1 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="sparsh-tiwary" data-level="7">
+<g class="tree-node" data-id="L6N1" data-level="6">
 <rect x="432.0" y="832.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
 <text class="tree-node-label" x="516.0" y="856.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Sparsh Tiwary</text>
-<text class="tree-node-sub" x="516.0" y="874.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 7 &#183; Gosaipur</text>
+<text class="tree-node-sub" x="516.0" y="874.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 6 &#183; L6N1 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="hardev-tiwary" data-level="4">
-<rect x="628.0" y="466.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="712.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Hardev Tiwary &#8224;</text>
-<text class="tree-node-sub" x="712.0" y="508.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L3N2" data-level="3" filter="url(#deceasedBlur)">
+<rect x="628.0" y="466.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="712.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Hardev Tiwary</text>
+<text class="tree-node-sub" x="712.0" y="508.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 3 &#183; L3N2 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="ramniwas-tiwary" data-level="5">
+<g class="tree-node" data-id="L4N1" data-level="4">
 <rect x="628.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
 <text class="tree-node-label" x="712.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Ramniwas Tiwary</text>
-<text class="tree-node-sub" x="712.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 5 &#183; Gosaipur</text>
+<text class="tree-node-sub" x="712.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; L4N1 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="harkishor-tiwary" data-level="4">
+<g class="tree-node" data-id="L3N3" data-level="3">
 <rect x="824.0" y="466.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
 <text class="tree-node-label" x="908.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Harkishor Tiwary</text>
-<text class="tree-node-sub" x="908.0" y="508.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; Gosaipur</text>
+<text class="tree-node-sub" x="908.0" y="508.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 3 &#183; L3N3 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="ramkumar-tiwary" data-level="4">
-<rect x="1020.0" y="466.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="1104.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Ramkumar Tiwary</text>
-<text class="tree-node-sub" x="1104.0" y="508.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; Gosaipur</text>
+<g class="tree-node" data-id="L4N4" data-level="4">
+<rect x="824.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
+<text class="tree-node-label" x="908.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Prabhakar Tiwary</text>
+<text class="tree-node-sub" x="908.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; L4N4 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="ramchij-tiwary" data-level="2">
-<rect x="1314.0" y="222.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="1398.0" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Ramchij Tiwary &#8224;</text>
-<text class="tree-node-sub" x="1398.0" y="264.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 2 &#183; Gosaipur</text>
+<g class="tree-node tree-deceased" data-id="L3N4" data-level="3" filter="url(#deceasedBlur)">
+<rect x="1118.0" y="466.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="1202.0" y="490.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Ramkumar Tiwary</text>
+<text class="tree-node-sub" x="1202.0" y="508.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 3 &#183; L3N4 &#183; 1/12</text>
 </g>
-<g class="tree-node" data-id="yugeshwar-tiwary" data-level="3">
-<rect x="1216.0" y="344.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="1300.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Yugeshwar Tiwary</text>
-<text class="tree-node-sub" x="1300.0" y="386.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 3 &#183; Gosaipur</text>
+<g class="tree-node" data-id="L4N3" data-level="4">
+<rect x="1020.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
+<text class="tree-node-label" x="1104.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Vijay Tiwary</text>
+<text class="tree-node-sub" x="1104.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; L4N3 &#183; 1/24</text>
 </g>
-<g class="tree-node" data-id="sidheshwar-tiwary" data-level="3">
-<rect x="1412.0" y="344.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
-<text class="tree-node-label" x="1496.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Sidheshwar Tiwary</text>
-<text class="tree-node-sub" x="1496.0" y="386.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 3 &#183; Gosaipur</text>
+<g class="tree-node" data-id="L4N6" data-level="4">
+<rect x="1216.0" y="588.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
+<text class="tree-node-label" x="1300.0" y="612.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Ajay Tiwary</text>
+<text class="tree-node-sub" x="1300.0" y="630.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 4 &#183; L4N6 &#183; 1/24</text>
+</g>
+<g class="tree-node tree-deceased" data-id="L1N3" data-level="1" filter="url(#deceasedBlur)">
+<rect x="1510.0" y="222.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="1594.0" y="246.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Ramchij Tiwary</text>
+<text class="tree-node-sub" x="1594.0" y="264.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 1 &#183; L1N3 &#183; 1/3</text>
+</g>
+<g class="tree-node tree-deceased" data-id="L2N3" data-level="2" filter="url(#deceasedBlur)">
+<rect x="1412.0" y="344.0" width="168" height="56" rx="0" fill="url(#deceasedFill)" stroke="#c62828" stroke-width="1.6"/>
+<text class="tree-node-label" x="1496.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#b71c1c">Lt. Yugeshwar Tiwary</text>
+<text class="tree-node-sub" x="1496.0" y="386.0" text-anchor="middle" font-size="11" fill="#c05a55">Gen 2 &#183; L2N3 &#183; 1/6</text>
+</g>
+<g class="tree-node" data-id="L2N4" data-level="2">
+<rect x="1608.0" y="344.0" width="168" height="56" rx="10" fill="url(#nodeFill)" stroke="#198754" stroke-width="1.6"/>
+<text class="tree-node-label" x="1692.0" y="368.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="#263238">Sidheshwar Tiwary</text>
+<text class="tree-node-sub" x="1692.0" y="386.0" text-anchor="middle" font-size="11" fill="#6c757d">Gen 2 &#183; L2N4 &#183; 1/6</text>
 </g>
 </svg>
