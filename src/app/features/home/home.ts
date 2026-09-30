@@ -110,6 +110,9 @@ export class Home {
 
   readonly moujaInfo = signal(this.landData.getMoujaInfo());
   readonly anshdarList = signal<Anshdar[]>(this.landData.getAnshdarList());
+  readonly topAnshdar = signal<Anshdar[]>(this.landData.getTopAnshdar());
+  /** The son of Badai Tiwary clicked in the Anshdar pie, whose line is drilled into. */
+  readonly drillAnshdarName = signal<string | null>(null);
   readonly resultAnshdaarSummary = signal(this.landData.getResultAnshdaarSummary());
 
   readonly selectedLocation = signal<LocationSelection | null>(null);
@@ -288,6 +291,77 @@ export class Home {
     buildPieSlices(this.filteredBreakdown(), this.filteredBreakdownTotal()),
   );
 
+  /** Badai Tiwary's sons (anshdar.json), each sized by their Dakhal in the selected Mouja. */
+  readonly topAnshdarBreakdown = computed<AnshdaarSummary[]>(() => {
+    const overall = this.anshdaarBreakdown();
+    return this.topAnshdar()
+      .map((a) => {
+        const slice = overall.find((s) => s.name === a.name);
+        return { name: a.name, totalRakba: slice?.totalRakba ?? 0, colorCode: slice?.colorCode ?? '#9aa0a6' };
+      })
+      .filter((s) => s.totalRakba > 0);
+  });
+
+  readonly topAnshdarTotal = computed<number>(() =>
+    this.topAnshdarBreakdown().reduce((sum, s) => sum + s.totalRakba, 0),
+  );
+
+  readonly topAnshdarSlices = computed<PieSlice[]>(() =>
+    buildPieSlices(this.topAnshdarBreakdown(), this.topAnshdarTotal()),
+  );
+
+  readonly drillAnshdar = computed<Anshdar | null>(
+    () => this.topAnshdar().find((a) => a.name === this.drillAnshdarName()) ?? null,
+  );
+
+  /** Anshdar in the drill-down file for the clicked son (e.g. anshdar-1-2.json for Paramhans), if any. */
+  readonly drillDownList = computed<Anshdar[] | null>(() => {
+    const anshdar = this.drillAnshdar();
+    return anshdar ? this.landData.getDrillDownAnshdar(anshdar.nodeId) : null;
+  });
+
+  /** "Jainarayan Tiwary" for anshdar-1-2.json: whose sons the drill-down shows. */
+  readonly drillDownFatherName = computed<string>(
+    () => this.drillDownList()?.[0]?.fatherName.replace(/\(.*\)/, '').trim() ?? '',
+  );
+
+  /** True when every drill-down Anshdar has a recorded rakaba to split by. */
+  readonly drillDownByRakba = computed<boolean>(
+    () => !!this.drillDownList()?.every((a) => a.totalRakabaDecimal !== 'NA'),
+  );
+
+  /**
+   * The clicked son's Dakhal split among the drill-down Anshdar in proportion
+   * to their recorded rakaba (51.5 / 51.5 / 44 / 44 in anshdar-1-2.json), or
+   * to their inheritance share when a rakaba is missing.
+   */
+  readonly drillDownBreakdown = computed<AnshdaarSummary[]>(() => {
+    const list = this.drillDownList();
+    const parent = this.topAnshdarBreakdown().find((s) => s.name === this.drillAnshdarName());
+    if (!list?.length || !parent) {
+      return [];
+    }
+    const weight = (a: Anshdar): number =>
+      this.drillDownByRakba() ? numberOrZero(a.totalRakabaDecimal) : a.share_percentage;
+    const weightSum = list.reduce((sum, a) => sum + weight(a), 0);
+    if (weightSum === 0) {
+      return [];
+    }
+    return list.map((a, i) => ({
+      name: a.name,
+      totalRakba: Math.round(((parent.totalRakba * weight(a)) / weightSum) * 100) / 100,
+      colorCode: this.landData.getAnshdarColor(a.name, i),
+    }));
+  });
+
+  readonly drillDownTotal = computed<number>(() =>
+    this.drillDownBreakdown().reduce((sum, s) => sum + s.totalRakba, 0),
+  );
+
+  readonly drillDownSlices = computed<PieSlice[]>(() =>
+    buildPieSlices(this.drillDownBreakdown(), this.drillDownTotal()),
+  );
+
   readonly excessDakhalPlots = computed<string[]>(() =>
     this.landData.getExcessDakhalPlots(this.khataPlots()),
   );
@@ -361,6 +435,11 @@ export class Home {
 
   clearRaiyatFilter(): void {
     this.setRaiyat(null);
+  }
+
+  /** Clicking a son in the Anshdar pie opens (or closes) the drill-down pie for his line. */
+  toggleDrillDown(name: string): void {
+    this.drillAnshdarName.update((current) => (current === name ? null : name));
   }
 
   clearAnshdarFilter(): void {

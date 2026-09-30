@@ -1,0 +1,57 @@
+[
+  {
+    "slNo": 1,
+    "name": "Vasudev Tiwary",
+    "fatherName": "Jainarayan Tiwary(1901-1965)",
+    "grandfatherName": "Paramhans Tiwary(1878-1971)",
+    "village": "Gosaipur",
+    "totalRakabaDecimal": 51.5,
+    "generation": 3,
+    "nodeId": "L3N1",
+    "raiyat": "Paramhans Tiwary",
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
+  },
+  {
+    "slNo": 2,
+    "name": "Hardev Tiwary",
+    "fatherName": "Jainarayan Tiwary(1901-1965)",
+    "grandfatherName": "Paramhans Tiwary(1878-1971)",
+    "village": "Gosaipur",
+    "totalRakabaDecimal": 51.5,
+    "generation": 3,
+    "nodeId": "L3N2",
+    "raiyat": "Paramhans Tiwary",
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
+  },
+  {
+    "slNo": 3,
+    "name": "Harkishor Tiwary",
+    "fatherName": "Jainarayan Tiwary(1901-1965)",
+    "grandfatherName": "Paramhans Tiwary(1878-1971)",
+    "village": "Gosaipur",
+    "totalRakabaDecimal": 44,
+    "note": "Mouja vyas chak Thana No. 108, Khata 11, Khesara - 380 and Rakaba - 30 decimal. 30*1/4 = 7.5. Sell kar diye hai",
+    "reference": "2018 (Refernece - TBD)",
+    "generation": 3,
+    "nodeId": "L3N3",
+    "raiyat": "Paramhans Tiwary",
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
+  },
+  {
+    "slNo": 4,
+    "name": "Ramkumar Tiwary",
+    "fatherName": "Jainarayan Tiwary(1901-1965)",
+    "grandfatherName": "Paramhans Tiwary(1878-1971)",
+    "village": "Gosaipur",
+    "totalRakabaDecimal": 44,
+    "note": "Mouja vyas chak Thana No. 108, Khata 11, Khesara - 380 and Rakaba - 30 decimal. 30*1/4 = 7.5. Sell kar diye hai",
+    "generation": 3,
+    "nodeId": "L3N4",
+    "raiyat": "Paramhans Tiwary",
+    "share_fraction": "1/12",
+    "share_percentage": 8.333333
+  }
+]

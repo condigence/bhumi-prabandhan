@@ -1,4 +1,5 @@
 import { Service } from '@angular/core';
+import anshdarL1N2Data from './data/anshdar-1-2.json';
 import anshdarData from './data/anshdar.json';
 import byaschak110Plots from './data/Byaschak-110.json';
 import byaschak110Khatiyan from './data/mouja-khatiyan-Byaschak-110.json';
@@ -6,6 +7,8 @@ import gosaipur109Plots from './data/Gosaipur-109.json';
 import gosaipur109Khatiyan from './data/mouja-khatiyan-Gosaipur-109.json';
 import randadeeh111Plots from './data/Randadeeh-111.json';
 import randadeeh111Khatiyan from './data/mouja-khatiyan-Randadeeh-111.json';
+import vanshawaliTemplate from './data/Vanshawali-template.json';
+import { VanshawaliPerson } from './vanshawali-tree';
 
 /**
  * Source: "Untitled spreadsheet.xlsx" (Sheet1) — Khanagi Bantwara (private partition)
@@ -20,8 +23,9 @@ export interface MoujaInfo {
 }
 
 /**
- * One member of the family holding (or inheriting) an Ansh in the land,
- * from anshdar.json — built from Vanshawali-template.json and tiwary_family_tree.svg.
+ * One member of the family holding (or inheriting) an Ansh in the land. The
+ * full list comes from Vanshawali-template.json; rakaba, notes and references
+ * come from the anshdar*.json files (see ANSHDAR_FILES).
  */
 export interface Anshdar {
   slNo: number;
@@ -106,7 +110,60 @@ const MOUJA_INFO: MoujaInfo = {
     'Note : 1980 isvi k Biajdawa ko sudhar kiya gaya khatiyaan and anshdari k basis pe jo pahale ye sab vishesh jankari nahi rahane k karan bahut saari trutiya rah gayi thi.',
 };
 
-const ANSHDAR_LIST: Anshdar[] = anshdarData as Anshdar[];
+/**
+ * Anshdar files: anshdar.json holds Badai Tiwary's sons (the top level);
+ * anshdar-<level>-<n>.json holds the drill-down under family-tree node
+ * L<level>N<n> (e.g. anshdar-1-2.json: under Paramhans Tiwary, L1N2, the four
+ * sons of his only son Jainarayan). Add a drill-down file here to enable it.
+ */
+const TOP_ANSHDAR: Anshdar[] = anshdarData as Anshdar[];
+const ANSHDAR_DRILLDOWN: Record<string, Anshdar[]> = {
+  L1N2: anshdarL1N2Data as Anshdar[],
+};
+const ANSHDAR_FILES: Anshdar[] = [...TOP_ANSHDAR, ...Object.values(ANSHDAR_DRILLDOWN).flat()];
+
+/**
+ * Every family member below Badai Tiwary, from the Vanshawali tree, ordered by
+ * generation and then node number (as in the family-tree diagram). Details
+ * recorded in an anshdar*.json file (rakaba, notes) override the defaults.
+ */
+function buildAnshdarList(root: VanshawaliPerson): Anshdar[] {
+  const withYears = (p: VanshawaliPerson): string => (p.lifespan ? `${p.node}(${p.lifespan})` : p.node);
+  const list: Anshdar[] = [];
+  const visit = (
+    person: VanshawaliPerson,
+    parent: VanshawaliPerson | null,
+    grandparent: VanshawaliPerson | null,
+    raiyat: string,
+  ): void => {
+    const lineRaiyat = person.level === 1 ? person.node : raiyat;
+    if (parent) {
+      const recorded = ANSHDAR_FILES.find((a) => a.name === person.node);
+      list.push({
+        slNo: 0,
+        name: person.node,
+        fatherName: withYears(parent),
+        grandfatherName: grandparent ? withYears(grandparent) : 'NA',
+        village: person.village || 'NA',
+        totalRakabaDecimal: 'NA',
+        ...recorded,
+        generation: person.level,
+        nodeId: person.name,
+        raiyat: lineRaiyat,
+        share_fraction: person.share_fraction,
+        share_percentage: person.share_percentage,
+      });
+    }
+    person.children.forEach((child) => visit(child, person, parent, lineRaiyat));
+  };
+  visit(root, null, null, '');
+  const nodeNo = (a: Anshdar): number => Number(a.nodeId.split('N')[1]);
+  list.sort((a, b) => a.generation - b.generation || nodeNo(a) - nodeNo(b));
+  list.forEach((a, i) => (a.slNo = i + 1));
+  return list;
+}
+
+const ANSHDAR_LIST: Anshdar[] = buildAnshdarList(vanshawaliTemplate as VanshawaliPerson);
 
 /**
  * Khatiyan + plot records per Mouja, keyed by the Mouja name used in
@@ -171,8 +228,23 @@ export class LandData {
     return ANSHDAR_LIST;
   }
 
+  /** Badai Tiwary's sons, from anshdar.json. */
+  getTopAnshdar(): Anshdar[] {
+    return TOP_ANSHDAR;
+  }
+
+  /** Drill-down Anshdar under a family-tree node (e.g. "L1N2"), or null when there's no file for it. */
+  getDrillDownAnshdar(nodeId: string): Anshdar[] | null {
+    return ANSHDAR_DRILLDOWN[nodeId] ?? null;
+  }
+
+  /** Slice color for an Anshdar: their own color when defined, otherwise from the palette. */
+  getAnshdarColor(name: string, index: number): string {
+    return ANSHDAAR_COLORS[name] ?? RAIYAT_PALETTE[index % RAIYAT_PALETTE.length];
+  }
+
   /**
-   * Every descendant of the given person in the Vanshawali (anshdar.json),
+   * Every descendant of the given person in the Vanshawali tree,
    * found by following fatherName links down the tree, ordered by generation.
    * Years in fatherName (e.g. "Jainarayan Tiwary(1901-1965)") are ignored.
    */

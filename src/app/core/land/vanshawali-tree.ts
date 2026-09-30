@@ -17,6 +17,8 @@ export interface VanshawaliPerson {
   node: string;
   /** Name as shown in the diagram: "Lt. <node>" for deceased people. Set by {@link assignDisplayNames}. */
   displayName?: string;
+  /** Birth-death years when known, e.g. "1878-1971". */
+  lifespan?: string;
   share_fraction: string;
   share_percentage: number;
   /** Set when this person's line has ended and their share passed to their siblings' lines. */
